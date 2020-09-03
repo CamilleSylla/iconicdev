@@ -1,24 +1,58 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Home from './components/Home/Home';
+import Particles from 'react-particles-js';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Particles 
+        params={{ 
+          "particles": { 
+            "color": {
+              "value": "#A6127E"
+            },
+            "number": { 
+              "value": 150, 
+              "density": { 
+                "enable": true, 
+                "value_area": 1000, 
+              },
+            },
+            "line_linked": {
+              "enable": false,
+            },
+            "size" : {
+              "value": 5,
+              "random": true,
+              "anim": {
+                "enable": true,
+                "speed": 30,
+              }
+            },
+
+          },
+          "interactivity": {
+            "detect_on": "canva",
+            "events": {
+              "onhover": {
+                "enable": true,
+                "mode": "bubble"
+              },
+              },
+              "modes": {
+                "bubble": {
+                    "distance": 150,
+                    "size": 30,
+                    "duration": 2,
+                    "opacity": 1,
+                    "speed": 3
+                },
+              }
+          } 
+        } 
+      }
+      /> 
     </div>
   );
 }
