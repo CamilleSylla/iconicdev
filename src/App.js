@@ -1,20 +1,16 @@
 import React from 'react';
 import './App.css';
 //component
-import Home from './components/Home/Home';
+import Main from './components/Home/Home';
+
+
+//material UI
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
-import Avatar from '@material-ui/core/Avatar';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
-import IconButton from '@material-ui/core/IconButton';
-import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+
+
 //bg animation
 import Particles from 'react-particles-js';
-//assets
-import ID from "./assets/img/ID.png";
-import { red } from '@material-ui/core/colors';
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -88,22 +84,8 @@ function App() {
         } 
       }
       />
+      <Main/>
       
-      <Grid container justify="center" className={classes.root}>
-        <Box display="flex" justifyContent="center" m={1} p={1} >
-        <Box className={classes.imgdim}>
-        <img className="imglog" src={ID} alt="logo"/>
-        </Box>
-      </Box>
-        <Grid>
-          <p>La solution pour vos projets web</p>
-        </Grid>
-        <Grid>
-          <IconButton className={classes.btn} aria-label="delete">
-            <ArrowForwardIcon fontSize="large"/>
-          </IconButton>
-        </Grid>
-      </Grid>
       
      
     </div>
