@@ -15,6 +15,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import Fade from 'react-reveal/Fade'
 import Tilt from'react-tilt';
 import Reveal from 'react-reveal/Reveal';
+import Typing from 'react-typing-animation';
 
 
 //assets
@@ -85,7 +86,13 @@ class Landing extends React.Component {
                                 Support Bureautique VBA/Excel
                             </Typography>
                         </Fade>
-                        
+                    </Grid>
+                    <Grid>
+                            <Typing>
+                                <Typography>
+                                    IconicDev
+                                </Typography>
+                            </Typing>
                     </Grid>
                 </Grid>
             </Fade>
