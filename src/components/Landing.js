@@ -14,6 +14,8 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 //animation
 import Fade from 'react-reveal/Fade'
 import Tilt from'react-tilt';
+import Reveal from 'react-reveal/Reveal';
+
 
 //assets
 import ID from '../assets/img/ID.png';
@@ -27,17 +29,24 @@ const useStyles = theme => ({
     imgdim: {
       width: "25%",
     },
-    btn: {
-      marginTop: 100,
-      backgroundColor: '#080C59',
-      color: '#A6127E',
-      '&:hover': {
-        backgroundColor: '#A6127E',
-        color: '#080C59',
-      }
-    },
-    
-  });
+    navBar: {
+      display: 'inline-flex',
+      borderBottomStyle: 'solid',
+      borderBottomColor: '#A6127E',
+      },
+    navItem: {
+        color: '#A6127E',
+        marginRight: 15,
+        marginLeft: 15,
+        padding: 20,
+        textAlign: 'center',
+        marginBottom: 20,
+        '&:hover': {
+            color: '#080C59'
+          }
+    }
+    }
+  );
 
 class Landing extends React.Component {
 
@@ -55,14 +64,31 @@ class Landing extends React.Component {
                             </Box>
                         </Box>
                     </Grid>
-                    <Grid>
-                        <Typography>
-                            SWAG
-                        </Typography>
+                    <Grid className={classes.navBar}>
+                        <Fade cascade delay={800}>
+                            <Typography className={classes.navItem}>
+                                IconicDev
+                            </Typography>
+                        </Fade>
+                        <Fade cascade delay={900}>
+                            <Typography className={classes.navItem}>
+                                Site Internet
+                            </Typography>
+                        </Fade>
+                        <Fade cascade delay={1000}>
+                            <Typography className={classes.navItem}>
+                                Creation Graphique
+                            </Typography>
+                        </Fade>
+                        <Fade cascade delay={1100}>
+                            <Typography className={classes.navItem}>
+                                Support Bureautique VBA/Excel
+                            </Typography>
+                        </Fade>
+                        
                     </Grid>
                 </Grid>
             </Fade>
-                
         )
     }
 }
