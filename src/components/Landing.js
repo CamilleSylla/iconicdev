@@ -4,12 +4,10 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import AccountCircle from '@material-ui/icons/AccountCircle';
+
+//component
+import Iconic from './items/iconic'
 
 //animation
 import Fade from 'react-reveal/Fade'
@@ -88,11 +86,7 @@ class Landing extends React.Component {
                         </Fade>
                     </Grid>
                     <Grid>
-                            <Typing>
-                                <Typography>
-                                    IconicDev
-                                </Typography>
-                            </Typing>
+                        <Iconic/>
                     </Grid>
                 </Grid>
             </Fade>
