@@ -9,8 +9,15 @@ import Box from '@material-ui/core/Box';
 
 // assets
 import Web from '../../assets/img/Web.svg'
+    //domaine
+        //icons
 import Dev from '../../assets/img/svg/Dev.svg'
-
+import Draw from '../../assets/img/Draw.svg'
+import VBA from '../../assets/img/svg/VBA.svg'
+            //img
+import Keyboard from '../../assets/img/Keyboard.jpg'
+import Graph from '../../assets/img/Graph.jpg'
+import Ex from '../../assets/img/Ex.jpg'
 const useStyles = theme => ({
     root: {
         padding: theme.spacing(3, 2),
@@ -20,8 +27,9 @@ const useStyles = theme => ({
         justifyContent: "center"
       },
     banniere: {
+        marginTop: 100,
         width: '90%',
-        height: 400,
+        height: 'auto',
         display: 'inline-flex'
     },
     banniereItem1:{
@@ -40,11 +48,13 @@ const useStyles = theme => ({
         height: '100%',
     },
     missionTitle: {
+        marginTop: 100,
         background: "-webkit-linear-gradient(#080C59, #A1627E)",
         WebkitBackgroundClip: "text",
         WebkitTextFillColor: "transparent",
         marginLeft: '15%',
         marginRight: '15%',
+        textAlign: 'right'
     },
     missionTypo: {
         background: "-webkit-linear-gradient(#080C59, #A1627E)",
@@ -56,6 +66,85 @@ const useStyles = theme => ({
     },
     webImg: {
         width: '50%',
+    },
+    domImg: {
+        width: '40%',
+    },
+    domaine: {
+        marginTop: 100,
+        width: '90%',
+        height: 'auto',
+        display: 'inline-flex'
+    },
+    domaineTitle: {
+        marginTop: 100,
+        background: "-webkit-linear-gradient(#080C59, #A1627E)",
+        WebkitBackgroundClip: "text",
+        WebkitTextFillColor: "transparent",
+        marginLeft: '15%',
+        marginRight: '15%',
+        textAlign: 'left'
+    },
+    dev: {
+        width: 'auto',
+        height: 300,
+        backgroundImage: `url(${Keyboard})`,
+        backgroundSize: 'cover',
+        opacity: 0.4,
+    },
+    layer1: {
+        backgroundColor: '#A6127E',
+        height: '100%',
+    },
+    bckCol1: {
+        backgroundColor: '#080C59',
+        width: '35%',
+        height: '50%',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 100,
+    },
+    
+    graph:{
+        width: 'auto',
+        height: 300,
+        backgroundImage: `url(${Graph})`,
+        backgroundSize: 'cover',
+        opacity: 0.4,
+    },
+    layer2: {
+        backgroundColor: '#7712a6',
+        height: '100%',
+    },
+    bckCol2: {
+        backgroundColor: '#A6127E',
+        width: '35%',
+        height: '50%',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 100,
+    },
+    ex:{
+        width: 'auto',
+        height: 300,
+        backgroundImage: `url(${Ex})`,
+        backgroundSize: 'cover',
+        opacity: 0.4,
+    },
+    layer3: {
+        backgroundColor: '#080C59',
+        height: '100%',
+    },
+    bckCol3: {
+        backgroundColor: '#7712a6',
+        width: '35%',
+        height: '50%',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 100,
     },
     }
   );
@@ -74,7 +163,7 @@ class Iconic extends React.Component {
                     </Typography>
                 </Box>
                 <Typography className={classes.missionTitle} variant="h3">
-                            Mission
+                            .Mission
                 </Typography>
                 <Box className={classes.banniere}>
                     <Box className={classes.banniereItem1}>
@@ -89,18 +178,36 @@ class Iconic extends React.Component {
                     </Typography>
                     </Box>
                 </Box>
-                <Typography className={classes.missionTitle} variant="h3">
-                            Domaines
+                <Typography className={classes.domaineTitle} variant="h3">
+                            .Domaines
                 </Typography>
-                <Box className={classes.banniere}>
-                    <Box>
-                        <img className={classes.webImg} src={Dev} />
+                <Box className={classes.domaine}>
+                    <Box className={classes.dev}>
+                        <div className={classes.layer1}>
+                            <Box className={classes.verticalCenter}>
+                                <div className={classes.bckCol1}>
+                                    <img className={classes.domImg} src={Dev} />
+                                </div>  
+                            </Box>
+                        </div>
                     </Box>
-                    <Box>
-                        <img className={classes.webImg} src={Dev} />
+                    <Box className={classes.graph}>
+                        <div className={classes.layer2}>
+                            <Box className={classes.verticalCenter}>
+                                <div className={classes.bckCol2}>
+                                    <img className={classes.domImg} src={Draw} />
+                                </div> 
+                            </Box>
+                        </div>
                     </Box>
-                    <Box>
-                        <img className={classes.webImg} src={Dev} />
+                    <Box className={classes.ex}>
+                        <div className={classes.layer3}>
+                            <Box className={classes.verticalCenter}>
+                                <div className={classes.bckCol3}>
+                                    <img className={classes.domImg} src={VBA} />
+                                </div>
+                            </Box>
+                        </div>
                     </Box>
                 </Box>
                 
