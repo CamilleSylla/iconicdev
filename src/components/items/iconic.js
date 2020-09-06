@@ -38,10 +38,20 @@ const useStyles = theme => ({
         width: '60%',
         height: '100%',
     },
+    missionTitle: {
+        background: "-webkit-linear-gradient(#080C59, #A1627E)",
+        WebkitBackgroundClip: "text",
+        WebkitTextFillColor: "transparent",
+        marginLeft: '15%',
+        marginRight: '15%',
+    },
     missionTypo: {
         background: "-webkit-linear-gradient(#080C59, #A1627E)",
         WebkitBackgroundClip: "text",
         WebkitTextFillColor: "transparent",
+        marginLeft: '15%',
+        marginRight: '15%',
+        textAlign: 'justify',
     },
     webImg: {
         width: '50%',
@@ -69,7 +79,7 @@ class Iconic extends React.Component {
                         </div>
                     </Box>
                     <Box className={classes.banniereItem2}>
-                    <Typography className={classes.missionTypo} variant="h3">
+                    <Typography className={classes.missionTitle} variant="h3">
                             Mission
                     </Typography>
                     <br/>
