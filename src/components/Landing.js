@@ -54,15 +54,6 @@ class Landing extends React.Component {
         return (
             <Fade right>
                 <Grid container justify="center" className={classes.root}>
-                    <Grid>
-                        <Box display="flex" justifyContent="center" m={1} p={1} >
-                            <Box className={classes.imgdim}>
-                                <Tilt className="Tilt br2" options={{ max : 100 }} >
-                                    <img className="imglog" src={ID} alt="logo"/>
-                                </Tilt>
-                            </Box>
-                        </Box>
-                    </Grid>
                     <Grid className={classes.navBar}>
                         <Fade cascade delay={800}>
                             <Typography className={classes.navItem}>
@@ -84,6 +75,20 @@ class Landing extends React.Component {
                                 Support Bureautique VBA/Excel
                             </Typography>
                         </Fade>
+                        <Fade cascade delay={1200}>
+                            <Typography className={classes.navItem}>
+                                Contact
+                            </Typography>
+                        </Fade>
+                    </Grid>
+                    <Grid>
+                        <Box display="flex" justifyContent="center" m={1} p={1} >
+                            <Box className={classes.imgdim}>
+                                <Tilt className="Tilt br2" options={{ max : 100 }} >
+                                    <img className="imglog" src={ID} alt="logo"/>
+                                </Tilt>
+                            </Box>
+                        </Box>
                     </Grid>
                     <Grid>
                         <Iconic/>

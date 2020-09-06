@@ -9,6 +9,7 @@ import Box from '@material-ui/core/Box';
 
 // assets
 import Web from '../../assets/img/Web.svg'
+import Dev from '../../assets/img/svg/Dev.svg'
 
 const useStyles = theme => ({
     root: {
@@ -72,6 +73,9 @@ class Iconic extends React.Component {
                         La solution pour vos projets Web
                     </Typography>
                 </Box>
+                <Typography className={classes.missionTitle} variant="h3">
+                            Mission
+                </Typography>
                 <Box className={classes.banniere}>
                     <Box className={classes.banniereItem1}>
                         <div className={classes.verticalCenter}>
@@ -79,13 +83,24 @@ class Iconic extends React.Component {
                         </div>
                     </Box>
                     <Box className={classes.banniereItem2}>
-                    <Typography className={classes.missionTitle} variant="h3">
-                            Mission
-                    </Typography>
-                    <br/>
+                    
                     <Typography className={classes.missionTypo}>
                             {Mission}
                     </Typography>
+                    </Box>
+                </Box>
+                <Typography className={classes.missionTitle} variant="h3">
+                            Domaines
+                </Typography>
+                <Box className={classes.banniere}>
+                    <Box>
+                        <img className={classes.webImg} src={Dev} />
+                    </Box>
+                    <Box>
+                        <img className={classes.webImg} src={Dev} />
+                    </Box>
+                    <Box>
+                        <img className={classes.webImg} src={Dev} />
                     </Box>
                 </Box>
                 
