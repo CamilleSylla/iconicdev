@@ -25,14 +25,40 @@ const useStyles = theme => ({
       display: "block",
       textAlign: 'center'
     },
+    navCol:{
+        background: 'linear-gradient(339deg, rgba(166,18,126,0.7) 0%, rgba(8,12,89,0.7) 100%)',
+        opacity: 0.5,
+        webkitTransition: 'all 1s ease',
+        mozTransition: 'all 1s ease',
+        oTransition: 'all 1s ease',
+        transition: 'all 1s ease',
+        '&:hover': {
+            opacity: 1
+          }
+    },
+    header:{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        paddingLeft: '10%',
+        paddingRight: '10%',
+        color: 'white',
+        borderBottomStyle: 'solid',
+        borderBottomColor: '#A6127E',
+        
+    },
+    imgNav: {
+        width: '10%',
+      },
+      navLink:{
+        display: 'inline-flex',
+      },
+      navBox:{
+        marginRight: 100
+      },
     imgdim: {
       width: "25%",
     },
-    navBar: {
-      display: 'inline-flex',
-      borderBottomStyle: 'solid',
-      borderBottomColor: '#A6127E',
-      },
     navItem: {
         color: '#A6127E',
         marginRight: 15,
@@ -54,33 +80,33 @@ class Landing extends React.Component {
         return (
             <Fade right>
                 <Grid container justify="center" className={classes.root}>
-                    <Grid className={classes.navBar}>
-                        <Fade cascade delay={800}>
-                            <Typography className={classes.navItem}>
-                                IconicDev
-                            </Typography>
-                        </Fade>
-                        <Fade cascade delay={900}>
-                            <Typography className={classes.navItem}>
-                                Site Internet
-                            </Typography>
-                        </Fade>
-                        <Fade cascade delay={1000}>
-                            <Typography className={classes.navItem}>
-                                Creation Graphique
-                            </Typography>
-                        </Fade>
-                        <Fade cascade delay={1100}>
-                            <Typography className={classes.navItem}>
-                                Support Bureautique VBA/Excel
-                            </Typography>
-                        </Fade>
-                        <Fade cascade delay={1200}>
-                            <Typography className={classes.navItem}>
-                                Contact
-                            </Typography>
-                        </Fade>
-                    </Grid>
+                        <header className={classes.navCol}>
+                            <div className={classes.header}>
+                                <img className={classes.imgNav} src={ID} alt='IconicDev'/>
+                                <nav>
+                                        <Grid className={classes.navLink}>
+                                            <Box className={classes.navBox}>
+                                                <Typography>
+                                                    IconicDev
+                                                </Typography>
+                                            </Box>
+                                            <Box className={classes.navBox}>
+                                                <Typography>
+                                                    Services
+                                                </Typography>
+                                            </Box>
+                                            <Box className={classes.navBox}>
+                                                <Typography>
+                                                    Portfolio
+                                                </Typography>
+                                            </Box>
+                                            
+                                        </Grid>
+                                </nav>
+                                <Typography>Contact</Typography>
+                            </div>
+                                
+                        </header>
                     <Grid>
                         <Box display="flex" justifyContent="center" m={1} p={1} >
                             <Box className={classes.imgdim}>

@@ -131,7 +131,7 @@ const useStyles = theme => ({
         height: 300,
         backgroundImage: `url(${Ex})`,
         backgroundSize: 'cover',
-        opacity: 0.4,
+        opacity: 0.4, 
     },
     layer3: {
         backgroundColor: '#080C59',
@@ -187,7 +187,12 @@ class Iconic extends React.Component {
                             <Box className={classes.verticalCenter}>
                                 <div className={classes.bckCol1}>
                                     <img className={classes.domImg} src={Dev} />
-                                </div>  
+                                </div>
+                                <div>
+                                    <Typography>
+                                        Developpement Web
+                                    </Typography>
+                                </div> 
                             </Box>
                         </div>
                     </Box>
