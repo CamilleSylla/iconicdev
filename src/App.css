@@ -13,7 +13,7 @@
   bottom: 0;
   left: 0;
   z-index: -1;
-  background-color: black;
+  background-color: #242238;
 }
 
 /*
@@ -24,7 +24,7 @@
 */
 /* resize images*/
 .imglog {
-  width: 100%;
+  width: 90%;
   height: auto;
 } 
 

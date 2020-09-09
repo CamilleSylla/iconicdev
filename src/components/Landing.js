@@ -17,7 +17,7 @@ import Typing from 'react-typing-animation';
 
 
 //assets
-import ID from '../assets/img/ID.png';
+import ID from '../assets/img/Idsvg.svg';
 import Code from '../assets/img/Code.svg';
 import SEO from '../assets/img/Seo.svg';
 import Gra from '../assets/img/Gra.svg';
@@ -84,7 +84,7 @@ const useStyles = theme => ({
         textAlign: 'center',
       },
     imgdim: {
-      width: "25%",
+      width: "35%",
     },
     navItem: {
         color: '#A6127E',
@@ -100,13 +100,17 @@ const useStyles = theme => ({
     bienvenueContainer: {
         width: "100%",
         height: 600,
-        backgroundColor: 'Transparent'
+        backgroundColor: 'Transparent',
     },
     bienvenueBox: {
-        width: '45%',
+        width: '35%',
+        marginLeft: '5%',
         textAlign: 'left',
         color: 'white',
-        marginLeft:'5%'
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        textAlign: 'justify',
     },
     itemContainer:{
         width: '100%',
@@ -116,7 +120,7 @@ const useStyles = theme => ({
     itemContainer2:{
         width: '100%',
         display: 'inline-flex',
-        marginTop: '2%'
+        marginTop: '2%',
     },
     itemBox:{
         width: '20%',
@@ -132,7 +136,7 @@ const useStyles = theme => ({
         marginRight: '10%',
     },
     itemFont: {
-        fontSize:'0.1em',
+        
     },
     }
   );
