@@ -27,8 +27,34 @@
   width: 90%;
   height: auto;
 } 
+.imgIco {
+  width: 53%;
+  height: auto;
+} 
 
-
+.mosaic {
+  display: grid;
+  opacity: 0.3;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+.mosaic:hover {
+  opacity: 1;
+}
+.mosaic__item:first-of-type{
+  grid-column: 1 / span 5;
+  grid-row: 2 / span 5;
+}
+.mosaic__item:nth-of-type(2){
+  grid-column: 4 / span 4;
+  grid-row:  1 / span 5;
+}
+.mosaic__item:last-of-type{
+  grid-column: 2 / span 6;
+  grid-row: 3 / span 5;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
