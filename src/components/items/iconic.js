@@ -36,6 +36,14 @@ const useStyles = theme => ({
       imgContainer: {
         width: '50%',
         height: 500,
+        opacity: 0.2,
+        webkitTransition: 'all 1s ease',
+        mozTransition: 'all 1s ease',
+        oTransition: 'all 1s ease',
+        transition: 'all 1s ease',
+        '&:hover': {
+            opacity: 1
+          }
       },
       
       domaineBox: {
