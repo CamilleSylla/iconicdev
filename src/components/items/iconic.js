@@ -20,6 +20,10 @@ import Graph from '../../assets/img/Graph.jpg'
 import Code from '../../assets/img/Comp.jpg'
 import Tab from '../../assets/img/Tab.jpg'
 import Palette from '../../assets/img/Palette.jpg'
+
+//animation
+import Fade from 'react-reveal/Fade';
+
 const useStyles = theme => ({
     root: {
         backgroundColor: '#21254F',
@@ -49,20 +53,23 @@ class Iconic extends React.Component {
 
     render () {
         const {classes} = this.props;
+        const imgSize = {
+            width: '100%',
+            height: '100%'
+        };
          return (
             <Grid className={classes.root}>
-                <Grid className={classes.imgContainer}>
-                    <div className="mosaic">
-                        <div className="mosaic__item">
-                            <img className="imgIco" src={Tab} alt=''/>
+                <Grid className={classes.imgContainer} container justify="center">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src={Code} alt="Computer" style={imgSize}/>
+                            </div>
+                            <div class="flip-card-back">
+                            <img src={Tab} alt="Tab" style={imgSize}/>
+                            </div>
                         </div>
-                        <div className="mosaic__item">
-                            <img className="imgIco" src={Palette} alt=''/>
-                        </div>
-                        <div className="mosaic__item">
-                            <img className="imgIco" src={Code} alt=''/>
-                        </div>
-                    </div>
+                    </div> 
                 </Grid>
                 <Grid className={classes.domaineBox}>
                             <Typography variant="h4">
