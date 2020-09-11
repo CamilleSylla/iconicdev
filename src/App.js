@@ -11,13 +11,24 @@ import { makeStyles } from '@material-ui/core/styles';
 //bg animation
 import Particles from 'react-particles-js';
 
+//assets
+import Space from './assets/img/Space.jpg'
+
 
 
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
-    display: "block",
-    textAlign: 'center'
+    height: '100%',
+    textAlign: 'center',
+    backgroundImage: `url(${Space})`,
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat',
+  },
+  layer: {
+    width: '100%',
+    height: '100%',
+    backgroundColor: 'rgba(56, 49, 91, 0.6)',
   },
   imgdim: {
     width: "33%",
@@ -37,8 +48,9 @@ const useStyles = makeStyles((theme) => ({
 function App() {
   const classes = useStyles();
   return (
-    <div className="App">
-     <Particles className="particles"
+    <div className={classes.root}>
+      <div className={classes.layer}>
+      <Particles className="particles"
         params={{ 
           "particles": { 
             "color": 
@@ -85,8 +97,7 @@ function App() {
       }
       />
       <Main/>
-      
-      
+      </div>
      
     </div>
   );

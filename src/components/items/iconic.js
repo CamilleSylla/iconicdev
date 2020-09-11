@@ -26,7 +26,7 @@ import Fade from 'react-reveal/Fade';
 
 const useStyles = theme => ({
     root: {
-        backgroundColor: '#21254F',
+        backgroundColor: '#38315B',
         width: '100%',
         height: 'auto',
         paddingTop: '5%',
@@ -86,9 +86,7 @@ class Iconic extends React.Component {
                             <Typography variant="body2">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh odio, dignissim ut pulvinar non, pretium in neque. Curabitur eget fermentum diam. Nullam ut vestibulum urna. Phasellus egestas quis turpis quis dapibus. Maecenas nunc orci, scelerisque id feugiat vitae, commodo id velit. Nam tincidunt gravida pretium. Duis porta tristique augue, a facilisis lorem rhoncus vel. Aliquam libero nisl, convallis eget volutpat non, porttitor eu sem. Praesent sed ipsum justo. Curabitur rhoncus nisi nulla, nec dictum justo rhoncus sagittis. Phasellus at malesuada elit, id sollicitudin mauris. Integer non nunc sapien. Donec lacinia vestibulum massa eu imperdiet.
 
-Etiam erat tortor, mattis vel lacinia imperdiet, eleifend eget turpis. Cras congue ultricies faucibus. Cras venenatis purus ut accumsan convallis. Cras commodo, dolor suscipit vulputate volutpat, eros tortor vulputate ante, sed tempus magna diam sit amet neque. Praesent suscipit, mi ac laoreet placerat, elit ligula elementum diam, at mollis arcu nisi sed tortor. In eu maximus diam. Maecenas et fringilla odio. Aliquam sed lacinia mi. Praesent luctus et sem sit amet ornare. Mauris sed sodales sem. Vivamus mollis quis massa sit amet molestie. Mauris faucibus ultricies ligula quis vehicula.
-
-Maecenas tempus hendrerit sapien vitae accumsan. Nunc convallis a metus ut dapibus. Nullam sapien ipsum, rhoncus sit amet neque vel, interdum vulputate felis. Fusce facilisis libero massa, non eleifend arcu interdum et. Proin id suscipit tellus. Vivamus ut congue magna. Donec et lacus lectus. Donec at nulla nec tortor gravida accumsan vitae nec dolor. Maecenas nec tincidunt nibh. Donec eget tortor ac est consectetur commodo. Quisque interdum mauris quis lobortis posuere. Integer tempor neque vitae ornare hendrerit. Curabitur mollis a tellus in convallis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut sagittis maximus tortor. 
+Etiam erat tortor, mattis vel lacinia imperdiet, eleifend eget turpis. Cras congue ultricies faucibus. Cras venenatis purus ut accumsan convallis. Cras commodo, dolor suscipit vulputate volutpat, eros tortor vulputate ante, sed tempus magna diam sit amet neque. Praesent suscipit, mi ac laoreet placerat, elit ligula elementum diam, at mollis arcu nisi sed tortor. In eu maximus diam. Maecenas et fringilla odio. Aliquam sed lacinia mi. Praesent luctus et sem sit amet ornare. Mauris sed sodales sem. Vivamus mollis quis massa sit amet molestie. 
                             </Typography>
                 </Grid>
             </Grid>
