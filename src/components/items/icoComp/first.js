@@ -13,12 +13,12 @@ import Fade from 'react-reveal/Fade';
 
 const useStyles = theme => ({
     root: {
-        width: '100%',
+        width: '80%',
         height: 'auto',
         display: 'inline-flex',
       },
       imgContainer: {
-        width: '55%',
+        width: '50%',
         height: 'auto',
         opacity: 0.2,
         webkitTransition: 'all 1s ease',
@@ -31,7 +31,7 @@ const useStyles = theme => ({
       },
       
       domaineBox: {
-        width: '35%',
+        width: '50%',
         textAlign: 'left',
         color: 'white',
         textAlign: 'justify',

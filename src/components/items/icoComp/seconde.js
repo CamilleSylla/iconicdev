@@ -33,7 +33,7 @@ const useStyles = theme => ({
         backgroundColor: 'rgba(56, 49, 91, 0.6)',
       },
       imgContainer: {
-        width: '55%',
+        width: '50%',
         height: 'auto',
         opacity: 0.2,
         webkitTransition: 'all 1s ease',
@@ -46,7 +46,7 @@ const useStyles = theme => ({
       },
       
       domaineBox: {
-        width: '35%',
+        width: '50%',
         textAlign: 'left',
         color: 'white',
         textAlign: 'justify',
@@ -65,7 +65,7 @@ class Seconde extends React.Component {
             height: '100%'
         };
          return (
-            <Grid className={classes.root} >
+            <Grid className={classes.root } >
                 <Grid className={classes.layer} container justify="center">
                     <Grid className={classes.domaineBox}>
                                 <Typography variant="h4">

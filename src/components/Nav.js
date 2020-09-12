@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
         paddingBottom: 30,
         paddingLeft: '10%',
         paddingRight: '10%',
-        color: 'white'
+        color: 'white',
   },
   nav: {
       display: 'inline-block'
@@ -40,7 +40,7 @@ export default function ButtonAppBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="fixed">
         <Toolbar>
           <img className={classes.navImg} src={ID} alt="IconicDev"/>
           <List className={classes.nav}  aria-label="main mailbox folders">
