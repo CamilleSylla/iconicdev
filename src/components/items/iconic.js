@@ -3,23 +3,10 @@ import React from 'react';
 //matterial Ui
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import { Typography } from '@material-ui/core';
-import Box from '@material-ui/core/Box';
 
-
-// assets
-import Web from '../../assets/img/Web.svg'
-    //domaine
-        //icons
-import Dev from '../../assets/img/svg/Dev.svg'
-import Draw from '../../assets/img/Draw.svg'
-import VBA from '../../assets/img/svg/VBA.svg'
-            //img
-import Keyboard from '../../assets/img/Keyboard.jpg'
-import Graph from '../../assets/img/Graph.jpg'
-import Code from '../../assets/img/Comp.jpg'
-import Tab from '../../assets/img/Tab.jpg'
-import Palette from '../../assets/img/Palette.jpg'
+//component
+import First from './icoComp/first';
+import Seconde from './icoComp/seconde';
 
 //animation
 import Fade from 'react-reveal/Fade';
@@ -31,27 +18,7 @@ const useStyles = theme => ({
         height: 'auto',
         paddingTop: '5%',
         paddingBottom: '5%',
-        display: 'inline-flex'
       },
-      imgContainer: {
-        width: '50%',
-        height: 500,
-        opacity: 0.2,
-        webkitTransition: 'all 1s ease',
-        mozTransition: 'all 1s ease',
-        oTransition: 'all 1s ease',
-        transition: 'all 1s ease',
-        '&:hover': {
-            opacity: 1
-          }
-      },
-      
-      domaineBox: {
-        width: '40%',
-        textAlign: 'left',
-        color: 'white',
-        textAlign: 'justify',
-    },
     }
   );
 
@@ -66,29 +33,9 @@ class Iconic extends React.Component {
             height: '100%'
         };
          return (
-            <Grid className={classes.root}>
-                <Grid className={classes.imgContainer} container justify="center">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src={Code} alt="Computer" style={imgSize}/>
-                            </div>
-                            <div class="flip-card-back">
-                            <img src={Tab} alt="Tab" style={imgSize}/>
-                            </div>
-                        </div>
-                    </div> 
-                </Grid>
-                <Grid className={classes.domaineBox}>
-                            <Typography variant="h4">
-                                Marquez le web de votre empreinte
-                            </Typography>
-                            <Typography variant="body2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh odio, dignissim ut pulvinar non, pretium in neque. Curabitur eget fermentum diam. Nullam ut vestibulum urna. Phasellus egestas quis turpis quis dapibus. Maecenas nunc orci, scelerisque id feugiat vitae, commodo id velit. Nam tincidunt gravida pretium. Duis porta tristique augue, a facilisis lorem rhoncus vel. Aliquam libero nisl, convallis eget volutpat non, porttitor eu sem. Praesent sed ipsum justo. Curabitur rhoncus nisi nulla, nec dictum justo rhoncus sagittis. Phasellus at malesuada elit, id sollicitudin mauris. Integer non nunc sapien. Donec lacinia vestibulum massa eu imperdiet.
-
-Etiam erat tortor, mattis vel lacinia imperdiet, eleifend eget turpis. Cras congue ultricies faucibus. Cras venenatis purus ut accumsan convallis. Cras commodo, dolor suscipit vulputate volutpat, eros tortor vulputate ante, sed tempus magna diam sit amet neque. Praesent suscipit, mi ac laoreet placerat, elit ligula elementum diam, at mollis arcu nisi sed tortor. In eu maximus diam. Maecenas et fringilla odio. Aliquam sed lacinia mi. Praesent luctus et sem sit amet ornare. Mauris sed sodales sem. Vivamus mollis quis massa sit amet molestie. 
-                            </Typography>
-                </Grid>
+            <Grid className={classes.root} >
+                <First/>
+                <Seconde/>
             </Grid>
          )
     }

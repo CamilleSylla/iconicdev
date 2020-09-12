@@ -12,7 +12,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Particles from 'react-particles-js';
 
 //assets
-import Space from './assets/img/Space.jpg'
+import HTB from './assets/img/HTB.jpg'
 
 
 
@@ -21,14 +21,14 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     height: '100%',
     textAlign: 'center',
-    backgroundImage: `url(${Space})`,
+    backgroundImage: `url(${HTB})`,
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
   },
   layer: {
     width: '100%',
     height: '100%',
-    backgroundColor: 'rgba(56, 49, 91, 0.6)',
+    backgroundColor: 'rgba(56, 49, 91, 0.9)',
   },
   imgdim: {
     width: "33%",
