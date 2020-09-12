@@ -18,7 +18,7 @@ const useStyles = theme => ({
         display: 'inline-flex',
       },
       imgContainer: {
-        width: '50%',
+        width: '55%',
         height: 'auto',
         opacity: 0.2,
         webkitTransition: 'all 1s ease',
@@ -31,7 +31,7 @@ const useStyles = theme => ({
       },
       
       domaineBox: {
-        width: '40%',
+        width: '35%',
         textAlign: 'left',
         color: 'white',
         textAlign: 'justify',
