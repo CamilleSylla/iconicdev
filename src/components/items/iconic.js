@@ -8,6 +8,7 @@ import Grid from '@material-ui/core/Grid';
 import First from './icoComp/first';
 import Seconde from './icoComp/seconde';
 import Tech from './icoComp/Tech';
+import Arg from './icoComp/Arg';
 
 //animation
 import Fade from 'react-reveal/Fade';
@@ -38,6 +39,7 @@ class Iconic extends React.Component {
                 <First/>
                 <Seconde/>
                 <Tech/>
+                <Arg/>
             </Grid>
          )
     }
