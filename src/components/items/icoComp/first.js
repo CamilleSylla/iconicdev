@@ -6,20 +6,26 @@ import Grid from '@material-ui/core/Grid';
 import { Typography } from '@material-ui/core';
 
 import Keyboard from '../../../assets/img/Keyboard.jpg'
-import Code from '../../../assets/img/Comp.jpg'
+import Code from '../../../assets/img/Compu.jpg'
 
 //animation
 import Fade from 'react-reveal/Fade';
 
 const useStyles = theme => ({
     root: {
-        width: '80%',
+        width: '100%',
         height: 'auto',
-        display: 'inline-flex',
+      },
+      grids: {
+        width: '80%',
+        display: 'grid',
+        gridTemplateColumns: 'repeat(2, 1fr)',
+        gridGap: 50,
+        gridAutoRows: 'minmax(100px, auto)',
       },
       imgContainer: {
-        width: '50%',
-        height: 'auto',
+        gridColumn: 1 ,
+        gridRow: 1,
         opacity: 0.2,
         webkitTransition: 'all 1s ease',
         mozTransition: 'all 1s ease',
@@ -31,7 +37,8 @@ const useStyles = theme => ({
       },
       
       domaineBox: {
-        width: '50%',
+        gridColumn: 2,
+        gridRow: 1,
         textAlign: 'left',
         color: 'white',
         textAlign: 'justify',
@@ -51,14 +58,15 @@ class First extends React.Component {
         };
          return (
             <Grid className={classes.root} container justify="center">
+         <div className={classes.grids}>
                 <Grid className={classes.imgContainer} container justify="center">
                     <div class="flip-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
-                                <img src={Code} alt="Computer" style={imgSize}/>
+                                <img src={Keyboard} alt="Computer" style={imgSize}/>
                             </div>
                             <div class="flip-card-back">
-                            <img src={Keyboard} alt="Tab" style={imgSize}/>
+                            <img src={Code} alt="Tab" style={imgSize}/>
                             </div>
                         </div>
                     </div> 
@@ -73,6 +81,8 @@ class First extends React.Component {
 Etiam erat tortor, mattis vel lacinia imperdiet, eleifend eget turpis. Cras congue ultricies faucibus. Cras venenatis purus ut accumsan convallis. Cras commodo, dolor suscipit vulputate volutpat, eros tortor vulputate ante, sed tempus magna diam sit amet neque. Praesent suscipit, mi ac laoreet placerat, elit ligula elementum diam, at mollis arcu nisi sed tortor. In eu maximus diam. Maecenas et fringilla odio. Aliquam sed lacinia mi. Praesent luctus et sem sit amet ornare. Mauris sed sodales sem. Vivamus mollis quis massa sit amet molestie. 
                             </Typography>
                 </Grid>
+            </div>
+                
             </Grid>
          )
     }

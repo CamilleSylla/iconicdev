@@ -9,6 +9,7 @@ import First from './icoComp/first';
 import Seconde from './icoComp/seconde';
 import Tech from './icoComp/Tech';
 import Arg from './icoComp/Arg';
+import Contactform from './icoComp/contactForm';
 
 //animation
 import Fade from 'react-reveal/Fade';
@@ -19,7 +20,6 @@ const useStyles = theme => ({
         width: '100%',
         height: 'auto',
         paddingTop: '5%',
-        paddingBottom: '5%',
       },
     }
   );
@@ -40,6 +40,7 @@ class Iconic extends React.Component {
                 <Seconde/>
                 <Tech/>
                 <Arg/>
+                <Contactform/>
             </Grid>
          )
     }

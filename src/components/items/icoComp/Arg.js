@@ -23,17 +23,14 @@ const useStyles = theme => ({
       one: {
         gridColumn: 1 ,
         gridRow: 1,
-        backgroundColor: '#A6127E'
       },
       two:{
         gridColumn: 2 ,
         gridRow: 1,
-        backgroundColor: 'pink'
       },
       three:{
         gridColumn: 3 ,
         gridRow: 1,
-        backgroundColor: '#080C59'
       },
     }
   );
@@ -51,21 +48,21 @@ class Arg extends React.Component{
                     suffix="%"
                     duration={5}
                      />
-                     <Typography> Adapter a votre besoin</Typography>
+                     <Typography variant="h6"> Adapter a votre besoin</Typography>
                 </div>
                 <div className={classes.two}>
                 <CountUp 
                     end={100}
                     suffix="%"
                     duration={5}
-                     /><Typography> Personalisable</Typography>
+                     /><Typography variant="h5"> Personalisable</Typography>
                 </div>
                 <div className={classes.three}>
                 <CountUp 
                     end={100}
                     suffix="K+"
                     duration={5}
-                     /><Typography>Lignes de codes</Typography>
+                     /><Typography variant="h5">Lignes de codes</Typography>
                 </div>
             </div>
         )
