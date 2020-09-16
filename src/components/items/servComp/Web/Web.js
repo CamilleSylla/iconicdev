@@ -13,36 +13,36 @@ import AssoGif from '../../../../assets/img/AssoGif.gif';
 const useStyles = theme => ({
     root: {
         width: '100%',
-        height: 'auto',
-        display: 'flex',
-        justifyContent: 'center'
+        height: 'auto'
       },
       page: {
         width: '100%',
-        display: 'grid',
-        gridTemplateColumns: 'repeat(1, 1fr)',
-        gridGap: 10,
-        gridAutoRows: 'minmax(100px, auto)',
+        height: 'auto',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
       },
       banniere: {
+        gridColumn: 'auto / span 2',
         gridRow: 1,
+        paddingBottom: '25%'
       },
       webcontainer:{
-        width: '90%',
+        width: '80%',
         display: 'grid',
         gridTemplateColumns: 'repeat(2, 1fr)',
-        gridGap: 50,
+        gridGap: '5%',
         gridAutoRows: 'minmax(100px, auto)',
       },
       vitrine:{
         gridColumn: 1 ,
-        gridRow: 1,
+        gridRow: 2,
         color: 'white'
       },
       vitrineImg:{
         width:'100%',
         gridColumn: 2 ,
-        gridRow: 1,
+        gridRow: 2,
       },
       vitImgCont:{
         width: '80%',
@@ -52,21 +52,21 @@ const useStyles = theme => ({
       },
       ecommerce:{
         gridColumn: 2 ,
-        gridRow: 2,
+        gridRow: 3,
         color: 'white'
       },
       ecommerceImg:{
         gridColumn: 1 ,
-        gridRow: 2,
+        gridRow: 3,
       },
       institutionnel:{
         gridColumn: 1 ,
-        gridRow: 3,
+        gridRow: 4,
         color: 'white'
       },
       institutionnelImg:{
         gridColumn: 2 ,
-        gridRow: 3,
+        gridRow: 4,
       },
 
     }
@@ -81,10 +81,12 @@ class Web extends React.Component {
         return (
             <div className={classes.root}>
                 <div className={classes.page}>
-                    <div className={classes.banniere}>
-                        web
-                    </div>
                     <div className={classes.webcontainer}>
+                      <div className={classes.banniere}>
+                        <Typography variant="h2">
+                          Une Vitrine ?
+                        </Typography>
+                      </div>
                       <div className={classes.vitrine}>
                         <Typography variant="h4">
                           Une Vitrine ?
