@@ -18,7 +18,7 @@ import HTB from './assets/img/HTB.jpg'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: '100vw',
+    width: '100%',
     height: '100vh',
     display: 'grid',
     gridTemplateColumns: 'repeat(1, 1fr)',
