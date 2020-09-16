@@ -8,31 +8,75 @@ import { Typography } from '@material-ui/core';
 import WebGif from '../../../../assets/img/WebGif.gif';
 import EcomGif from '../../../../assets/img/EcomGif.gif';
 import AssoGif from '../../../../assets/img/AssoGif.gif';
+import Code from '../../../../assets/img/Code.svg';
+import Gra from '../../../../assets/img/Gra.svg';
+import Lap from '../../../../assets/img/Lap.svg';
 
 
 const useStyles = theme => ({
     root: {
         width: '100%',
-        height: 'auto'
+        height: '100vh'
       },
       page: {
         width: '100%',
-        height: 'auto',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
       },
       banniere: {
-        gridColumn: 'auto / span 2',
+        gridColumn: 1,
         gridRow: 1,
         paddingBottom: '25%'
       },
+      banniereMenu:{
+        width: '100%',
+        display: 'grid',
+        gridTemplateColumns: 'repeat(3, 1fr)',
+        gridGap: '5%',
+      },
+      creationWebcont:{
+        gridColumn: 1 ,
+      },
+      graphismecont:{
+        gridColumn: 2 ,
+      },
+      vbacont:{
+        gridColumn: 3 ,
+      },
+      cardsMenu: {
+        background:'#080C59',
+        width:'100%',
+        height: '100%',
+        color: 'white'
+      },
+      cardsIcons: {
+        width:'100%',
+        height: '30%'
+      },
+      iconsSize:{
+        width:'20%',
+        padding: 10,
+        backgroundColor: 'white',
+        borderRadius: 30,
+        border: 0,
+      },
+      cardsText: {
+        width:'100%',
+        height: '40%'
+      },
+      cardBtn: {
+        width:'100%',
+        height: '30%',
+        backgroundColor: '#A6127E'
+      },
       webcontainer:{
-        width: '80%',
+        width: '100%',
         display: 'grid',
         gridTemplateColumns: 'repeat(2, 1fr)',
         gridGap: '5%',
         gridAutoRows: 'minmax(100px, auto)',
+        backgroundColor: '#D9D9D9'
       },
       vitrine:{
         gridColumn: 1 ,
@@ -84,8 +128,55 @@ class Web extends React.Component {
                     <div className={classes.webcontainer}>
                       <div className={classes.banniere}>
                         <Typography variant="h2">
-                          Une Vitrine ?
+                          Creation Web
                         </Typography>
+                      </div>
+                      <div className={classes.banniereMenu}>
+                        <div className={classes.creationWebcont}>
+                          <div className={classes.cardsMenu}>
+                              <div className={classes.cardsIcons}>
+                                <img className={classes.iconsSize} src={Code} alt="logo"/>
+                              </div>
+                              <div className={classes.cardsText}>
+                                <Typography variant="h6">
+                                Conception <br/> Web
+                                </Typography>
+                              </div>
+                              <div className={classes.cardBtn}>
+
+                              </div>
+                          </div>
+                        </div>
+                        <div className={classes.graphismecont}>
+                          <div className={classes.cardsMenu}>
+                            <div className={classes.cardsIcons}>
+                              <img className={classes.iconsSize} src={Gra} alt="logo"/>
+                            </div>
+                            <div className={classes.cardsText}>
+                              <Typography variant="h6">
+                                Création<br/>Graphique
+                              </Typography>
+                            </div>
+                            <div className={classes.cardBtn}>
+                              
+                            </div>
+                          </div>
+                        </div>
+                        <div className={classes.vbacont}>
+                          <div className={classes.cardsMenu}>
+                              <div className={classes.cardsIcons}>
+                                <img className={classes.iconsSize} src={Lap} alt="logo"/>
+                              </div>
+                              <div className={classes.cardsText}>
+                                <Typography variant="h6">
+                                  Support<br/>Bureautique
+                                </Typography>
+                              </div>
+                              <div className={classes.cardBtn}>
+                                
+                              </div>
+                          </div>
+                        </div>
                       </div>
                       <div className={classes.vitrine}>
                         <Typography variant="h4">
@@ -117,7 +208,7 @@ class Web extends React.Component {
                         </Typography>
                       </div>
                       <div className={classes.institutionnelImg}>
-                      <img className={classes.vitImgCont} src={AssoGif}/>
+                        <img className={classes.vitImgCont} src={AssoGif}/>
                       </div>
                       <div className={classes.ecommerce}>
                       <Typography variant="h4">
