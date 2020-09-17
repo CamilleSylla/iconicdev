@@ -4,13 +4,14 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import { Typography } from '@material-ui/core';
 
+
+//components
+import CardsMenu from './Cards';
+
 //assets
 import WebGif from '../../../../assets/img/WebGif.gif';
 import EcomGif from '../../../../assets/img/EcomGif.gif';
 import AssoGif from '../../../../assets/img/AssoGif.gif';
-import Code from '../../../../assets/img/Code.svg';
-import Gra from '../../../../assets/img/Gra.svg';
-import Lap from '../../../../assets/img/Lap.svg';
 
 
 const useStyles = theme => ({
@@ -24,59 +25,19 @@ const useStyles = theme => ({
         justifyContent: 'center',
         alignItems: 'center',
       },
-      banniere: {
-        gridColumn: 1,
-        gridRow: 1,
-        paddingBottom: '25%'
-      },
-      banniereMenu:{
-        width: '100%',
-        display: 'grid',
-        gridTemplateColumns: 'repeat(3, 1fr)',
-        gridGap: '5%',
-      },
-      creationWebcont:{
-        gridColumn: 1 ,
-      },
-      graphismecont:{
-        gridColumn: 2 ,
-      },
-      vbacont:{
-        gridColumn: 3 ,
+      title: {
+        gridColumn: 1
       },
       cardsMenu: {
-        background:'#080C59',
-        width:'100%',
-        height: '100%',
-        color: 'white'
-      },
-      cardsIcons: {
-        width:'100%',
-        height: '30%'
-      },
-      iconsSize:{
-        width:'20%',
-        padding: 10,
-        backgroundColor: 'white',
-        borderRadius: 30,
-        border: 0,
-      },
-      cardsText: {
-        width:'100%',
-        height: '40%'
-      },
-      cardBtn: {
-        width:'100%',
-        height: '30%',
-        backgroundColor: '#A6127E'
+        gridColumn: 2
       },
       webcontainer:{
         width: '100%',
         display: 'grid',
         gridTemplateColumns: 'repeat(2, 1fr)',
-        gridGap: '5%',
         gridAutoRows: 'minmax(100px, auto)',
-        backgroundColor: '#D9D9D9'
+        backgroundColor: '#D9D9D9',
+        gridGap: '5%',
       },
       vitrine:{
         gridColumn: 1 ,
@@ -125,59 +86,14 @@ class Web extends React.Component {
         return (
             <div className={classes.root}>
                 <div className={classes.page}>
+                  
                     <div className={classes.webcontainer}>
-                      <div className={classes.banniere}>
+                      <div className={classes.title}>
                         <Typography variant="h2">
                           Creation Web
                         </Typography>
                       </div>
-                      <div className={classes.banniereMenu}>
-                        <div className={classes.creationWebcont}>
-                          <div className={classes.cardsMenu}>
-                              <div className={classes.cardsIcons}>
-                                <img className={classes.iconsSize} src={Code} alt="logo"/>
-                              </div>
-                              <div className={classes.cardsText}>
-                                <Typography variant="h6">
-                                Conception <br/> Web
-                                </Typography>
-                              </div>
-                              <div className={classes.cardBtn}>
-
-                              </div>
-                          </div>
-                        </div>
-                        <div className={classes.graphismecont}>
-                          <div className={classes.cardsMenu}>
-                            <div className={classes.cardsIcons}>
-                              <img className={classes.iconsSize} src={Gra} alt="logo"/>
-                            </div>
-                            <div className={classes.cardsText}>
-                              <Typography variant="h6">
-                                Création<br/>Graphique
-                              </Typography>
-                            </div>
-                            <div className={classes.cardBtn}>
-                              
-                            </div>
-                          </div>
-                        </div>
-                        <div className={classes.vbacont}>
-                          <div className={classes.cardsMenu}>
-                              <div className={classes.cardsIcons}>
-                                <img className={classes.iconsSize} src={Lap} alt="logo"/>
-                              </div>
-                              <div className={classes.cardsText}>
-                                <Typography variant="h6">
-                                  Support<br/>Bureautique
-                                </Typography>
-                              </div>
-                              <div className={classes.cardBtn}>
-                                
-                              </div>
-                          </div>
-                        </div>
-                      </div>
+                    <CardsMenu className={classes.cardsMenu}/>
                       <div className={classes.vitrine}>
                         <Typography variant="h4">
                           Une Vitrine ?
