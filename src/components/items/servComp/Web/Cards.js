@@ -3,6 +3,7 @@ import React from 'react';
 //matterial Ui
 import { withStyles } from '@material-ui/core/styles';
 import { Typography } from '@material-ui/core';
+import Button from '@material-ui/core/Button';
 
 //assets
 import Code from '../../../../assets/img/Code.svg';
@@ -76,6 +77,7 @@ class CardsMenu extends React.Component {
 
     render () {
         const {classes} = this.props;
+        console.log(this.props.onClick)
         return (
             <div className={classes.root}>
                       <div className={classes.banniereMenu}>
@@ -90,9 +92,9 @@ class CardsMenu extends React.Component {
                                 </Typography>
                               </div>
                               <div className={classes.cardBtn}>
-                                <Typography variant="p">
-                                  GO
-                                </Typography>
+                                <Button onClick={this.props.buttonClick}>
+                                    Default
+                                </Button>
                               </div>
                           </div>
                         </div>

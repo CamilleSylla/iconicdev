@@ -25,12 +25,6 @@ const useStyles = theme => ({
         justifyContent: 'center',
         alignItems: 'center',
       },
-      title: {
-        gridColumn: 1
-      },
-      cardsMenu: {
-        gridColumn: 2
-      },
       webcontainer:{
         width: '100%',
         display: 'grid',
@@ -41,13 +35,13 @@ const useStyles = theme => ({
       },
       vitrine:{
         gridColumn: 1 ,
-        gridRow: 2,
+        gridRow: 1,
         color: 'white'
       },
       vitrineImg:{
         width:'100%',
         gridColumn: 2 ,
-        gridRow: 2,
+        gridRow: 1,
       },
       vitImgCont:{
         width: '80%',
@@ -57,21 +51,21 @@ const useStyles = theme => ({
       },
       ecommerce:{
         gridColumn: 2 ,
-        gridRow: 3,
+        gridRow: 2,
         color: 'white'
       },
       ecommerceImg:{
         gridColumn: 1 ,
-        gridRow: 3,
+        gridRow: 2,
       },
       institutionnel:{
         gridColumn: 1 ,
-        gridRow: 4,
+        gridRow: 3,
         color: 'white'
       },
       institutionnelImg:{
         gridColumn: 2 ,
-        gridRow: 4,
+        gridRow: 3,
       },
 
     }
@@ -86,14 +80,7 @@ class Web extends React.Component {
         return (
             <div className={classes.root}>
                 <div className={classes.page}>
-                  
                     <div className={classes.webcontainer}>
-                      <div className={classes.title}>
-                        <Typography variant="h2">
-                          Creation Web
-                        </Typography>
-                      </div>
-                    <CardsMenu className={classes.cardsMenu}/>
                       <div className={classes.vitrine}>
                         <Typography variant="h4">
                           Une Vitrine ?
