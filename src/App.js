@@ -56,8 +56,7 @@ function App() {
   return (
     <div className={classes.root}>
       <div className={classes.layer}>
-      
-      <Main/>
+        <Main/>
       </div>
      
     </div>
