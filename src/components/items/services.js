@@ -25,8 +25,8 @@ const useStyles = theme => ({
     width: '100%',
     display: 'grid',
     gridTemplateColumns: 'repeat(2, 1fr)',
-    gridAutoRows: 'minmax(225px, auto)',
-    gridGap: '5%',
+    gridAutoRows: 'minmax(100px, auto)',
+    gridGap: '5%'
   },
   cards: {
     gridColumn: 2,
@@ -70,7 +70,7 @@ class Services extends React.Component {
 
     let services;
     if (this.state.toShow === 'Web') {
-      services = <Zoom><Web bttuonClick={this.pages.bind(this)} /></Zoom>
+      services = <Web bttuonClick={this.pages.bind(this)} />
     } else if (this.state.toShow === 'Identite') {
       services = <Identite />
     } else if (this.state.toShow === 'VBA') {
@@ -91,9 +91,9 @@ class Services extends React.Component {
                 Creation Graphique
                             </Typography>
               <Typography variant="subtitle1">
-                Lorem rvt trh htr htrh tr egrg
-                re gerr gegrgzzg zg v df vdvfd
-                dfvv  fdvf d
+                Tous le monde (ou presque) possède
+                un smartphone ou bien un ordinateur c'est pourquoi IconicDev
+                rendra votre site
                             </Typography>
             </div>
           </div>
