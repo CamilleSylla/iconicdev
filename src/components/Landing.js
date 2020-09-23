@@ -94,7 +94,7 @@ class Landing extends React.Component {
                         <div>
                             <Box display="flex" justifyContent="center" m={1} p={1} >
                                 <Box className={classes.imgdim}>
-                                    <Tilt className="Tilt br2" options={{ max: 100 }} >
+                                    <Tilt className="Tilt br2" options={{ max: 100, reverse: true }} >
                                         <img className="imglog" src={ID} alt="logo" />
                                     </Tilt>
                                 </Box>

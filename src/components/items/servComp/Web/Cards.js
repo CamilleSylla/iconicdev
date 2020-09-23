@@ -92,7 +92,7 @@ class CardsMenu extends React.Component {
                                 </Typography>
               </div>
               <div className={classes.cardBtn}>
-                <Button onClick={this.props.buttonClick('Web')} >
+                <Button onClick={this.props.toWeb} >
                   Default
                                 </Button>
               </div>
@@ -109,9 +109,9 @@ class CardsMenu extends React.Component {
                               </Typography>
               </div>
               <div className={classes.cardBtn}>
-                <Typography variant="p">
-                  GO
-                              </Typography>
+              <Button onClick={this.props.toIdentite} >
+                  Default
+                                </Button>
               </div>
             </div>
           </div>
@@ -126,9 +126,9 @@ class CardsMenu extends React.Component {
                                 </Typography>
               </div>
               <div className={classes.cardBtn}>
-                <Typography variant="p">
-                  GO
-                                </Typography>
+              <Button onClick={this.props.toVba} >
+                  Default
+                                </Button>
               </div>
             </div>
           </div>

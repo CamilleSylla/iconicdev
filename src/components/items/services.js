@@ -27,7 +27,7 @@ const useStyles = theme => ({
     gridTemplateColumns: 'repeat(2, 1fr)',
     gridAutoRows: 'minmax(100px, auto)',
     gridGap: '5%',
-    backgroundColor: 'rgba(33, 37, 79, 1)'
+    background: 'rgba(166, 18, 126, 0.1)',
   },
   cards: {
     gridColumn: 2,
@@ -43,7 +43,8 @@ const useStyles = theme => ({
     gridRow: 1,
     display: 'flex',
     justifyContent: 'center',
-    textAlign: 'left'
+    textAlign: 'left',
+    paddingBottom:'30%'
   },
   titleContainer: {
     width: '70%',
@@ -59,20 +60,23 @@ class Services extends React.Component {
   constructor() {
     super();
     this.state = {
-      toShow: 'VBA',
+      toShow: 'Web',
     }
   }
-  pages(event) {
-    if (this.state.toShow !== event) {
-      this.setState({toShow : event})
-    }
+  toWeb(event) {
+      this.setState({toShow : 'Web'})
   }
-
+  toIdentite(event) {
+    this.setState({toShow : 'Identite'})
+}
+  toVba(event) {
+  this.setState({toShow : 'VBA'})
+}
   render() {
 
     let services;
     if (this.state.toShow === 'Web') {
-      services = <Web bttuonClick={this.pages.bind(this)} />
+      services = <Web/>
     } else if (this.state.toShow === 'Identite') {
       services = <Identite />
     } else if (this.state.toShow === 'VBA') {
@@ -84,7 +88,10 @@ class Services extends React.Component {
       <div className={classes.root}>
         <div className={classes.pageGrid}>
           <CardsMenu className={classes.cards}
-            buttonClick={this.pages.bind(this)}
+            toWeb={this.toWeb.bind(this)}
+            toIdentite={this.toIdentite.bind(this)}
+            toVba={this.toVba.bind(this)}
+
           />
           <div className={classes.center}>
             <div className={classes.titleContainer}>
