@@ -88,7 +88,7 @@ class Services extends React.Component {
             <div className={classes.titleContainer}>
               <img className={classes.logo} src={ID} alt="logo" />
               <Typography variant="h4">
-                Creation Graphique
+                Conception Web
                             </Typography>
               <Typography variant="subtitle1">
                 Tous le monde (ou presque) possède
