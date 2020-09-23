@@ -10,6 +10,8 @@ import { Typography } from '@material-ui/core';
 import Website from '../../../../assets/img/Website.svg';
 import SEOISO from '../../../../assets/img/SEOISO.svg';
 import Vitrine from '../../../../assets/img/Vitrine.svg';
+import Ecom from '../../../../assets/img/Ecom.svg';
+import Puz from '../../../../assets/img/Puz.svg';
 
 
 const useStyles = theme => ({
@@ -197,7 +199,7 @@ class Web extends React.Component {
                 <div className={classes.seconde}>
                     <div className="container">
                         <a className="card1" href="#">
-                        <img src={Vitrine} className={classes.logW}/>
+                        <img src={Ecom} className={classes.logW}/>
                             <h3>E-commerce</h3>
                             <p className="small">
                                 Etendez vos possibilitées & augmentez votre CA et votre clientèle grasse
@@ -210,7 +212,7 @@ class Web extends React.Component {
                 <div className={classes.thired}>
                     <div className="container">
                         <a className="card1" href="#">
-                        <img src={Vitrine} className={classes.logW}/>
+                        <img src={Puz} className={classes.logW}/>
                             <h3>Site Instutionnel</h3>
                             <p className="small">
                                 Communiquez facilement sur vos evenements vos engagement vos projets
