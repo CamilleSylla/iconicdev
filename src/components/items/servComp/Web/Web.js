@@ -12,6 +12,7 @@ import SEOISO from '../../../../assets/img/SEOISO.svg';
 import Vitrine from '../../../../assets/img/Vitrine.svg';
 import Ecom from '../../../../assets/img/Ecom.svg';
 import Puz from '../../../../assets/img/Puz.svg';
+import servicesBG from '../../../../assets/img/servicesBG.png';
 
 
 const useStyles = theme => ({
@@ -24,29 +25,30 @@ const useStyles = theme => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'transparent'
+
   },
   center: {
     display: 'flex',
     justifyContent: 'center',
     width: '100%',
+
   },
   webcontainer: {
-    paddingTop: '50px',
-    paddingBottom: '50px',
     width: '100%',
     display: 'grid',
     gridTemplateColumns: 'repeat(6, 1fr)',
     gridAutoRows: 'minmax(100px, auto)',
-    backgroundColor: 'transparent',
+    backgroundImage: `url(${servicesBG})`,
+    backgroundSize: 'cover'
+
   },
   vitrine: {
     gridColumn: '1 /span 2',
     gridRow: 1,
+    paddingTop: 100,
     color: 'white',
     paddingTop: '50px',
-    backgroundColor: '#21254F',
-    borderBottom: '10px dotted #A6127E'
+    background: 'linear-gradient(180deg, rgba(166,18,126,0.7) 0%, rgba(8,12,89,0.7) 100%)',
   },
   vitrineTxt: {
     marginLeft: '15%',
@@ -58,7 +60,7 @@ const useStyles = theme => ({
     paddingTop: '50px',
     paddingBottom: '50px',
     width: '100%',
-    backgroundColor: '#A6127E',
+    background: 'linear-gradient(180deg, rgba(166,18,126,0.7) 0%, rgba(8,12,89,0.7) 100%)',
 
   },
   vitImgCont: {
@@ -69,9 +71,7 @@ const useStyles = theme => ({
     gridRow: 2,
     color: 'white',
     paddingTop: '50px',
-    backgroundColor: '#A6127E',
-    borderTop: '10px dotted #080C59',
-    borderBottom: '10px dotted #080C59',
+    background: 'linear-gradient(180deg, rgba(8,12,89,0.7) 0%, rgba(33,37,79,0.7) 100%)',
   },
   SeoImg: {
     gridColumn: '1 / span 4',
@@ -79,32 +79,31 @@ const useStyles = theme => ({
     paddingTop: '50px',
     paddingBottom: '100px',
     width: '100%',
-    backgroundColor: '#21254F',
-    borderBottom: '10px dotted #A6127E',
+    background: 'linear-gradient(180deg, rgba(8,12,89,0.7) 0%, rgba(33,37,79,0.7) 100%)',
   },
   first: {
     paddingTop: '50px',
     paddingBottom: '50px',
     gridColumn: '1 / span 2',
     gridRow: 3,
-    backgroundColor: '#21254F'
+    backgroundColor: 'rgba(33, 37, 79, 0.7)'
   },
   seconde: {
     paddingTop: '50px',
     paddingBottom: '50px',
     gridColumn: '3 / span 2',
     gridRow: 3,
-    backgroundColor: '#21254F'
+    backgroundColor: 'rgba(33, 37, 79, 0.7)'
   },
   thired: {
     paddingTop: '50px',
     paddingBottom: '50px',
     gridColumn: '5 / span 2',
     gridRow: 3,
-    backgroundColor: '#A6127E'
+    backgroundColor: 'rgba(33, 37, 79, 0.7)'
   },
   logW: {
-width: '20%'
+    width: '20%'
   },
   titre: {
     textAlign: 'justify',
@@ -182,46 +181,46 @@ class Web extends React.Component {
               </div>
 
               {/*Type de sites*/}
-                <div className={classes.first}>
-                  <div className="container">
-                    <a className="card1" href="#">
-                      <img src={Vitrine} className={classes.logW}/>
-                      <h3>Site Vitrine</h3>
-                      <p className="small">
-                        Idéale Pour promouvoir votre acitvité,
-                        présenter vos produits ou encore
+              <div className={classes.first}>
+                <div className="container">
+                  <a className="card1" >
+                    <img src={Vitrine} className={classes.logW} />
+                    <h3>Site Vitrine</h3>
+                    <p className="small">
+                      Idéale Pour promouvoir votre acitvité,
+                      présenter vos produits ou encore
                         presentez votre entreprise</p>
-                      <div className="go-corner" href="#">
-                      </div>
-                    </a>
-                  </div>
+                    <div className="go-corner" href="#">
+                    </div>
+                  </a>
                 </div>
-                <div className={classes.seconde}>
-                    <div className="container">
-                        <a className="card1" href="#">
-                        <img src={Ecom} className={classes.logW}/>
-                            <h3>E-commerce</h3>
-                            <p className="small">
-                                Etendez vos possibilitées & augmentez votre CA et votre clientèle grasse
+              </div>
+              <div className={classes.seconde}>
+                <div className="container">
+                  <a className="card1" >
+                    <img src={Ecom} className={classes.logW} />
+                    <h3>E-commerce</h3>
+                    <p className="small">
+                      Etendez vos possibilitées & augmentez votre CA et votre clientèle grasse
                                 a une boutique en ligne </p>
-                            <div className="go-corner" href="#">
-                            </div>
-                        </a>
+                    <div className="go-corner" href="#">
                     </div>
+                  </a>
                 </div>
-                <div className={classes.thired}>
-                    <div className="container">
-                        <a className="card1" href="#">
-                        <img src={Puz} className={classes.logW}/>
-                            <h3>Site Instutionnel</h3>
-                            <p className="small">
-                                Communiquez facilement sur vos evenements vos engagement vos projets
+              </div>
+              <div className={classes.thired}>
+                <div className="container">
+                  <a className="card1" >
+                    <img src={Puz} className={classes.logW} />
+                    <h3>Site Instutionnel</h3>
+                    <p className="small">
+                      Communiquez facilement sur vos evenements vos engagement vos projets
                                 a des fins non lucratives</p>
-                            <div className="go-corner" href="#">
-                            </div>
-                        </a>
+                    <div className="go-corner" href="#">
                     </div>
+                  </a>
                 </div>
+              </div>
             </div>
           </div>
         </div>

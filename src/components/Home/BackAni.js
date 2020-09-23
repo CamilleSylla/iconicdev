@@ -22,6 +22,7 @@ const useStyles = theme => ({
     width: '100%',
     display: "block",
     textAlign: 'center'
+    
   },
   imgdim: {
     width: "33%",

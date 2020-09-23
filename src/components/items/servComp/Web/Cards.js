@@ -92,7 +92,7 @@ class CardsMenu extends React.Component {
                                 </Typography>
               </div>
               <div className={classes.cardBtn}>
-                <Button onClick={this.props.buttonClick}>
+                <Button onClick={this.props.buttonClick('Web')} >
                   Default
                                 </Button>
               </div>

@@ -26,7 +26,8 @@ const useStyles = theme => ({
     display: 'grid',
     gridTemplateColumns: 'repeat(2, 1fr)',
     gridAutoRows: 'minmax(100px, auto)',
-    gridGap: '5%'
+    gridGap: '5%',
+    backgroundColor: 'rgba(33, 37, 79, 1)'
   },
   cards: {
     gridColumn: 2,
@@ -58,12 +59,13 @@ class Services extends React.Component {
   constructor() {
     super();
     this.state = {
-      toShow: 'Web',
+      toShow: 'VBA',
     }
   }
   pages(event) {
-    this.setState({ toShow: 'Identite' })
-    console.log(this.state)
+    if (this.state.toShow !== event) {
+      this.setState({toShow : event})
+    }
   }
 
   render() {
