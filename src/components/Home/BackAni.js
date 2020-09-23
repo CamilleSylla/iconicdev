@@ -1,6 +1,7 @@
 import React from 'react';
 
-//component
+// Rooter
+import { Link } from 'react-router-dom';
 
 //material ui
 import { withStyles } from '@material-ui/core/styles';
@@ -22,7 +23,7 @@ const useStyles = theme => ({
     width: '100%',
     display: "block",
     textAlign: 'center'
-    
+
   },
   imgdim: {
     width: "33%",
@@ -57,10 +58,11 @@ class Welcome extends React.Component {
             <Typography>La solution pour vos projets web</Typography>
           </Grid>
           <Grid>
-            <IconButton className={classes.btn} aria-label="delete"
-              onClick={this.props.buttonClick}>
-              <ArrowForwardIcon />
-            </IconButton>
+            <Link to='/IconicDev'>
+              <IconButton className={classes.btn} aria-label="delete">
+                <ArrowForwardIcon />
+              </IconButton>
+            </Link>
           </Grid>
         </Grid>
       </div>

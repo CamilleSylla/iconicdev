@@ -4,14 +4,14 @@ import React from 'react';
 import Welcome from './BackAni';
 import Landing from '../Landing';
 import Services from '../items/services';
-import Nav from '../Nav'
+import Nav from './Nav'
 //rooter
 import { BrowserRouter as Rooter, Route } from 'react-router-dom';
 
 //animation
 import Zoom from 'react-reveal/Zoom'
 
-class Main extends React.Component {
+class Manager extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -38,4 +38,4 @@ class Main extends React.Component {
     }
 }
 
-export default Main;
+export default Manager;

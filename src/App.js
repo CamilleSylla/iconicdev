@@ -8,9 +8,6 @@ import Main from './components/Home/Home';
 import { makeStyles } from '@material-ui/core/styles';
 
 
-//bg animation
-import Particles from 'react-particles-js';
-
 //assets
 import HTB from './assets/img/HTB.jpg'
 
