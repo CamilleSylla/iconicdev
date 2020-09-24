@@ -8,9 +8,6 @@ import Nav from '../Nav'
 //rooter
 import { BrowserRouter as Rooter, Route } from 'react-router-dom';
 
-//animation
-import Zoom from 'react-reveal/Zoom'
-
 class Main extends React.Component {
     constructor() {
         super();
@@ -27,7 +24,7 @@ class Main extends React.Component {
         return (
             <div>
                 <Rooter>
-                    <Nav/>
+                    <Nav className="navbar"/>
                     <Route path='/' exact component={Welcome}/>
                     <Route path='/IconicDev' exact component={Landing}/>
                     <Route path='/Services' exact component={Services}/>

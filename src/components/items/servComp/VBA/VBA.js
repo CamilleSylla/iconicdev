@@ -13,6 +13,8 @@ import Biff from '../../../../assets/img/Biff.svg';
 import Data from '../../../../assets/img/Data.svg';
 import Office from '../../../../assets/img/Office.jpg';
 
+//animation
+import Fade from 'react-reveal/Fade'
 
 const useStyles = theme => ({
   root: {
@@ -110,8 +112,8 @@ class VBA extends React.Component {
   render() {
     const { classes } = this.props;
     return (
-      <div className={classes.root}>
-        <div className={classes.page}>
+      <Fade bottom>
+<div className={classes.page}>
           <div className={classes.center} >
             <div className={classes.webcontainer}>
 
@@ -184,7 +186,9 @@ class VBA extends React.Component {
             </div>
           </div>
         </div>
-      </div>
+      </Fade>
+      
+        
     )
   }
 }

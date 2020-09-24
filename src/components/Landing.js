@@ -1,9 +1,5 @@
 import React from 'react';
 
-// Rooter
-import { Link } from 'react-router-dom';
-import { BrowserRouter as Rooter, Route } from 'react-router-dom';
-
 //material Ui
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';

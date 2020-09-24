@@ -14,6 +14,8 @@ import Ecom from '../../../../assets/img/Ecom.svg';
 import Puz from '../../../../assets/img/Puz.svg';
 import servicesBG from '../../../../assets/img/servicesBG.png';
 
+//animation
+import Fade from 'react-reveal/Fade'
 
 const useStyles = theme => ({
   root: {
@@ -126,7 +128,8 @@ class Web extends React.Component {
   render() {
     const { classes } = this.props;
     return (
-      <div className={classes.root}>
+      <Fade bottom>
+ <div className={classes.root}>
         <div className={classes.page}>
           <div className={classes.center} >
             <div className={classes.webcontainer}>
@@ -225,7 +228,10 @@ class Web extends React.Component {
           </div>
         </div>
       </div>
+      </Fade>
     )
+      
+     
   }
 }
 

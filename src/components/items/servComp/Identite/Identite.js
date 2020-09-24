@@ -14,6 +14,9 @@ import Card from '../../../../assets/img/Card.svg';
 import Art from '../../../../assets/img/Art.jpg';
 
 
+//animation
+import Fade from 'react-reveal/Fade'
+
 const useStyles = theme => ({
   root: {
     width: '100%',
@@ -110,7 +113,8 @@ class Identite extends React.Component {
   render() {
     const { classes } = this.props;
     return (
-      <div className={classes.root}>
+      <Fade bottom>
+<div className={classes.root}>
         <div className={classes.page}>
           <div className={classes.center} >
             <div className={classes.webcontainer}>
@@ -191,6 +195,8 @@ class Identite extends React.Component {
           </div>
         </div>
       </div>
+      </Fade>
+      
     )
   }
 }

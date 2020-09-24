@@ -18,12 +18,6 @@ import Typing from 'react-typing-animation';
 
 //assets
 import ID from '../assets/img/Idsvg.svg';
-import Code from '../assets/img/Code.svg';
-import SEO from '../assets/img/Seo.svg';
-import Gra from '../assets/img/Gra.svg';
-import Fly from '../assets/img/Fly.svg';
-import Lap from '../assets/img/Lap.svg';
-import Set from '../assets/img/Set.svg';
 
 const useStyles = theme => ({
     root: {

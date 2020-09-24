@@ -3,12 +3,13 @@ import React from 'react';
 //matterial Ui
 import { withStyles } from '@material-ui/core/styles';
 import { Typography } from '@material-ui/core';
-import Button from '@material-ui/core/Button';
+import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 
 //assets
 import Code from '../../../../assets/img/Code.svg';
 import Gra from '../../../../assets/img/Gra.svg';
 import Lap from '../../../../assets/img/Lap.svg';
+import AccessibilityNewIcon from '@material-ui/icons/AccessibilityNew';
 
 const useStyles = theme => ({
   root: {
@@ -39,11 +40,36 @@ const useStyles = theme => ({
   cardsMenu: {
     background: 'Transparent',
     width: '100%',
-    height: '100%',
+    height: '90%',
     color: 'white',
-    webkitBoxShadow: '0px 20px 30px 0px rgba(33, 35, 79, 1)',
-    mozBoxShadow: '0px 20px 30px 0px rgba(33, 35, 79, 1)',
-    boxShadow: '0px 20px 30px 0px rgba(33, 35, 79, 1)',
+    display: 'block',
+    textAlign: 'center',
+    borderBottomRightRadius: 70,
+    borderBottomLeftRadius: 70,
+    webkitTransition: 'all .7s ease',
+    mozTransition: 'all .7s ease',
+    oTransition: 'all .7s ease',
+    transition: 'all .7s ease',
+    '&:hover': {
+      width: '100%',
+      height: '120%',
+      color: 'white',
+      '& $arrow': {
+        borderRadius: 20,
+        backgroundColor: '#21254F',
+      }
+    },
+    
+  },
+  arrow: {
+    marginTop: '20%',
+    border: '1px solid white',
+    padding: 5,
+    borderRadius: 10,
+    webkitTransition: 'all .7s ease',
+    mozTransition: 'all .7s ease',
+    oTransition: 'all .7s ease',
+    transition: 'all .7s ease',
   },
   cardsIcons: {
     width: '100%',
@@ -56,26 +82,30 @@ const useStyles = theme => ({
     border: 0,
   },
   cardsText: {
+    marginTop: '20%',
     width: '100%',
     height: '45%'
   },
 
   cardBtn: {
-    width: '100%',
+    width: '50%',
     height: '25%',
     backgroundColor: 'transparent',
+    borderRadius: 50,
+    backgroundColor: 'pink',
+    textAlign: 'center'
   },
 
   //active cards
 
   cardsMenuActive: {
-    background: 'linear-gradient(180deg, transparent 0%, rgba(33,37,79,1) 20%)',
+    background: 'Transparent',
     width: '100%',
-    height: '100%',
+    height: '90%',
     color: 'white',
-    webkitBoxShadow: '0px 20px 30px 0px rgba(33, 35, 79, 1)',
-    mozBoxShadow: '0px 20px 30px 0px rgba(33, 35, 79, 1)',
-    boxShadow: '0px 20px 30px 0px rgba(33, 35, 79, 1)',
+    display: 'block',
+    textAlign: 'center',
+    borderTop: '2px solid white',
   },
 
   cardBtnActive: {
@@ -84,6 +114,9 @@ const useStyles = theme => ({
     backgroundColor: '#A6127E',
     borderBottom: '4mm ridge rgb(170, 50, 220, .6)',
   },
+  IdStatus: {
+    marginTop: '20%',
+  }
 }
 );
 
@@ -111,15 +144,13 @@ class CardsMenu extends React.Component {
             <Typography variant="body1">
               Conception <br /> Web
                       </Typography>
+            <AccessibilityNewIcon className={classes.IdStatus} />
           </div>
-          <div className={classes.cardBtnActive} onClick={this.props.toWeb}>
-            Default
-            </div>
         </div>
 
       Graph =
 
-        <div className={classes.cardsMenu}>
+        <div className={classes.cardsMenu} onClick={this.props.toIdentite}>
           <div className={classes.cardsIcons}>
             <img className={classes.iconsSize} src={Gra} alt="logo" />
           </div>
@@ -127,14 +158,12 @@ class CardsMenu extends React.Component {
             <Typography variant="body1">
               Création<br />Graphique
                     </Typography>
+            <ArrowDownwardIcon className={classes.arrow} />
           </div>
-          <div className={classes.cardBtn} onClick={this.props.toIdentite} >
-            Default
-        </div>
         </div>
 
 
-      VBA = <div className={classes.cardsMenu}>
+      VBA = <div className={classes.cardsMenu} onClick={this.props.toVba}>
         <div className={classes.cardsIcons}>
           <img className={classes.iconsSize} src={Lap} alt="logo" />
         </div>
@@ -142,16 +171,14 @@ class CardsMenu extends React.Component {
           <Typography variant="body1">
             Support<br />Bureautique
             </Typography>
-        </div>
-        <div className={classes.cardBtn} onClick={this.props.toVba}>
-          Default
+          <ArrowDownwardIcon className={classes.arrow} />
         </div>
       </div>
 
     } else if (this.props.Status.toShow === 'Identite') {
       Web =
 
-        <div className={classes.cardsMenu}>
+        <div className={classes.cardsMenu} onClick={this.props.toWeb}>
           <div className={classes.cardsIcons}>
             <img className={classes.iconsSize} src={Code} alt="logo" />
           </div>
@@ -159,10 +186,8 @@ class CardsMenu extends React.Component {
             <Typography variant="body1">
               Conception <br /> Web
                       </Typography>
+            <ArrowDownwardIcon className={classes.arrow} />
           </div>
-          <div className={classes.cardBtn} onClick={this.props.toWeb}>
-            Default
-            </div>
         </div>
 
       Graph =
@@ -175,14 +200,12 @@ class CardsMenu extends React.Component {
             <Typography variant="body1">
               Création<br />Graphique
                     </Typography>
+            <AccessibilityNewIcon className={classes.IdStatus} />
           </div>
-          <div className={classes.cardBtnActive} onClick={this.props.toIdentite} >
-            Default
-        </div>
         </div>
 
 
-      VBA = <div className={classes.cardsMenu}>
+      VBA = <div className={classes.cardsMenu} onClick={this.props.toVba}>
         <div className={classes.cardsIcons}>
           <img className={classes.iconsSize} src={Lap} alt="logo" />
         </div>
@@ -190,15 +213,13 @@ class CardsMenu extends React.Component {
           <Typography variant="body1">
             Support<br />Bureautique
             </Typography>
-        </div>
-        <div className={classes.cardBtn} onClick={this.props.toVba}>
-          Default
+          <ArrowDownwardIcon className={classes.arrow} />
         </div>
       </div>
     } else if (this.props.Status.toShow === 'VBA') {
       Web =
 
-        <div className={classes.cardsMenu}>
+        <div className={classes.cardsMenu} onClick={this.props.toWeb}>
           <div className={classes.cardsIcons}>
             <img className={classes.iconsSize} src={Code} alt="logo" />
           </div>
@@ -206,15 +227,13 @@ class CardsMenu extends React.Component {
             <Typography variant="body1">
               Conception <br /> Web
                       </Typography>
+            <ArrowDownwardIcon className={classes.arrow} />
           </div>
-          <div className={classes.cardBtn} onClick={this.props.toWeb}>
-            Default
-            </div>
         </div>
 
       Graph =
 
-        <div className={classes.cardsMenu}>
+        <div className={classes.cardsMenu} onClick={this.props.toIdentite}>
           <div className={classes.cardsIcons}>
             <img className={classes.iconsSize} src={Gra} alt="logo" />
           </div>
@@ -222,10 +241,8 @@ class CardsMenu extends React.Component {
             <Typography variant="body1">
               Création<br />Graphique
                     </Typography>
+            <ArrowDownwardIcon className={classes.arrow} />
           </div>
-          <div className={classes.cardBtn} onClick={this.props.toIdentite} >
-            Default
-        </div>
         </div>
 
 
@@ -237,9 +254,7 @@ class CardsMenu extends React.Component {
           <Typography variant="body1">
             Support<br />Bureautique
             </Typography>
-        </div>
-        <div className={classes.cardBtnActive} onClick={this.props.toVba}>
-          Default
+          <AccessibilityNewIcon className={classes.IdStatus} />
         </div>
       </div>
     }
