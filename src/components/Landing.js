@@ -29,8 +29,8 @@ import Set from '../assets/img/Set.svg';
 const useStyles = theme => ({
     root: {
         width: '100%',
-        display: "block",
-        textAlign: 'center'
+        textAlign: 'center',
+
     },
     imgdim: {
         width: '35%'

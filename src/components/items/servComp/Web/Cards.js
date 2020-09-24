@@ -63,7 +63,7 @@ const useStyles = theme => ({
   },
   arrow: {
     marginTop: '20%',
-    border: '1px solid white',
+    border: '2px solid white',
     padding: 5,
     borderRadius: 10,
     webkitTransition: 'all .7s ease',

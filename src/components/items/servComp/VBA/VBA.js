@@ -19,7 +19,6 @@ import Fade from 'react-reveal/Fade'
 const useStyles = theme => ({
   root: {
     width: '100%',
-    height: '100vh',
   },
   page: {
     width: '100%',

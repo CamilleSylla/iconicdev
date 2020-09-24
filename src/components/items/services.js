@@ -11,7 +11,7 @@ import VBA from './servComp/VBA/VBA';
 import CardsMenu from './servComp/Web/Cards';
 
 //animation
-import Zoom from 'react-reveal/Zoom'
+import Fade from 'react-reveal/Fade'
 import { Typography } from '@material-ui/core';
 
 //assets
@@ -44,7 +44,7 @@ const useStyles = theme => ({
     display: 'flex',
     justifyContent: 'center',
     textAlign: 'left',
-    paddingBottom:'30%'
+    paddingBottom: '30%'
   },
   titleContainer: {
     width: '70%',
@@ -64,19 +64,19 @@ class Services extends React.Component {
     }
   }
   toWeb(event) {
-      this.setState({toShow : 'Web'})
+    this.setState({ toShow: 'Web' })
   }
   toIdentite(event) {
-    this.setState({toShow : 'Identite'})
-}
+    this.setState({ toShow: 'Identite' })
+  }
   toVba(event) {
-  this.setState({toShow : 'VBA'})
-}
+    this.setState({ toShow: 'VBA' })
+  }
   render() {
 
     let services;
     if (this.state.toShow === 'Web') {
-      services = <Web/>
+      services = <Web />
     } else if (this.state.toShow === 'Identite') {
       services = <Identite />
     } else if (this.state.toShow === 'VBA') {
@@ -87,26 +87,29 @@ class Services extends React.Component {
     return (
       <div className={classes.root}>
         <div className={classes.pageGrid}>
-          <CardsMenu className={classes.cards}
-            toWeb={this.toWeb.bind(this)}
-            toIdentite={this.toIdentite.bind(this)}
-            toVba={this.toVba.bind(this)}
-            Status={this.state}
+          <Fade>
+            <CardsMenu className={classes.cards}
+              toWeb={this.toWeb.bind(this)}
+              toIdentite={this.toIdentite.bind(this)}
+              toVba={this.toVba.bind(this)}
+              Status={this.state}
 
-          />
-          <div className={classes.center}>
-            <div className={classes.titleContainer}>
-              <img className={classes.logo} src={ID} alt="logo" />
-              <Typography variant="h4">
-                Conception Web
+            />
+            <div className={classes.center}>
+              <div className={classes.titleContainer}>
+                <img className={classes.logo} src={ID} alt="logo" />
+                <Typography variant="h4">
+                  Conception Web
                             </Typography>
-              <Typography variant="subtitle1">
-                Tous le monde (ou presque) possède
-                un smartphone ou bien un ordinateur c'est pourquoi IconicDev
-                rendra votre site
+                <Typography variant="subtitle1">
+                  Tous le monde (ou presque) possède
+                  un smartphone ou bien un ordinateur c'est pourquoi IconicDev
+                  rendra votre site
                             </Typography>
+              </div>
             </div>
-          </div>
+          </Fade>
+
           <div className={classes.content}>
             {services}
           </div>
