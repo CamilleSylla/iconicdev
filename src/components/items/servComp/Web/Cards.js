@@ -9,7 +9,7 @@ import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import Code from '../../../../assets/img/Code.svg';
 import Gra from '../../../../assets/img/Gra.svg';
 import Lap from '../../../../assets/img/Lap.svg';
-import AccessibilityNewIcon from '@material-ui/icons/AccessibilityNew';
+import VisibilityIcon from '@material-ui/icons/Visibility';
 
 const useStyles = theme => ({
   root: {
@@ -144,7 +144,7 @@ class CardsMenu extends React.Component {
             <Typography variant="body1">
               Conception <br /> Web
                       </Typography>
-            <AccessibilityNewIcon className={classes.IdStatus} />
+            <VisibilityIcon className={classes.IdStatus} />
           </div>
         </div>
 
@@ -200,7 +200,7 @@ class CardsMenu extends React.Component {
             <Typography variant="body1">
               Création<br />Graphique
                     </Typography>
-            <AccessibilityNewIcon className={classes.IdStatus} />
+            <VisibilityIcon className={classes.IdStatus} />
           </div>
         </div>
 
@@ -254,7 +254,7 @@ class CardsMenu extends React.Component {
           <Typography variant="body1">
             Support<br />Bureautique
             </Typography>
-          <AccessibilityNewIcon className={classes.IdStatus} />
+          <VisibilityIcon className={classes.IdStatus} />
         </div>
       </div>
     }
