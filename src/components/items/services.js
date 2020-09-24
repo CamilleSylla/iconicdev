@@ -82,7 +82,7 @@ class Services extends React.Component {
     } else if (this.state.toShow === 'VBA') {
       services = <VBA />
     }
-
+    const CardsStatus = this.state.toShow
     const { classes } = this.props;
     return (
       <div className={classes.root}>
@@ -91,6 +91,7 @@ class Services extends React.Component {
             toWeb={this.toWeb.bind(this)}
             toIdentite={this.toIdentite.bind(this)}
             toVba={this.toVba.bind(this)}
+            Status={this.state}
 
           />
           <div className={classes.center}>

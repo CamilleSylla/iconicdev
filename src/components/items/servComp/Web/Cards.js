@@ -22,9 +22,10 @@ const useStyles = theme => ({
   banniereMenu: {
     width: '100%',
     display: 'grid',
-    gridTemplateColumns: 'repeat(3, 1fr)',
-    gridAutoRows: 'minmax(225px, auto)',
+    gridTemplateColumns: 'repeat(4, 1fr)',
+    gridAutoRows: 'minmax(300px, auto)',
     gridGap: '5%',
+    marginTop: 50,
   },
   creationWebcont: {
     gridColumn: 1,
@@ -36,101 +37,226 @@ const useStyles = theme => ({
     gridColumn: 3,
   },
   cardsMenu: {
-    background: '#080C59',
+    background: 'Transparent',
     width: '100%',
     height: '100%',
     color: 'white',
     webkitBoxShadow: '0px 20px 30px 0px rgba(33, 35, 79, 1)',
     mozBoxShadow: '0px 20px 30px 0px rgba(33, 35, 79, 1)',
     boxShadow: '0px 20px 30px 0px rgba(33, 35, 79, 1)',
-    borderBottomLeftRadius: 25,
-    borderBottomRightRadius: 25,
-
   },
   cardsIcons: {
     width: '100%',
-    height: '30%'
+    height: '30%',
   },
   iconsSize: {
+    marginTop: '30%',
     width: '20%',
     padding: 10,
-    backgroundColor: 'white',
-    borderRadius: 30,
     border: 0,
   },
   cardsText: {
     width: '100%',
     height: '45%'
   },
+
   cardBtn: {
+    width: '100%',
+    height: '25%',
+    backgroundColor: 'transparent',
+  },
+
+  //active cards
+
+  cardsMenuActive: {
+    background: 'linear-gradient(180deg, transparent 0%, rgba(33,37,79,1) 20%)',
+    width: '100%',
+    height: '100%',
+    color: 'white',
+    webkitBoxShadow: '0px 20px 30px 0px rgba(33, 35, 79, 1)',
+    mozBoxShadow: '0px 20px 30px 0px rgba(33, 35, 79, 1)',
+    boxShadow: '0px 20px 30px 0px rgba(33, 35, 79, 1)',
+  },
+
+  cardBtnActive: {
     width: '100%',
     height: '25%',
     backgroundColor: '#A6127E',
     borderBottom: '4mm ridge rgb(170, 50, 220, .6)',
-    borderBottomLeftRadius: 25,
-    borderBottomRightRadius: 25,
   },
 }
 );
 
 class CardsMenu extends React.Component {
 
+
+
   render() {
+
+
     const { classes } = this.props;
-    console.log(this.props.onClick)
+
+    let Web;
+    let Graph;
+    let VBA;
+
+    if (this.props.Status.toShow === 'Web') {
+      Web =
+
+        <div className={classes.cardsMenuActive}>
+          <div className={classes.cardsIcons}>
+            <img className={classes.iconsSize} src={Code} alt="logo" />
+          </div>
+          <div className={classes.cardsText}>
+            <Typography variant="body1">
+              Conception <br /> Web
+                      </Typography>
+          </div>
+          <div className={classes.cardBtnActive} onClick={this.props.toWeb}>
+            Default
+            </div>
+        </div>
+
+      Graph =
+
+        <div className={classes.cardsMenu}>
+          <div className={classes.cardsIcons}>
+            <img className={classes.iconsSize} src={Gra} alt="logo" />
+          </div>
+          <div className={classes.cardsText}>
+            <Typography variant="body1">
+              Création<br />Graphique
+                    </Typography>
+          </div>
+          <div className={classes.cardBtn} onClick={this.props.toIdentite} >
+            Default
+        </div>
+        </div>
+
+
+      VBA = <div className={classes.cardsMenu}>
+        <div className={classes.cardsIcons}>
+          <img className={classes.iconsSize} src={Lap} alt="logo" />
+        </div>
+        <div className={classes.cardsText}>
+          <Typography variant="body1">
+            Support<br />Bureautique
+            </Typography>
+        </div>
+        <div className={classes.cardBtn} onClick={this.props.toVba}>
+          Default
+        </div>
+      </div>
+
+    } else if (this.props.Status.toShow === 'Identite') {
+      Web =
+
+        <div className={classes.cardsMenu}>
+          <div className={classes.cardsIcons}>
+            <img className={classes.iconsSize} src={Code} alt="logo" />
+          </div>
+          <div className={classes.cardsText}>
+            <Typography variant="body1">
+              Conception <br /> Web
+                      </Typography>
+          </div>
+          <div className={classes.cardBtn} onClick={this.props.toWeb}>
+            Default
+            </div>
+        </div>
+
+      Graph =
+
+        <div className={classes.cardsMenuActive}>
+          <div className={classes.cardsIcons}>
+            <img className={classes.iconsSize} src={Gra} alt="logo" />
+          </div>
+          <div className={classes.cardsText}>
+            <Typography variant="body1">
+              Création<br />Graphique
+                    </Typography>
+          </div>
+          <div className={classes.cardBtnActive} onClick={this.props.toIdentite} >
+            Default
+        </div>
+        </div>
+
+
+      VBA = <div className={classes.cardsMenu}>
+        <div className={classes.cardsIcons}>
+          <img className={classes.iconsSize} src={Lap} alt="logo" />
+        </div>
+        <div className={classes.cardsText}>
+          <Typography variant="body1">
+            Support<br />Bureautique
+            </Typography>
+        </div>
+        <div className={classes.cardBtn} onClick={this.props.toVba}>
+          Default
+        </div>
+      </div>
+    } else if (this.props.Status.toShow === 'VBA') {
+      Web =
+
+        <div className={classes.cardsMenu}>
+          <div className={classes.cardsIcons}>
+            <img className={classes.iconsSize} src={Code} alt="logo" />
+          </div>
+          <div className={classes.cardsText}>
+            <Typography variant="body1">
+              Conception <br /> Web
+                      </Typography>
+          </div>
+          <div className={classes.cardBtn} onClick={this.props.toWeb}>
+            Default
+            </div>
+        </div>
+
+      Graph =
+
+        <div className={classes.cardsMenu}>
+          <div className={classes.cardsIcons}>
+            <img className={classes.iconsSize} src={Gra} alt="logo" />
+          </div>
+          <div className={classes.cardsText}>
+            <Typography variant="body1">
+              Création<br />Graphique
+                    </Typography>
+          </div>
+          <div className={classes.cardBtn} onClick={this.props.toIdentite} >
+            Default
+        </div>
+        </div>
+
+
+      VBA = <div className={classes.cardsMenuActive}>
+        <div className={classes.cardsIcons}>
+          <img className={classes.iconsSize} src={Lap} alt="logo" />
+        </div>
+        <div className={classes.cardsText}>
+          <Typography variant="body1">
+            Support<br />Bureautique
+            </Typography>
+        </div>
+        <div className={classes.cardBtnActive} onClick={this.props.toVba}>
+          Default
+        </div>
+      </div>
+    }
+
+
+
     return (
       <div className={classes.root}>
         <div className={classes.banniereMenu}>
           <div className={classes.creationWebcont}>
-            <div className={classes.cardsMenu}>
-              <div className={classes.cardsIcons}>
-                <img className={classes.iconsSize} src={Code} alt="logo" />
-              </div>
-              <div className={classes.cardsText}>
-                <Typography variant="h6">
-                  Conception <br /> Web
-                                </Typography>
-              </div>
-              <div className={classes.cardBtn}>
-                <Button onClick={this.props.toWeb} >
-                  Default
-                                </Button>
-              </div>
-            </div>
+            {Web}
           </div>
           <div className={classes.graphismecont}>
-            <div className={classes.cardsMenu}>
-              <div className={classes.cardsIcons}>
-                <img className={classes.iconsSize} src={Gra} alt="logo" />
-              </div>
-              <div className={classes.cardsText}>
-                <Typography variant="h6">
-                  Création<br />Graphique
-                              </Typography>
-              </div>
-              <div className={classes.cardBtn}>
-              <Button onClick={this.props.toIdentite} >
-                  Default
-                                </Button>
-              </div>
-            </div>
+            {Graph}
           </div>
           <div className={classes.vbacont}>
-            <div className={classes.cardsMenu}>
-              <div className={classes.cardsIcons}>
-                <img className={classes.iconsSize} src={Lap} alt="logo" />
-              </div>
-              <div className={classes.cardsText}>
-                <Typography variant="h6">
-                  Support<br />Bureautique
-                                </Typography>
-              </div>
-              <div className={classes.cardBtn}>
-              <Button onClick={this.props.toVba} >
-                  Default
-                                </Button>
-              </div>
-            </div>
+            {VBA}
           </div>
         </div>
       </div>
