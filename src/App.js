@@ -47,7 +47,6 @@ function App() {
       <div className={classes.layer}>
         <Main/>
       </div>
-      <Footer className={classes.footer}/>
     </div>
   );
 }

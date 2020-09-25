@@ -31,7 +31,7 @@ class Main extends React.Component {
                     <Route path='/IconicDev' exact component={Landing}/>
                     <Route path='/Services' exact component={Services}/>
                     
-      <Footer/>
+                <Footer/>
                 </Rooter>
             </div>
         )
