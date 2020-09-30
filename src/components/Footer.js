@@ -5,6 +5,9 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import { Typography } from '@material-ui/core';
 
+// Rooter
+import { Link } from 'react-router-dom';
+
 
 //assets
 import LocationOnIcon from '@material-ui/icons/LocationOn';
@@ -18,19 +21,20 @@ import ID from '../assets/img/Idsvg.svg'
 const useStyles = theme => ({
     root: {
         width: '100%',
-        backgroundColor: '#838383',
+        backgroundColor: '#373737',
         display: 'grid',
-        
+
     },
     contact: {
         gridRow: 1,
         width: '100%',
-        backgroundColor: 'red',
+        color: 'white',
+        backgroundColor: '#515151',
         display: 'grid',
         gridTemplateColumns: 'repeat(10, 1fr)',
         [theme.breakpoints.down('md')]: {
             gridTemplateColumns: 'repeat(1, 1fr)',
-          },
+        },
     },
     txt: {
         gridColumn: '2/ span 4',
@@ -38,7 +42,7 @@ const useStyles = theme => ({
         [theme.breakpoints.down('md')]: {
             gridColumn: '1',
             gridRow: '1'
-          },
+        },
     },
     btn: {
         width: '100%',
@@ -46,25 +50,42 @@ const useStyles = theme => ({
         [theme.breakpoints.down('sm')]: {
             gridColumn: '1',
             gridRow: '2'
-          },
+        },
     },
     navCont: {
         gridRow: 2,
         display: 'grid',
-        gridTemplateColumns: 'repeat(5, 1fr)',
+        gridTemplateColumns: 'repeat(3, 1fr)',
         color: 'white',
         paddingTop: 50,
         paddingBottom: 50,
+        [theme.breakpoints.down('md')]: {
+            gridTemplateColumns: 'repeat(1, 1fr)',
+        },
     },
-    //logo
+    //Logo
     logo: {
-        gridColumn: '2'
+        gridColumn: '1',
+        [theme.breakpoints.down('md')]: {
+            gridColumn: '1',
+            gridRow: '1'
+        },
+    },
+    id: {
+        width: '50%',
+        [theme.breakpoints.down('md')]: {
+            width: '50%'
+        },
     },
 
     //Infos Utiles
     about: {
-        gridColumn: '3',
+        gridColumn: '2',
         display: 'block',
+        [theme.breakpoints.down('md')]: {
+            gridColumn: '1',
+            gridRow: '2'
+        },
     },
     contentWidth: {
         marginLeft: '10%',
@@ -74,14 +95,17 @@ const useStyles = theme => ({
         display: 'flex'
     },
     icons: {
-        textAlign: 'right',
         marginTop: 10
     },
 
     //Plan du site
     plan: {
-        gridColumn: '4',
+        gridColumn: '3',
         display: 'block',
+        [theme.breakpoints.down('md')]: {
+            gridColumn: '1',
+            gridRow: '3'
+        },
     },
 }
 );
@@ -104,8 +128,8 @@ class Footer extends React.Component {
                 <div className={classes.navCont}>
 
                     <div className={classes.logo}>
-                        <img src={ID} style={{ width: '70%' }} />
-                        <Typography>
+                        <img src={ID} className={classes.id} />
+                        <Typography variant='h5'>
                             Make you bigger
                         </Typography>
                     </div>

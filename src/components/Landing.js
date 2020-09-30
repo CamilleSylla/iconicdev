@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 
 //component
 import Iconic from './items/iconic';
-import Nav from './Nav'
+import Particles from 'react-particles-js'
 
 //animation
 import Fade from 'react-reveal/Fade'
@@ -32,15 +32,19 @@ const useStyles = theme => ({
         textAlign: 'center',
 
     },
-    imgdim: {
-        width: '35%'
-    },
     bienvenueContainer: {
         width: "100%",
-        height: 600,
+        display: 'grid',
+        gridTemplateColumns: 'repeat(4, 1fr)',
+        gridAutoRows: 'minmax(100px, auto)',
         backgroundColor: 'Transparent',
     },
+    imgdim: {
+        width: '35%',
+        gridColumn: 2, 
+    },
     bienvenueBox: {
+        gridColumn: 3, 
         width: '35%',
         marginLeft: '5%',
         textAlign: 'left',
@@ -53,6 +57,7 @@ const useStyles = theme => ({
     itemContainer: {
         width: '100%',
         display: 'inline-flex',
+        gridColumn: 4, 
 
     },
     itemContainer2: {
@@ -76,6 +81,10 @@ const useStyles = theme => ({
     itemFont: {
 
     },
+    particles: {
+        position: 'absolute !important',
+        width: '100%'
+    }
 }
 );
 
@@ -85,6 +94,58 @@ class Landing extends React.Component {
         const { classes } = this.props
         return (
             <Fade right>
+                <Particles className={classes.particles}
+        params={{
+          "particles": {
+            "number": {
+              "value": 250,
+              "density": {
+                "enable": false
+              }
+            },
+            "size": {
+              "value": 6,
+              "random": true,
+              "anim": {
+                "speed": 4,
+                "size_min": 0.3
+              }
+            },
+            "line_linked": {
+              "enable": false
+            },
+            "move": {
+              "random": true,
+              "speed": 2,
+              "direction": "top",
+              "out_mode": "out"
+            }
+          },
+          "interactivity": {
+            "events": {
+              "onhover": {
+                "enable": true,
+                "mode": "bubble"
+              },
+              "onclick": {
+                "enable": true,
+                "mode": "repulse"
+              }
+            },
+            "modes": {
+              "bubble": {
+                "distance": 250,
+                "duration": 2,
+                "size": 0,
+                "opacity": 0
+              },
+              "repulse": {
+                "distance": 400,
+                "duration": 4
+              }
+            }
+          }
+        }} />
                 <Grid container justify="center" className={classes.root}>
                     <Grid className={classes.bienvenueContainer}>
                         <div>

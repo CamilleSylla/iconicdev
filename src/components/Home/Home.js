@@ -5,7 +5,6 @@ import Welcome from './BackAni';
 import Landing from '../Landing';
 import Services from '../items/services';
 import Nav from '../Nav'
-import Footer from '../Footer'
 
 //rooter
 import { BrowserRouter as Rooter, Route } from 'react-router-dom';
