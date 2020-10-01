@@ -15,16 +15,20 @@ const useStyles = theme => ({
     root: {
         width: '100%',
         height: 'auto',
-      },
-      grids: {
+    },
+    grids: {
         width: '80%',
         display: 'grid',
         gridTemplateColumns: 'repeat(2, 1fr)',
         gridGap: 50,
         gridAutoRows: 'minmax(100px, auto)',
-      },
-      imgContainer: {
-        gridColumn: 1 ,
+        [theme.breakpoints.down('md')]: {
+            gridTemplateColumns: 'repeat(1, 1fr)',
+            gridAutoRows: 'minmax(250px, auto)',
+        },
+    },
+    imgContainer: {
+        gridColumn: 1,
         gridRow: 1,
         opacity: 0.2,
         webkitTransition: 'all 1s ease',
@@ -33,58 +37,66 @@ const useStyles = theme => ({
         transition: 'all 1s ease',
         '&:hover': {
             opacity: 1
-          }
-      },
-      
-      domaineBox: {
+        },
+        [theme.breakpoints.down('md')]: {
+            gridColumn: 1,
+            gridRow: 1,
+        },
+    },
+
+    domaineBox: {
         gridColumn: 2,
         gridRow: 1,
         textAlign: 'left',
         color: 'white',
         textAlign: 'justify',
+        [theme.breakpoints.down('md')]: {
+            gridColumn: 1,
+            gridRow: 2,
+        },
     },
-    }
-  );
+}
+);
 
-  const Mission = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed ex augue. Sed sed tellus elit. Donec nec velit quis lectus tincidunt vehicula. Praesent eu quam ullamcorper, interdum libero eu, porttitor nisi. Aliquam tempor id sapien vitae interdum. Vivamus aliquet gravida semper. Nulla nunc ligula, tristique at fermentum vel, rutrum eget lectus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse commodo dui sit amet sagittis semper. Donec tincidunt nibh ac odio rutrum luctus. Mauris eget condimentum odio. Cras sodales malesuada erat, et condimentum augue pretium at. ';
+const Mission = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed ex augue. Sed sed tellus elit. Donec nec velit quis lectus tincidunt vehicula. Praesent eu quam ullamcorper, interdum libero eu, porttitor nisi. Aliquam tempor id sapien vitae interdum. Vivamus aliquet gravida semper. Nulla nunc ligula, tristique at fermentum vel, rutrum eget lectus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse commodo dui sit amet sagittis semper. Donec tincidunt nibh ac odio rutrum luctus. Mauris eget condimentum odio. Cras sodales malesuada erat, et condimentum augue pretium at. ';
 
 class First extends React.Component {
 
-    render () {
-        const {classes} = this.props;
+    render() {
+        const { classes } = this.props;
         const imgSize = {
             width: '100%',
             height: '100%'
         };
-         return (
+        return (
             <Grid className={classes.root} container justify="center">
-         <div className={classes.grids}>
-                <Grid className={classes.imgContainer} container justify="center">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src={Keyboard} alt="Computer" style={imgSize}/>
-                            </div>
-                            <div class="flip-card-back">
-                            <img src={Code} alt="Tab" style={imgSize}/>
+                <div className={classes.grids}>
+                    <Grid className={classes.imgContainer} container justify="center">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src={Keyboard} alt="Computer" style={imgSize} />
+                                </div>
+                                <div class="flip-card-back">
+                                    <img src={Code} alt="Tab" style={imgSize} />
+                                </div>
                             </div>
                         </div>
-                    </div> 
-                </Grid>
-                <Grid className={classes.domaineBox}>
-                            <Typography variant="h4">
-                                Marquez le web de votre empreinte
+                    </Grid>
+                    <Grid className={classes.domaineBox}>
+                        <Typography variant="h4">
+                            Marquez le web de votre empreinte
                             </Typography>
-                            <Typography variant="body2">
+                        <Typography variant="body2">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh odio, dignissim ut pulvinar non, pretium in neque. Curabitur eget fermentum diam. Nullam ut vestibulum urna. Phasellus egestas quis turpis quis dapibus. Maecenas nunc orci, scelerisque id feugiat vitae, commodo id velit. Nam tincidunt gravida pretium. Duis porta tristique augue, a facilisis lorem rhoncus vel. Aliquam libero nisl, convallis eget volutpat non, porttitor eu sem. Praesent sed ipsum justo. Curabitur rhoncus nisi nulla, nec dictum justo rhoncus sagittis. Phasellus at malesuada elit, id sollicitudin mauris. Integer non nunc sapien. Donec lacinia vestibulum massa eu imperdiet.
 
-Etiam erat tortor, mattis vel lacinia imperdiet, eleifend eget turpis. Cras congue ultricies faucibus. Cras venenatis purus ut accumsan convallis. Cras commodo, dolor suscipit vulputate volutpat, eros tortor vulputate ante, sed tempus magna diam sit amet neque. Praesent suscipit, mi ac laoreet placerat, elit ligula elementum diam, at mollis arcu nisi sed tortor. In eu maximus diam. Maecenas et fringilla odio. Aliquam sed lacinia mi. Praesent luctus et sem sit amet ornare. Mauris sed sodales sem. Vivamus mollis quis massa sit amet molestie. 
+                            Etiam erat tortor, mattis vel lacinia imperdiet, eleifend eget turpis. Cras congue ultricies faucibus. Cras venenatis purus ut accumsan convallis. Cras commodo, dolor suscipit vulputate volutpat, eros tortor vulputate ante, sed tempus magna diam sit amet neque. Praesent suscipit, mi ac laoreet placerat, elit ligula elementum diam, at mollis arcu nisi sed tortor. In eu maximus diam. Maecenas et fringilla odio. Aliquam sed lacinia mi. Praesent luctus et sem sit amet ornare. Mauris sed sodales sem. Vivamus mollis quis massa sit amet molestie.
                             </Typography>
-                </Grid>
-            </div>
-                
+                    </Grid>
+                </div>
+
             </Grid>
-         )
+        )
     }
 }
 

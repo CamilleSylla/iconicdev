@@ -23,6 +23,9 @@ const useStyles = theme => ({
         backgroundImage: `url(${Cerf})`,
         backgroundSize: 'cover',
         backgroundRepeat:'no-repeat',
+        [theme.breakpoints.down('md')]: {
+            backgroundPosition: 'center'
+        },
         
       },
     layer: {
@@ -39,6 +42,10 @@ const useStyles = theme => ({
         gridTemplateColumns: 'repeat(2, 1fr)',
         gridGap: 50,
         gridAutoRows: 'minmax(100px, auto)',
+        [theme.breakpoints.down('md')]: {
+            gridTemplateColumns: 'repeat(1, 1fr)',
+            gridAutoRows: 'minmax(250px, auto)',
+        },
       },
       imgContainer: {
         gridColumn: 2 ,
@@ -50,7 +57,11 @@ const useStyles = theme => ({
         transition: 'all 1s ease',
         '&:hover': {
             opacity: 1
-          }
+          },
+          [theme.breakpoints.down('md')]: {
+            gridColumn: 1,
+            gridRow: 1,
+        },
       },
       
       domaineBox: {
@@ -59,6 +70,10 @@ const useStyles = theme => ({
         textAlign: 'justify',
         gridColumn: 1,
         gridRow: 1,
+        [theme.breakpoints.down('md')]: {
+            gridColumn: 1,
+            gridRow: 2,
+        },
     },
     }
   );
