@@ -29,60 +29,124 @@ const useStyles = theme => ({
   root: {
     width: '100%',
     height: 'auto',
+    color: 'white'
   },
 
   items2: {
     marginTop: '5%',
-    display: 'block'
   },
   items: {
     marginTop: '5%',
     display: 'grid',
-    gridTemplateColumns: 'repeat(10, 1fr)',
+    gridTemplateColumns: 'repeat(12, 1fr)',
     gridGap: 10,
     gridAutoRows: 'minmax(100px, auto)',
     color: 'white',
     fontSize: 50,
+    [theme.breakpoints.down('md')]: {
+      gridTemplateColumns: 'repeat(4, 1fr)',
+      gridAutoRows: 'minmax(100px, auto)',
+  },
   },
   html: {
-    gridColumn: 1,
-    gridRow: 1,
-  },
-  css: {
+    width: '150%',
     gridColumn: 2,
     gridRow: 1,
+    [theme.breakpoints.down('md')]: {
+      gridColumn: 1,
+      gridRow: 1,
+      width: '100%',
+  },
+  },
+  css: {
+    width: '150%',
+    gridColumn: 3,
+    gridRow: 2,
+    [theme.breakpoints.down('md')]: {
+      gridColumn: 2,
+      gridRow: 1,
+      width: '100%',
+  },
   },
   reactjs: {
-    gridColumn: 3,
-    gridRow: 1,
-  },
-  node: {
+    width: '150%',
     gridColumn: 4,
     gridRow: 1,
+    [theme.breakpoints.down('md')]: {
+      gridColumn: 3,
+      gridRow: 1,
+      width: '100%',
+  },
+  },
+  node: {
+    width: '150%',
+    gridColumn: 5,
+    gridRow: 2,
+    [theme.breakpoints.down('md')]: {
+      gridColumn: 4,
+      gridRow: 1,
+      width: '100%',
+  },
   },
   js: {
-    gridColumn: 5,
-    gridRow: 1,
-  },
-  pgsql: {
+    width: '150%',
     gridColumn: 6,
     gridRow: 1,
+    [theme.breakpoints.down('md')]: {
+      gridColumn: 1,
+      gridRow: 2,
+      width: '100%',
+  },
+  },
+  pgsql: {
+    width: '150%',
+    gridColumn: 7,
+    gridRow: 2,
+    [theme.breakpoints.down('md')]: {
+      gridColumn: 2,
+      gridRow: 2,
+      width: '100%',
+  },
   },
   wp: {
-    gridColumn: 7,
-    gridRow: 1,
-  },
-  vba: {
+    width: '150%',
     gridColumn: 8,
     gridRow: 1,
+    [theme.breakpoints.down('md')]: {
+      gridColumn: 3,
+      gridRow: 2,
+      width: '100%',
+  },
+  },
+  vba: {
+    width: '150%',
+    gridColumn: 9,
+    gridRow: 2,
+    [theme.breakpoints.down('md')]: {
+      gridColumn: 4,
+      gridRow: 2,
+      width: '100%',
+  },
   },
   adobe: {
-    gridColumn: 9,
-    gridRow: 1,
-  },
-  git: {
+    width: '150%',
     gridColumn: 10,
     gridRow: 1,
+    [theme.breakpoints.down('md')]: {
+      gridColumn: 2,
+      gridRow: 3,
+      width: '100%',
+  },
+  },
+  git: {
+    width: '150%',
+    gridColumn: 11,
+    gridRow: 2,
+    [theme.breakpoints.down('md')]: {
+      gridColumn: 3,
+      gridRow: 3,
+      width: '100%',
+  },
   },
 }
 );
@@ -102,54 +166,54 @@ class Tech extends React.Component {
         </Grid>
         <Grid className={classes.items}>
           <Fade delay={800}>
-            <Box className={classes.html}>
+            <div className={classes.html}>
               <img className='imgLogo' src={Html} alt='' />
-            </Box>
+            </div>
           </Fade>
           <Fade delay={900}>
-            <Box className={classes.css}>
+            <div className={classes.css}>
               <img className='imgLogo' src={Css} alt='' />
-            </Box>
+            </div>
           </Fade>
           <Fade delay={1000}>
-            <Box className={classes.reactjs}>
+            <div className={classes.reactjs}>
               <img className='imgLogo' src={ReactJS} alt='' />
-            </Box>
+            </div>
           </Fade>
           <Fade delay={1100}>
-            <Box className={classes.node}>
+            <div className={classes.node}>
               <img className='imgLogo' src={Node} alt='' />
-            </Box>
+            </div>
           </Fade>
           <Fade delay={1200}>
-            <Box className={classes.js}>
+            <div className={classes.js}>
               <img className='imgLogo' src={JS} alt='' />
-            </Box>
+            </div>
           </Fade>
           <Fade delay={1300}>
-            <Box className={classes.pgsql}>
+            <div className={classes.pgsql}>
               <img className='imgLogo' src={Pgsql} alt='' />
-            </Box>
+            </div>
           </Fade>
           <Fade delay={1400}>
-            <Box className={classes.wp}>
+            <div className={classes.wp}>
               <img className='imgLogo' src={WP} alt='' />
-            </Box>
+            </div>
           </Fade>
           <Fade delay={1500}>
-            <Box className={classes.vba}>
+            <div className={classes.vba}>
               <img className='imgLogo' src={VBA} alt='' />
-            </Box>
+            </div>
           </Fade>
           <Fade delay={1600}>
-            <Box className={classes.adobe}>
+            <div className={classes.adobe}>
               <img className='imgLogo' src={Adobe} alt='' />
-            </Box>
+            </div>
           </Fade>
           <Fade delay={1700}>
-            <Box className={classes.git}>
+            <div className={classes.git}>
               <img className='imgLogo' src={Github} alt='' />
-            </Box>
+            </div>
           </Fade>
         </Grid>
       </Grid>

@@ -19,18 +19,34 @@ const useStyles = theme => ({
         gridAutoRows: 'minmax(100px, auto)',
         color: 'white',
         fontSize: 50,
+        [theme.breakpoints.down('md')]: {
+          gridTemplateColumns: 'repeat(1, 1fr)',
+          gridAutoRows: 'minmax(150px, auto)',
+      },
       },
       one: {
         gridColumn: 1 ,
         gridRow: 1,
+        [theme.breakpoints.down('md')]: {
+          gridColumn: 1,
+          gridRow: 1,
+      },
       },
       two:{
         gridColumn: 2 ,
         gridRow: 1,
+        [theme.breakpoints.down('md')]: {
+          gridColumn: 1,
+          gridRow: 2,
+      },
       },
       three:{
         gridColumn: 3 ,
         gridRow: 1,
+        [theme.breakpoints.down('md')]: {
+          gridColumn: 1,
+          gridRow: 3,
+      },
       },
     }
   );

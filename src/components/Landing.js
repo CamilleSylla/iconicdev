@@ -169,9 +169,6 @@ const useStyles = theme => ({
     particles: {
         position: 'absolute !important',
         width: '100%',
-        [theme.breakpoints.down('md')]: {
-            height: '3000px',
-        },
     }
 }
 );
