@@ -35,55 +35,143 @@ const useStyles = theme => ({
     bienvenueContainer: {
         width: "100%",
         display: 'grid',
-        gridTemplateColumns: 'repeat(4, 1fr)',
+        gridTemplateColumns: 'repeat(2, 1fr)',
         gridAutoRows: 'minmax(100px, auto)',
         backgroundColor: 'Transparent',
+        [theme.breakpoints.down('md')]: {
+            gridTemplateColumns: 'repeat(1, 1fr)',
+        },
     },
-    imgdim: {
-        width: '35%',
-        gridColumn: 2, 
+    imgGrid: {
+        width: '100%',
+        gridColumn: '1 / span 2',
+        gridRow: 1,
+
+    },
+    center: {
+        display: 'flex',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        width: '25%',
+        [theme.breakpoints.down('md')]: {
+            width: '80%'
+        },
     },
     bienvenueBox: {
-        gridColumn: 3, 
-        width: '35%',
-        marginLeft: '5%',
-        textAlign: 'left',
-        color: 'white',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
+        gridColumn: 2,
+        gridRow: '2 / span 2',
         textAlign: 'justify',
+        color: 'white',
+        position: 'relative',
+        [theme.breakpoints.down('md')]: {
+            gridRow: 2,
+            gridColumn: 1,
+            textAlign: 'center',
+            position: 'static',
+            marginBottom :'15%'
+        },
+        
+    },
+    element: {
+        position: 'absolute',
+        top: '50%',
+        transform: 'translateY(-50%)',
+        marginRight: '20%',
+        [theme.breakpoints.down('md')]: {
+            position: 'static',
+            top: '0%',
+            transform: 'translateY(0%)',
+            marginRight: '10%',
+            marginLeft: '10%'
+        },
+        
     },
     itemContainer: {
+        gridColumn: 1,
+        gridRow: '2 / span 2',
+        display: ' grid',
         width: '100%',
-        display: 'inline-flex',
-        gridColumn: 4, 
+        gridTemplateColumns: 'repeat(7, 1fr)',
+        gridAutoRows: 'minmax(100px, auto)',
+        gridGap: '5em',
+        backgroundColor: 'Transparent',
+        [theme.breakpoints.down('md')]: {
+            gridRow: 3,
+            gridTemplateColumns: 'repeat(2, 1fr)',
+            gridRowGap: '50px',
+            gridColumnGap: '0px',
+        },
 
     },
-    itemContainer2: {
+    site: {
         width: '100%',
-        display: 'inline-flex',
-        marginTop: '2%',
+        gridColumn: 3,
+        [theme.breakpoints.down('md')]: {
+            gridRow: 1,
+            gridColumn: 1,
+        },
     },
-    itemBox: {
-        width: '20%',
-        display: 'inline-flex',
-        textAlign: 'left',
-        marginRight: '2.5%',
-        marginLeft: '2.5%',
+    graph: {
+        width: '100%',
+        gridColumn: 4,
+        [theme.breakpoints.down('md')]: {
+            gridRow: 1,
+            gridColumn: 2,
+        },
+    },
+    bureau: {
+        width: '100%',
+        gridColumn: 5,
+        [theme.breakpoints.down('md')]: {
+            gridRow: 2,
+            gridColumn: 1,
+        },
+    },
+    perf: {
+        width: '100%',
+        gridColumn: 3,
+        gridRow: 2,
+        [theme.breakpoints.down('md')]: {
+            gridRow: 2,
+            gridColumn: 2,
+        },
+    },
+    comm: {
+        width: '100%',
+        gridColumn: 4,
+        gridRow: 2,
+        [theme.breakpoints.down('md')]: {
+            gridRow: 3,
+            gridColumn: 1,
+        },
+    },
+    acc: {
+        width: '100%',
+        gridColumn: 5,
+        gridRow: 2,
+        [theme.breakpoints.down('md')]: {
+            gridRow: 3,
+            gridColumn: 2,
+        },
+    },
+    itemcont: {
+        width: '100%',
         color: 'white',
+
     },
     itemImg: {
-        width: '15%',
+        width: '50%',
         height: 'auto',
-        marginRight: '10%',
-    },
-    itemFont: {
-
+        [theme.breakpoints.down('md')]: {
+            width: '25%'
+        },
     },
     particles: {
         position: 'absolute !important',
-        width: '100%'
+        width: '100%',
+        [theme.breakpoints.down('md')]: {
+            height: '3000px',
+        },
     }
 }
 );
@@ -95,176 +183,155 @@ class Landing extends React.Component {
         return (
             <Fade right>
                 <Particles className={classes.particles}
-        params={{
-          "particles": {
-            "number": {
-              "value": 250,
-              "density": {
-                "enable": false
-              }
-            },
-            "size": {
-              "value": 6,
-              "random": true,
-              "anim": {
-                "speed": 4,
-                "size_min": 0.3
-              }
-            },
-            "line_linked": {
-              "enable": false
-            },
-            "move": {
-              "random": true,
-              "speed": 2,
-              "direction": "top",
-              "out_mode": "out"
-            }
-          },
-          "interactivity": {
-            "events": {
-              "onhover": {
-                "enable": true,
-                "mode": "bubble"
-              },
-              "onclick": {
-                "enable": true,
-                "mode": "repulse"
-              }
-            },
-            "modes": {
-              "bubble": {
-                "distance": 250,
-                "duration": 2,
-                "size": 0,
-                "opacity": 0
-              },
-              "repulse": {
-                "distance": 400,
-                "duration": 4
-              }
-            }
-          }
-        }} />
+                    params={{
+                        "particles": {
+                            "number": {
+                                "value": 250,
+                                "density": {
+                                    "enable": false
+                                }
+                            },
+                            "size": {
+                                "value": 6,
+                                "random": true,
+                                "anim": {
+                                    "speed": 4,
+                                    "size_min": 0.3
+                                }
+                            },
+                            "line_linked": {
+                                "enable": false
+                            },
+                            "move": {
+                                "random": true,
+                                "speed": 2,
+                                "direction": "top",
+                                "out_mode": "out"
+                            }
+                        },
+                        "interactivity": {
+                            "events": {
+                                "onhover": {
+                                    "enable": true,
+                                    "mode": "bubble"
+                                },
+                                "onclick": {
+                                    "enable": true,
+                                    "mode": "repulse"
+                                }
+                            },
+                            "modes": {
+                                "bubble": {
+                                    "distance": 250,
+                                    "duration": 2,
+                                    "size": 0,
+                                    "opacity": 0
+                                },
+                                "repulse": {
+                                    "distance": 400,
+                                    "duration": 4
+                                }
+                            }
+                        }
+                    }} />
                 <Grid container justify="center" className={classes.root}>
                     <Grid className={classes.bienvenueContainer}>
-                        <div>
-                            <Box display="flex" justifyContent="center" m={1} p={1} >
-                                <Box className={classes.imgdim}>
-                                    <Tilt className="Tilt br2" options={{ max: 100, reverse: true }} >
-                                        <img className="imglog" src={ID} alt="logo" />
-                                    </Tilt>
-                                </Box>
-                                <Box className={classes.bienvenueBox}>
-                                    <Typography variant="h6">
-                                        IconicDev
-                                    </Typography>
-                                    <Typography variant="h2">
-                                        Bienvenue
-                                    </Typography>
-                                    <Typography variant="body2">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit convallis efficitur.
-                                        Donec bibendum massa ac sem faucibus,
-                                        vitae ultricies magna sagittis.
-                                        In suscipit volutpat rutrum.
-                                    </Typography>
-                                </Box>
-                            </Box>
+                        <div className={classes.imgGrid}>
+                            <Tilt className="Tilt br2" options={{ max: 100, reverse: true }} >
+                                <img src={ID} alt="logo" className={classes.center} />
+                            </Tilt>
                         </div>
-                        <div>
-                            <Grid className={classes.itemContainer} container justify="center">
-                                <Grid className={classes.itemBox}>
-                                    <img className={classes.itemImg} src={Code} alt='' />
-                                    <Box>
-                                        <Typography style={{ fontSize: 10 }}>
-                                            Developpement Web
-                                        </Typography>
-                                        <Typography style={{ fontSize: 20 }}>
-                                            Site Internet
-                                        </Typography>
-                                        <Typography style={{ fontSize: 12 }}>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit convallis efficitur.
-                                        </Typography>
-                                    </Box>
-                                </Grid>
-                                <Grid className={classes.itemBox}>
-                                    <img className={classes.itemImg} src={Gra} alt='' />
-                                    <Box>
-                                        <Typography style={{ fontSize: 10 }}>
-                                            Image de marque
-                                        </Typography>
-                                        <Typography style={{ fontSize: 20 }}>
-                                            Conception Graphique
-                                        </Typography>
-                                        <Typography style={{ fontSize: 12 }}>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit convallis efficitur.
-                                        </Typography>
-                                    </Box>
-                                </Grid>
-                                <Grid className={classes.itemBox}>
-                                    <img className={classes.itemImg} src={Lap} alt='' />
-                                    <Box>
-                                        <Typography style={{ fontSize: 10 }}>
-                                            Soutien
-                                        </Typography>
-                                        <Typography style={{ fontSize: 20 }}>
-                                            Bureautique
-                                        </Typography>
-                                        <Typography style={{ fontSize: 12 }}>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit convallis efficitur.
-                                        </Typography>
-                                    </Box>
-                                </Grid>
 
-                                <Grid className={classes.itemContainer2} container justify="center">
-                                    <Grid className={classes.itemBox}>
-                                        <img className={classes.itemImg} src={SEO} alt='' />
-                                        <Box className={classes.itemFont}>
-                                            <Typography style={{ fontSize: 10 }}>
-                                                Optimisation
-                                            </Typography>
-                                            <Typography style={{ fontSize: 20 }}>
-                                                Performances
-                                            </Typography>
-                                            <Typography style={{ fontSize: 12 }}>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit convallis efficitur.
-                                            </Typography>
-                                        </Box>
-                                    </Grid>
-                                    <Grid className={classes.itemBox}>
-                                        <img className={classes.itemImg} src={Fly} alt='' />
-                                        <Box>
-                                            <Typography style={{ fontSize: 10 }}>
-                                                Support graphique
-                                            </Typography>
-                                            <Typography style={{ fontSize: 20 }}>
-                                                Communication
-                                            </Typography>
-                                            <Typography style={{ fontSize: 12 }}>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit convallis efficitur.
-                                            </Typography>
-                                        </Box>
-                                    </Grid>
-                                    <Grid className={classes.itemBox}>
-                                        <img className={classes.itemImg} src={Set} alt='' />
-                                        <Box>
-                                            <Typography style={{ fontSize: 10 }}>
-                                                Maintenance
-                                            </Typography>
-                                            <Typography style={{ fontSize: 20 }}>
-                                                Accompagnement
-                                            </Typography>
-                                            <Typography style={{ fontSize: 12 }}>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit convallis efficitur.
-                                            </Typography>
-                                        </Box>
-                                    </Grid>
-                                </Grid>
-                            </Grid>
-                            <Grid>
+                        <Box className={classes.bienvenueBox}>
+                            <div className={classes.element}>
+                                <Typography variant="h6">
+                                    MAKE YOU BIGGER
+                                    </Typography>
+                                <Typography variant="h2">
+                                    Bienvenue
+                                    </Typography>
+                                <Typography variant="body2">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit convallis efficitur.
+                                    Donec bibendum massa ac sem faucibus,
+                                    vitae ultricies magna sagittis.
+                                    In suscipit volutpat rutrum.
+                                    </Typography>
+                            </div>
 
+                        </Box>
+                        <Grid className={classes.itemContainer} >
+                            <Grid className={classes.site} container justify="center">
+                                <img className={classes.itemImg} src={Code} alt='' />
+                                <Box className={classes.itemcont}>
+                                    <Typography style={{ fontSize: 10 }}>
+                                        Developpement Web
+                                        </Typography>
+                                    <Typography style={{ fontSize: 20 }}>
+                                        Site Internet
+                                        </Typography>
+                                </Box>
                             </Grid>
-                        </div>
+                            <Grid className={classes.graph} container justify="center">
+                                <img className={classes.itemImg} src={Gra} alt='' />
+                                <Box className={classes.itemcont}>
+                                    <Typography style={{ fontSize: 10 }}>
+                                        Image de marque
+                                        </Typography>
+                                    <Typography style={{ fontSize: 20 }}>
+                                        Conception Graphique
+                                        </Typography>
+                                </Box>
+                            </Grid>
+                            <Grid className={classes.bureau} container justify="center">
+                                <img className={classes.itemImg} src={Lap} alt='' />
+                                <Box className={classes.itemcont}>
+                                    <Typography style={{ fontSize: 10 }}>
+                                        Soutien
+                                        </Typography>
+                                    <Typography style={{ fontSize: 20 }}>
+                                        Bureautique
+                                        </Typography>
+                                </Box>
+                            </Grid>
+
+
+                            <Grid className={classes.perf} container justify="center">
+                                <img className={classes.itemImg} src={SEO} alt='' />
+                                <Box className={classes.itemcont}>
+                                    <Typography style={{ fontSize: 10 }}>
+                                        Optimisation
+                                            </Typography>
+                                    <Typography style={{ fontSize: 20 }}>
+                                        Performances
+                                            </Typography>
+                                </Box>
+                            </Grid>
+                            <Grid className={classes.comm} container justify="center">
+                                <img className={classes.itemImg} src={Fly} alt='' />
+                                <Box className={classes.itemcont}>
+                                    <Typography style={{ fontSize: 10 }}>
+                                        Support graphique
+                                            </Typography>
+                                    <Typography style={{ fontSize: 20 }}>
+                                        Communication
+                                            </Typography>
+                                </Box>
+                            </Grid>
+                            <Grid className={classes.acc} container justify="center">
+                                <img className={classes.itemImg} src={Set} alt='' />
+                                <Box className={classes.itemcont}>
+                                    <Typography style={{ fontSize: 10 }}>
+                                        Maintenance
+                                            </Typography>
+                                    <Typography style={{ fontSize: 20 }}>
+                                        Accompagnement
+                                            </Typography>
+                                </Box>
+                            </Grid>
+                        </Grid>
+                        <Grid>
+
+                        </Grid>
 
                     </Grid>
                     <Grid>
