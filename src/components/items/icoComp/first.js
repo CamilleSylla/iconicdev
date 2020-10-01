@@ -55,7 +55,12 @@ const useStyles = theme => ({
         textAlign: 'justify',
         border: ' 2px solid white',
         boxShadow: '30px 30px 0px 0px #21254F',
+        webkitTransition: 'all 1s ease',
+        mozTransition: 'all 1s ease',
+        oTransition: 'all 1s ease',
+        transition: 'all 1s ease',
         '&:hover': {
+            boxShadow: '50px 50px 0px 0px #21254F',
             '& $title': {
                 WebkitTextFillColor: 'transparent',
                 textShadow: '0px -20px #A6127E, 0px 20px #21254F;',
@@ -66,6 +71,9 @@ const useStyles = theme => ({
             gridColumn: 1,
             gridRow: 1,
             boxShadow: '20px 20px 0px 0px #21254F',
+            '&:hover': {
+                boxShadow: '20px 20px 0px 0px #21254F',
+            }
         },
     },
     title: {
