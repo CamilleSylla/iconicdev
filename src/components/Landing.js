@@ -68,9 +68,53 @@ const useStyles = theme => ({
             gridColumn: 1,
             textAlign: 'center',
             position: 'static',
-            marginBottom :'15%'
+            marginBottom: '15%'
         },
-        
+
+    },
+    slogan: {
+        letterSpacing: ' 0.4em',
+        fontSize: 20,
+        color: '#21254F',
+        WebkitTextStroke: '2px',
+        WebkitTextStrokeColor: '#21254F',
+        webkitTransition: 'all 0.5s ease',
+        mozTransition: 'all 0.5s ease',
+        oTransition: 'all 0.5s ease',
+        transition: 'all 0.5s ease',
+        '&:hover': {
+            textShadow: '-20px -20px white, 20px 20px #A6127E;',
+        },
+        [theme.breakpoints.down('md')]: {
+            fontSize: 15,
+            WebkitTextStroke: '2px',
+            '&:hover': {
+                textShadow: '0px -20px white, 0px 20px #A6127E;',
+            },
+        },
+    },
+    bienvenueTitle: {
+        letterSpacing: ' 0.1em',
+        fontSize: 80,
+        WebkitTextFillColor: 'transparent',
+        WebkitTextStroke: '2px',
+        WebkitTextStrokeColor: 'white',
+        textShadow: '7px 7px #ff1f8f, 14px 14px #21254F;',
+        webkitTransition: 'all 0.5s ease',
+        mozTransition: 'all 0.5s ease',
+        oTransition: 'all 0.5s ease',
+        transition: 'all 0.5s ease',
+        '&:hover': {
+            textShadow: '-20px -20px #A6127E, 20px 20px #21254F;',
+        },
+        [theme.breakpoints.down('md')]: {
+            fontSize: 50,
+            WebkitTextStroke: '2px',
+            textShadow: '0px 7px #ff1f8f, 0px 14px #21254F;',
+            '&:hover': {
+                textShadow: '0px -20px #A6127E, 0px 20px #21254F;',
+            },
+        },
     },
     element: {
         position: 'absolute',
@@ -84,7 +128,7 @@ const useStyles = theme => ({
             marginRight: '10%',
             marginLeft: '10%'
         },
-        
+
     },
     itemContainer: {
         gridColumn: 1,
@@ -93,7 +137,7 @@ const useStyles = theme => ({
         width: '100%',
         gridTemplateColumns: 'repeat(7, 1fr)',
         gridAutoRows: 'minmax(100px, auto)',
-        gridGap: '5em',
+        gridGap: '2em',
         backgroundColor: 'Transparent',
         [theme.breakpoints.down('md')]: {
             gridRow: 3,
@@ -106,6 +150,17 @@ const useStyles = theme => ({
     site: {
         width: '100%',
         gridColumn: 3,
+        padding: 10,
+        webkitTransition: 'all .3s ease',
+        mozTransition: 'all .3s ease',
+        oTransition: 'all .3s ease',
+        transition: 'all .3s ease',
+        border: '3px solid transparent',
+        '&:hover': {
+            color: 'white',
+            boxShadow: '10px 10px 0px 0px #21254F',
+            border: '3px solid white',
+        },
         [theme.breakpoints.down('md')]: {
             gridRow: 1,
             gridColumn: 1,
@@ -114,14 +169,41 @@ const useStyles = theme => ({
     graph: {
         width: '100%',
         gridColumn: 4,
+        padding: 10,
+        webkitTransition: 'all .3s ease',
+        mozTransition: 'all .3s ease',
+        oTransition: 'all .3s ease',
+        transition: 'all .3s ease',
+        border: '3px solid transparent',
+        '&:hover': {
+            color: 'white',
+            boxShadow: '10px 10px 0px 0px #21254F',
+            border: '3px solid white',
+        },
         [theme.breakpoints.down('md')]: {
             gridRow: 1,
             gridColumn: 2,
+            '&:hover': {
+                color: 'white',
+                boxShadow: '-10px 10px 0px 0px #21254F',
+                border: '3px solid white',
+            },
         },
     },
     bureau: {
         width: '100%',
         gridColumn: 5,
+        padding: 10,
+        webkitTransition: 'all .3s ease',
+        mozTransition: 'all .3s ease',
+        oTransition: 'all .3s ease',
+        transition: 'all .3s ease',
+        border: '3px solid transparent',
+        '&:hover': {
+            color: 'white',
+            boxShadow: '10px 10px 0px 0px #21254F',
+            border: '3px solid white',
+        },
         [theme.breakpoints.down('md')]: {
             gridRow: 2,
             gridColumn: 1,
@@ -131,15 +213,42 @@ const useStyles = theme => ({
         width: '100%',
         gridColumn: 3,
         gridRow: 2,
+        padding: 10,
+        webkitTransition: 'all .3s ease',
+        mozTransition: 'all .3s ease',
+        oTransition: 'all .3s ease',
+        transition: 'all .3s ease',
+        border: '3px solid transparent',
+        '&:hover': {
+            color: 'white',
+            boxShadow: '10px 10px 0px 0px #21254F',
+            border: '3px solid white',
+        },
         [theme.breakpoints.down('md')]: {
             gridRow: 2,
             gridColumn: 2,
+            '&:hover': {
+                color: 'white',
+                boxShadow: '-10px 10px 0px 0px #21254F',
+                border: '3px solid white',
+            },
         },
     },
     comm: {
         width: '100%',
         gridColumn: 4,
         gridRow: 2,
+        padding: 10,
+        webkitTransition: 'all .3s ease',
+        mozTransition: 'all .3s ease',
+        oTransition: 'all .3s ease',
+        transition: 'all .3s ease',
+        border: '3px solid transparent',
+        '&:hover': {
+            color: 'white',
+            boxShadow: '10px 10px 0px 0px #21254F',
+            border: '3px solid white',
+        },
         [theme.breakpoints.down('md')]: {
             gridRow: 3,
             gridColumn: 1,
@@ -149,9 +258,25 @@ const useStyles = theme => ({
         width: '100%',
         gridColumn: 5,
         gridRow: 2,
+        padding: 10,
+        webkitTransition: 'all .3s ease',
+        mozTransition: 'all .3s ease',
+        oTransition: 'all .3s ease',
+        transition: 'all .3s ease',
+        border: '3px solid transparent',
+        '&:hover': {
+            color: 'white',
+            boxShadow: '10px 10px 0px 0px #21254F',
+            border: '3px solid white',
+        },
         [theme.breakpoints.down('md')]: {
             gridRow: 3,
             gridColumn: 2,
+            '&:hover': {
+                color: 'white',
+                boxShadow: '-10px 10px 0px 0px #21254F',
+                border: '3px solid white',
+            },
         },
     },
     itemcont: {
@@ -160,10 +285,30 @@ const useStyles = theme => ({
 
     },
     itemImg: {
-        width: '50%',
+        width: '40%',
         height: 'auto',
         [theme.breakpoints.down('md')]: {
             width: '25%'
+        },
+    },
+    itemTitle: {
+        letterSpacing: ' 0.1em',
+        fontSize: 15,
+        textTransform: 'uppercase',
+        fontWeight: 'bold',
+        color: 'white',
+        webkitTransition: 'all 0.5s ease',
+        mozTransition: 'all 0.5s ease',
+        oTransition: 'all 0.5s ease',
+        transition: 'all 0.5s ease',
+        '&:hover': {
+            textShadow: '0px 8px #A6127E',
+        },
+        [theme.breakpoints.down('md')]: {
+            fontSize: 15,
+            '&:hover': {
+                textShadow: '0px 10px #A6127E;',
+            },
         },
     },
     particles: {
@@ -241,17 +386,17 @@ class Landing extends React.Component {
 
                         <Box className={classes.bienvenueBox}>
                             <div className={classes.element}>
-                                <Typography variant="h6">
+                                <p className={classes.slogan}>
                                     MAKE YOU BIGGER
-                                    </Typography>
-                                <Typography variant="h2">
+                                    </p>
+                                <span className={classes.bienvenueTitle}>
                                     Bienvenue
-                                    </Typography>
-                                <Typography variant="body2">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit convallis efficitur.
-                                    Donec bibendum massa ac sem faucibus,
-                                    vitae ultricies magna sagittis.
-                                    In suscipit volutpat rutrum.
+                                    </span>
+                                <Typography variant="body2" style={{ marginTop: '20px' }}>
+                                    Ce faire une place sur internet est une tache
+                                    technique, complexe et difficile. IconicDev
+                                    vous propose ses services afin de vous accompagner
+                                    dans votre strategie digital.
                                     </Typography>
                             </div>
 
@@ -260,34 +405,34 @@ class Landing extends React.Component {
                             <Grid className={classes.site} container justify="center">
                                 <img className={classes.itemImg} src={Code} alt='' />
                                 <Box className={classes.itemcont}>
-                                    <Typography style={{ fontSize: 10 }}>
+                                    <Typography style={{ fontSize: 10, marginTop :'10px' }}>
                                         Developpement Web
                                         </Typography>
-                                    <Typography style={{ fontSize: 20 }}>
+                                    <p className={classes.itemTitle} >
                                         Site Internet
-                                        </Typography>
+                                        </p>
                                 </Box>
                             </Grid>
                             <Grid className={classes.graph} container justify="center">
                                 <img className={classes.itemImg} src={Gra} alt='' />
                                 <Box className={classes.itemcont}>
-                                    <Typography style={{ fontSize: 10 }}>
+                                    <Typography style={{ fontSize: 10, marginTop :'10px' }}>
                                         Image de marque
                                         </Typography>
-                                    <Typography style={{ fontSize: 20 }}>
-                                        Conception Graphique
-                                        </Typography>
+                                    <p className={classes.itemTitle} >
+                                        Graphisme
+                                        </p>
                                 </Box>
                             </Grid>
                             <Grid className={classes.bureau} container justify="center">
                                 <img className={classes.itemImg} src={Lap} alt='' />
                                 <Box className={classes.itemcont}>
-                                    <Typography style={{ fontSize: 10 }}>
+                                    <Typography style={{ fontSize: 10, marginTop :'10px' }}>
                                         Soutien
                                         </Typography>
-                                    <Typography style={{ fontSize: 20 }}>
+                                    <p className={classes.itemTitle} >
                                         Bureautique
-                                        </Typography>
+                                        </p>
                                 </Box>
                             </Grid>
 
@@ -295,34 +440,34 @@ class Landing extends React.Component {
                             <Grid className={classes.perf} container justify="center">
                                 <img className={classes.itemImg} src={SEO} alt='' />
                                 <Box className={classes.itemcont}>
-                                    <Typography style={{ fontSize: 10 }}>
+                                    <Typography style={{ fontSize: 10, marginTop :'10px' }}>
                                         Optimisation
                                             </Typography>
-                                    <Typography style={{ fontSize: 20 }}>
+                                    <p className={classes.itemTitle} >
                                         Performances
-                                            </Typography>
+                                            </p>
                                 </Box>
                             </Grid>
                             <Grid className={classes.comm} container justify="center">
                                 <img className={classes.itemImg} src={Fly} alt='' />
                                 <Box className={classes.itemcont}>
-                                    <Typography style={{ fontSize: 10 }}>
+                                    <Typography style={{ fontSize: 10, marginTop :'10px' }}>
                                         Support graphique
                                             </Typography>
-                                    <Typography style={{ fontSize: 20 }}>
+                                    <p className={classes.itemTitle} >
                                         Communication
-                                            </Typography>
+                                            </p>
                                 </Box>
                             </Grid>
                             <Grid className={classes.acc} container justify="center">
                                 <img className={classes.itemImg} src={Set} alt='' />
                                 <Box className={classes.itemcont}>
-                                    <Typography style={{ fontSize: 10 }}>
+                                    <Typography style={{ fontSize: 10, marginTop :'10px' }}>
                                         Maintenance
                                             </Typography>
-                                    <Typography style={{ fontSize: 20 }}>
+                                    <p className={classes.itemTitle} >
                                         Accompagnement
-                                            </Typography>
+                                            </p>
                                 </Box>
                             </Grid>
                         </Grid>
