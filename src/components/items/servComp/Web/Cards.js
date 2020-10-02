@@ -21,6 +21,7 @@ const useStyles = theme => ({
     paddingBottom: '25%',
     [theme.breakpoints.down('md')]: {
       paddingBottom: '0%',
+      justifyContent: 'center'
     },
   },
   banniereMenu: {
@@ -29,45 +30,61 @@ const useStyles = theme => ({
     gridTemplateColumns: 'repeat(4, 1fr)',
     gridAutoRows: 'minmax(300px, auto)',
     gridGap: '5%',
-    marginTop: 50,
     [theme.breakpoints.down('md')]: {
       gridTemplateColumns: 'repeat(3, 1fr)',
       gridAutoRows: 'minmax(auto, auto)',
-      gridGap: '0%',
+      gridColumnGap: 'auto',
     },
   },
   creationWebcont: {
     gridColumn: 1,
+    [theme.breakpoints.down('md')]: {
+      gridColumn: 1,
+      gridRow: 1,
+    },
   },
   graphismecont: {
     gridColumn: 2,
+    [theme.breakpoints.down('md')]: {
+      gridColumn: 2,
+      gridRow: 1,
+    },
   },
   vbacont: {
     gridColumn: 3,
+    [theme.breakpoints.down('md')]: {
+      gridColumn: 3,
+      gridRow: 1,
+    },
   },
   cardsMenu: {
-    background: 'Transparent',
     width: '100%',
-    height: '90%',
+    padding: 10,
     color: 'white',
-    display: 'block',
-    textAlign: 'center',
-    borderBottomRightRadius: 70,
-    borderBottomLeftRadius: 70,
-    webkitTransition: 'all .7s ease',
-    mozTransition: 'all .7s ease',
-    oTransition: 'all .7s ease',
-    transition: 'all .7s ease',
+    webkitTransition: 'all .3s ease',
+    mozTransition: 'all .3s ease',
+    oTransition: 'all .3s ease',
+    transition: 'all .3s ease',
+    border: '3px solid transparent',
     '&:hover': {
-      width: '100%',
-      height: '120%',
       color: 'white',
+      boxShadow: '10px 10px 0px 0px #21254F',
+      border: '3px solid white',
       '& $arrow': {
         borderRadius: 20,
         backgroundColor: '#21254F',
-      }
+      },
     },
-    
+    [theme.breakpoints.down('md')]: {
+      padding: 0,
+      width: 'auto',
+      '&:hover': {
+        color: 'white',
+        border: '3px solid white',
+        boxShadow: '0px 0px 0px 0px #21254F',
+      },
+  },
+
   },
   arrow: {
     marginTop: '20%',
@@ -78,6 +95,9 @@ const useStyles = theme => ({
     mozTransition: 'all .7s ease',
     oTransition: 'all .7s ease',
     transition: 'all .7s ease',
+    [theme.breakpoints.down('md')]: {
+      marginTop: '5%',
+  },
   },
   cardsIcons: {
     width: '100%',
@@ -85,14 +105,21 @@ const useStyles = theme => ({
   },
   iconsSize: {
     marginTop: '30%',
-    width: '20%',
-    padding: 10,
+    width: '35%',
     border: 0,
+    [theme.breakpoints.down('md')]: {
+      marginTop: '5%',
+      width: '30%',
+  },
   },
   cardsText: {
     marginTop: '20%',
     width: '100%',
-    height: '45%'
+    height: '45%',
+    [theme.breakpoints.down('md')]: {
+      marginTop: '5%',
+      height: '10%',
+  },
   },
 
   cardBtn: {
@@ -101,19 +128,29 @@ const useStyles = theme => ({
     backgroundColor: 'transparent',
     borderRadius: 50,
     backgroundColor: 'pink',
-    textAlign: 'center'
+    textAlign: 'center',
+    [theme.breakpoints.down('md')]: {
+      height: '10%',
+  },
   },
 
   //active cards
 
   cardsMenuActive: {
-    background: 'Transparent',
     width: '100%',
-    height: '90%',
+    padding: 10,
     color: 'white',
-    display: 'block',
-    textAlign: 'center',
-    borderTop: '2px solid white',
+    webkitTransition: 'all .3s ease',
+    mozTransition: 'all .3s ease',
+    oTransition: 'all .3s ease',
+    transition: 'all .3s ease',
+    boxShadow: '10px 10px 0px 0px #A6127E',
+    border: '3px solid white',
+    [theme.breakpoints.down('md')]: {
+      padding: 0,
+      width: 'auto',
+      boxShadow: '0px 0px 0px 0px #A6127E',
+  },
   },
 
   cardBtnActive: {
@@ -121,9 +158,15 @@ const useStyles = theme => ({
     height: '25%',
     backgroundColor: '#A6127E',
     borderBottom: '4mm ridge rgb(170, 50, 220, .6)',
+    [theme.breakpoints.down('md')]: {
+      height: '10%',
+  },
   },
   IdStatus: {
     marginTop: '20%',
+    [theme.breakpoints.down('md')]: {
+      marginTop: '5%',
+  },
   }
 }
 );
@@ -270,8 +313,8 @@ class CardsMenu extends React.Component {
 
 
     return (
-      <div className={classes.root}>
-        <div className={classes.banniereMenu}>
+      <div className={classes.root} >
+        <div className={classes.banniereMenu} container justify="center">
           <div className={classes.creationWebcont}>
             {Web}
           </div>

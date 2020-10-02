@@ -73,7 +73,7 @@ const useStyles = theme => ({
       gridRow: 1,
       boxShadow: '20px 20px 0px 0px #21254F',
       '&:hover': {
-        boxShadow: '20px 20px 0px 0px #21254F',
+        boxShadow: '-20px 20px 0px 0px #21254F',
       }
     },
   },
@@ -109,7 +109,7 @@ const useStyles = theme => ({
     [theme.breakpoints.down('md')]: {
       gridColumn: 1,
       gridRow: 2,
-      boxShadow: '20px 20px 0px 0px #21254F',
+      boxShadow: '-20px 20px 0px 0px #21254F',
       '&:hover': {
         boxShadow: '20px 20px 0px 0px #21254F',
       }

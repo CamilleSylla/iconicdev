@@ -24,12 +24,13 @@ const useStyles = theme => ({
   pageGrid: {
     width: '100%',
     display: 'grid',
+    marginTop: 100,
     gridTemplateColumns: 'repeat(2, 1fr)',
     gridAutoRows: 'minmax(100px, auto)',
     gridGap: '5%',
-    background: 'rgba(166, 18, 126, 0.1)',
     [theme.breakpoints.down('md')]: {
       gridTemplateColumns: 'repeat(1, 1fr)',
+      marginTop: 0,
     },
   },
   cards: {
@@ -37,7 +38,7 @@ const useStyles = theme => ({
     gridRow: 1,
     [theme.breakpoints.down('md')]: {
       gridColumn: 1,
-      gridRow: 1,
+      gridRow: 2,
     },
   },
   content: {
@@ -54,21 +55,44 @@ const useStyles = theme => ({
     display: 'flex',
     justifyContent: 'center',
     textAlign: 'left',
-    paddingBottom: '30%',
-    [theme.breakpoints.down('md')]: {
-      gridColumn: 1,
-      gridRow: 2,
-      paddingBottom: '0%',
-    },
+    
   },
   titleContainer: {
     width: '70%',
     color: 'white',
+    [theme.breakpoints.down('md')]: {
+      textAlign: 'center',
+    },
+    
   },
   logo: {
-    width: '40%',
+    display: 'none',
     [theme.breakpoints.down('md')]: {
-      width: '100%'
+      width: '100%',
+      display: 'block'
+    },
+  },
+  cWeb: {
+    letterSpacing: ' 0.1em',
+    fontSize: 70,
+    WebkitTextFillColor: 'transparent',
+    WebkitTextStroke: '2px',
+    WebkitTextStrokeColor: 'white',
+    textShadow: '7px 7px #ff1f8f, 14px 14px #21254F;',
+    webkitTransition: 'all 0.5s ease',
+    mozTransition: 'all 0.5s ease',
+    oTransition: 'all 0.5s ease',
+    transition: 'all 0.5s ease',
+    '&:hover': {
+      textShadow: '-20px -20px #A6127E, 20px 20px #21254F;',
+    },
+    [theme.breakpoints.down('md')]: {
+      fontSize: 50,
+      WebkitTextStroke: '2px',
+      textShadow: '0px 7px #ff1f8f, 0px 14px #21254F;',
+      '&:hover': {
+        textShadow: '0px -20px #A6127E, 0px 20px #21254F;',
+      },
     },
   },
 }
@@ -94,7 +118,7 @@ class Services extends React.Component {
 
     let services;
     if (this.state.toShow === 'Web') {
-      services = <Web/>
+      services = <Web />
     } else if (this.state.toShow === 'Identite') {
       services = <Identite />
     } else if (this.state.toShow === 'VBA') {
@@ -106,6 +130,7 @@ class Services extends React.Component {
       <div className={classes.root}>
         <div className={classes.pageGrid}>
           <Fade>
+            
             <CardsMenu className={classes.cards}
               toWeb={this.toWeb.bind(this)}
               toIdentite={this.toIdentite.bind(this)}
@@ -115,10 +140,10 @@ class Services extends React.Component {
             />
             <div className={classes.center}>
               <div className={classes.titleContainer}>
-                <img className={classes.logo} src={ID} alt="logo" />
-                <Typography variant="h4">
+              <img className={classes.logo} src={ID} alt="logo" />
+                <span className={classes.cWeb}>
                   Conception Web
-                            </Typography>
+                                    </span>
                 <Typography variant="subtitle1">
                   Tous le monde (ou presque) possède
                   un smartphone ou bien un ordinateur c'est pourquoi IconicDev
