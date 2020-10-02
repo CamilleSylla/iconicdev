@@ -28,15 +28,25 @@ const useStyles = theme => ({
     gridAutoRows: 'minmax(100px, auto)',
     gridGap: '5%',
     background: 'rgba(166, 18, 126, 0.1)',
+    [theme.breakpoints.down('md')]: {
+      gridTemplateColumns: 'repeat(1, 1fr)',
+    },
   },
   cards: {
     gridColumn: 2,
-    gridRow: 1
-
+    gridRow: 1,
+    [theme.breakpoints.down('md')]: {
+      gridColumn: 1,
+      gridRow: 1,
+    },
   },
   content: {
     gridColumn: '1 / span 2',
     gridRow: 2,
+    [theme.breakpoints.down('md')]: {
+      gridColumn: 1,
+      gridRow: 3,
+    },
   },
   center: {
     gridColumn: 1,
@@ -44,14 +54,22 @@ const useStyles = theme => ({
     display: 'flex',
     justifyContent: 'center',
     textAlign: 'left',
-    paddingBottom: '30%'
+    paddingBottom: '30%',
+    [theme.breakpoints.down('md')]: {
+      gridColumn: 1,
+      gridRow: 2,
+      paddingBottom: '0%',
+    },
   },
   titleContainer: {
     width: '70%',
     color: 'white',
   },
   logo: {
-    width: '40%'
+    width: '40%',
+    [theme.breakpoints.down('md')]: {
+      width: '100%'
+    },
   },
 }
 );
@@ -76,7 +94,7 @@ class Services extends React.Component {
 
     let services;
     if (this.state.toShow === 'Web') {
-      services = <Web />
+      services = <Web/>
     } else if (this.state.toShow === 'Identite') {
       services = <Identite />
     } else if (this.state.toShow === 'VBA') {

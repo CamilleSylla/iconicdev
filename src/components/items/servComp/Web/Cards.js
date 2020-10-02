@@ -18,7 +18,10 @@ const useStyles = theme => ({
   banniere: {
     gridColumn: 1,
     gridRow: 1,
-    paddingBottom: '25%'
+    paddingBottom: '25%',
+    [theme.breakpoints.down('md')]: {
+      paddingBottom: '0%',
+    },
   },
   banniereMenu: {
     width: '100%',
@@ -27,6 +30,11 @@ const useStyles = theme => ({
     gridAutoRows: 'minmax(300px, auto)',
     gridGap: '5%',
     marginTop: 50,
+    [theme.breakpoints.down('md')]: {
+      gridTemplateColumns: 'repeat(3, 1fr)',
+      gridAutoRows: 'minmax(auto, auto)',
+      gridGap: '0%',
+    },
   },
   creationWebcont: {
     gridColumn: 1,

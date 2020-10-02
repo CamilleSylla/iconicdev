@@ -22,11 +22,14 @@ const useStyles = theme => ({
     width: '100%',
   },
   page: {
+    paddingTop: '10%',
+    paddingBottom: '5%',
     width: '100%',
-    display: 'flex',
+    display: 'block',
     justifyContent: 'center',
     alignItems: 'center',
-
+    backgroundImage: `url(${servicesBG})`,
+    backgroundSize: 'cover',
   },
   center: {
     display: 'flex',
@@ -37,86 +40,165 @@ const useStyles = theme => ({
   webcontainer: {
     width: '100%',
     display: 'grid',
-    gridTemplateColumns: 'repeat(6, 1fr)',
-    gridAutoRows: 'minmax(100px, auto)',
-    backgroundImage: `url(${servicesBG})`,
-    backgroundSize: 'cover'
-
+    gridTemplateColumns: 'repeat(10, 1fr)',
+    gridAutoRows: 'minmax(auto, auto)',
+    gridGap: 100,
+    [theme.breakpoints.down('md')]: {
+      gridTemplateColumns: 'repeat(1, 1fr)',
+      marginLeft: '10%',
+      marginRight: '10%'
+    },
   },
   vitrine: {
-    gridColumn: '1 /span 2',
+    gridColumn: '2 / span 4',
     gridRow: 1,
-    paddingTop: 100,
-    color: 'white',
-    paddingTop: '50px',
-    background: 'linear-gradient(180deg, rgba(166,18,126,0.7) 0%, rgba(8,12,89,0.7) 100%)',
-  },
-  vitrineTxt: {
-    marginLeft: '15%',
-    marginRight: '15%'
-  },
-  vitrineImg: {
-    gridColumn: '3 / span 4',
-    gridRow: 1,
-    paddingTop: '50px',
-    paddingBottom: '50px',
     width: '100%',
-    background: 'linear-gradient(180deg, rgba(166,18,126,0.7) 0%, rgba(8,12,89,0.7) 100%)',
+    color: 'white',
+    border: ' 2px solid white',
+    boxShadow: '30px 30px 0px 0px #21254F',
+    webkitTransition: 'all 1s ease',
+    mozTransition: 'all 1s ease',
+    oTransition: 'all 1s ease',
+    transition: 'all 1s ease',
+    '&:hover': {
+      boxShadow: '-50px 50px 0px 0px #21254F',
+      '& $title': {
+        WebkitTextFillColor: 'transparent',
+        textShadow: '0px -20px #A6127E, 0px 20px #21254F;',
+        letterSpacing: ' 0.1em',
+      }
+    },
+    [theme.breakpoints.down('md')]: {
+      gridColumn: 1,
+      gridRow: 1,
+      boxShadow: '20px 20px 0px 0px #21254F',
+      '&:hover': {
+        boxShadow: '20px 20px 0px 0px #21254F',
+      }
+    },
+  },
 
-  },
-  vitImgCont: {
-    width: '50%',
-  },
-  Seo: {
-    gridColumn: '5 /span 2',
-    gridRow: 2,
-    color: 'white',
-    paddingTop: '50px',
-    background: 'linear-gradient(180deg, rgba(8,12,89,0.7) 0%, rgba(33,37,79,0.7) 100%)',
-  },
-  SeoImg: {
-    gridColumn: '1 / span 4',
-    gridRow: 2,
-    paddingTop: '50px',
-    paddingBottom: '100px',
+  website: {
     width: '100%',
-    background: 'linear-gradient(180deg, rgba(8,12,89,0.7) 0%, rgba(33,37,79,0.7) 100%)',
+    gridColumn: '6 / span 4',
+    gridRow: 1,
+    [theme.breakpoints.down('md')]: {
+      display: 'none'
+    },
   },
-  first: {
-    paddingTop: '50px',
-    paddingBottom: '50px',
-    gridColumn: '1 / span 2',
+
+  seo: {
+    gridColumn: '6 / span 4',
+    gridRow: 2,
+    width: '100%',
+    color: 'white',
+    border: ' 2px solid white',
+    boxShadow: '-30px 30px 0px 0px #21254F',
+    webkitTransition: 'all 1s ease',
+    mozTransition: 'all 1s ease',
+    oTransition: 'all 1s ease',
+    transition: 'all 1s ease',
+    '&:hover': {
+      boxShadow: '50px 50px 0px 0px #21254F',
+      '& $title': {
+        WebkitTextFillColor: 'transparent',
+        textShadow: '0px -20px #A6127E, 0px 20px #21254F;',
+        letterSpacing: ' 0.1em',
+      }
+    },
+    [theme.breakpoints.down('md')]: {
+      gridColumn: 1,
+      gridRow: 2,
+      boxShadow: '20px 20px 0px 0px #21254F',
+      '&:hover': {
+        boxShadow: '20px 20px 0px 0px #21254F',
+      }
+    },
+  },
+
+  seoimg: {
+    width: '100%',
+    gridColumn: '2 / span 4',
+    gridRow: 2,
+    [theme.breakpoints.down('md')]: {
+      display: 'none'
+    },
+  },
+  cardGrid: {
+    gridColumn: '1 / span 10',
     gridRow: 3,
-    backgroundColor: 'rgba(33, 37, 79, 0.7)'
+    gridGap: 100,
+    display: 'grid',
+    gridTemplateColumns: 'repeat(3, 1fr)',
+    gridAutoRows: 'minmax(auto, auto)',
+    [theme.breakpoints.down('md')]: {
+      gridTemplateColumns: 'repeat(1, 1fr)',
+      gridColumn: 1,
+      gridRow: 3,
+    },
+  },
+
+  first: {
+    gridColumn: 1,
+    gridRow: 1,
+    [theme.breakpoints.down('md')]: {
+      gridColumn: 1,
+      gridRow: 1,
+    },
   },
   seconde: {
-    paddingTop: '50px',
-    paddingBottom: '50px',
-    gridColumn: '3 / span 2',
-    gridRow: 3,
-    backgroundColor: 'rgba(33, 37, 79, 0.7)'
+    gridColumn: 2,
+    gridRow: 1,
+    [theme.breakpoints.down('md')]: {
+      gridColumn: 1,
+      gridRow: 2,
+    },
   },
   thired: {
-    paddingTop: '50px',
-    paddingBottom: '50px',
-    gridColumn: '5 / span 2',
-    gridRow: 3,
-    backgroundColor: 'rgba(33, 37, 79, 0.7)'
+    gridColumn: 3,
+    gridRow: 1,
+    [theme.breakpoints.down('md')]: {
+      gridColumn: 1,
+      gridRow: 3,
+    },
   },
   logW: {
     width: '20%'
   },
-  titre: {
-    textAlign: 'justify',
-    marginBottom: '5%'
+  title: {
+    marginLeft: '5%',
+    letterSpacing: ' 0.1em',
+    fontSize: 30,
+    textTransform: 'uppercase',
+    textAlign: 'left',
+    WebkitTextFillColor: 'white',
+    WebkitTextStroke: '1px',
+    WebkitTextStrokeColor: 'white',
+    textShadow: '7px 7px #ff1f8f, 14px 14px #21254F;',
+    webkitTransition: 'all 0.5s ease',
+    mozTransition: 'all 0.5s ease',
+    oTransition: 'all 0.5s ease',
+    transition: 'all 0.5s ease',
+    [theme.breakpoints.down('md')]: {
+      fontSize: 25,
+      textAlign: 'center',
+      WebkitTextStroke: '2px',
+      textShadow: '0px 7px #ff1f8f, 0px 14px #21254F;',
+      '&:hover': {
+        textShadow: '0px -20px #A6127E, 0px 20px #21254F;',
+      },
+    },
   },
   sousTitre: {
     textAlign: 'left',
-    marginBottom: '5%'
+    marginLeft: '5%',
+    fontSize: 20,
   },
   txt: {
     textAlign: 'justify',
-  },
+    marginLeft: '5%',
+    marginRight: '5%',
+  }
 }
 );
 
@@ -128,109 +210,99 @@ class Web extends React.Component {
     const { classes } = this.props;
     return (
       <Fade bottom>
- <div className={classes.root}>
-        <div className={classes.page}>
-          <div className={classes.center} >
-            <div className={classes.webcontainer}>
+        <div className={classes.root}>
+          <div className={classes.page}>
+            <div className={classes.center} >
+              <div className={classes.webcontainer}>
 
-              {/*Arguments*/}
-              <div className={classes.vitrine}>
-                <div className={classes.vitrineTxt}>
-                  <Typography className={classes.titre} variant="h4">
+                {/*Arguments*/}
+                <div className={classes.vitrine}>
+                  <p className={classes.title}>
                     Vous accompagner dans la création d'une image sur le web
-                        </Typography>
-                  <Typography className={classes.sousTitre} variant="h6">
+                     </p>
+                  <p className={classes.sousTitre}>
                     Etude & conception
-                        </Typography>
-                  <Typography className={classes.txt} variant="subtitle1">
+                     </p>
+                  <p className={classes.txt}>
                     Après une étude approfondis de vos besoins, une conception
                     respectant les standards web sera mise en place tout en
-                    apportant un design individualiser. <br />Les technologies exploitées
-                    permettent une persionnalisation maximal.<br />
+                    apportant un design individualiser.<br /><br /> Les technologies exploitées
+                    permettent une persionnalisation maximal.<br /><br />
                      IconicDev vous accompagnera et vous conseillera tout au long du projet.
-                        </Typography>
+                     </p>
                 </div>
-              </div>
-              <div className={classes.vitrineImg}>
-                <div className={classes.vertical}>
-                  <img className={classes.vitImgCont} src={Website} />
-                </div>
-              </div>
-              <div className={classes.Seo}>
-                <div className={classes.vitrineTxt}>
-                  <Typography className={classes.titre} variant="h4">
+                <img src={SEOISO} alt='web' className={classes.seoimg} />
+
+                <div className={classes.seo}>
+                  <p className={classes.title}>
                     Augmenter votre visibilité grace au referencement
-                        </Typography>
-                  <Typography className={classes.sousTitre} variant="h6">
+                     </p>
+                  <p className={classes.sousTitre}>
                     Optimisation du SEO
-                        </Typography>
-                  <Typography className={classes.txt} variant="subtitle1">
+                     </p>
+                  <p className={classes.txt}>
                     Le référencement est depuis quelque année un outil
-                    inspensable pour la visibilité de votre site <br />
+                    inspensable pour la visibilité de votre site <br /><br />
                     Un travail autours du type de référencement sera donc
-                     etablie en fonction des objectifs du projets.<br />
+                     etablie en fonction des objectifs du projets.<br /><br />
                     Cela à pour but de mettre en avant votre projet une fois
                     en production et le faire apparaitre dans les premieres
                      places lors de recherches Google et donc de toucher le
                      plus de personnes possible !
-                        </Typography>
+                  </p>
                 </div>
-              </div>
-              <div className={classes.SeoImg}>
-                <div className={classes.vertical}>
-                  <img className={classes.vitImgCont} src={SEOISO} />
-                </div>
-              </div>
-
-              {/*Type de sites*/}
-              <div className={classes.first}>
-                <div className="container">
-                  <a className="card1" >
-                    <img src={Vitrine} className={classes.logW} />
-                    <h3>Site Vitrine</h3>
-                    <p className="small">
-                      Idéale Pour promouvoir votre acitvité,
-                      présenter vos produits ou encore
+                <img src={Website} alt='web' className={classes.website} />
+                {/*Type de sites*/}
+                <div className={classes.cardGrid}>
+                  <div className={classes.first}>
+                    <div className="container">
+                      <a className="card1" >
+                        <img src={Vitrine} className={classes.logW} />
+                        <h3>Site Vitrine</h3>
+                        <p className="small">
+                          Idéale Pour promouvoir votre acitvité,
+                          présenter vos produits ou encore
                         presentez votre entreprise</p>
-                    <div className="go-corner" href="#">
+                        <div className="go-corner" href="#">
+                        </div>
+                      </a>
                     </div>
-                  </a>
-                </div>
-              </div>
-              <div className={classes.seconde}>
-                <div className="container">
-                  <a className="card1" >
-                    <img src={Ecom} className={classes.logW} />
-                    <h3>E-commerce</h3>
-                    <p className="small">
-                      Etendez vos possibilitées & augmentez votre CA et votre clientèle grasse
+                  </div>
+                  <div className={classes.seconde}>
+                    <div className="container">
+                      <a className="card1" >
+                        <img src={Ecom} className={classes.logW} />
+                        <h3>E-commerce</h3>
+                        <p className="small">
+                          Etendez vos possibilitées & augmentez votre CA et votre clientèle grasse
                                 a une boutique en ligne </p>
-                    <div className="go-corner" href="#">
+                        <div className="go-corner" href="#">
+                        </div>
+                      </a>
                     </div>
-                  </a>
-                </div>
-              </div>
-              <div className={classes.thired}>
-                <div className="container">
-                  <a className="card1" >
-                    <img src={Puz} className={classes.logW} />
-                    <h3>Site Instutionnel</h3>
-                    <p className="small">
-                      Communiquez facilement sur vos evenements vos engagement vos projets
+                  </div>
+                  <div className={classes.thired}>
+                    <div className="container">
+                      <a className="card1" >
+                        <img src={Puz} className={classes.logW} />
+                        <h3>Site Instutionnel</h3>
+                        <p className="small">
+                          Communiquez facilement sur vos evenements vos engagement vos projets
                                 a des fins non lucratives</p>
-                    <div className="go-corner" href="#">
+                        <div className="go-corner" href="#">
+                        </div>
+                      </a>
                     </div>
-                  </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
       </Fade>
     )
-      
-     
+
+
   }
 }
 
