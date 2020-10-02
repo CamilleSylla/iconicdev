@@ -4,6 +4,7 @@ import React from 'react';
 import Welcome from './BackAni';
 import Landing from '../Landing';
 import Services from '../items/services';
+import Bac from '../items/Bac';
 import Nav from '../Nav'
 
 //rooter
@@ -29,6 +30,7 @@ class Main extends React.Component {
                     <Route path='/' exact component={Welcome}/>
                     <Route path='/IconicDev' exact component={Landing}/>
                     <Route path='/Services' exact component={Services}/>
+                    <Route path='/Bac_a_Sable' exact component={Bac}/>
                 </Rooter>
             </div>
         )

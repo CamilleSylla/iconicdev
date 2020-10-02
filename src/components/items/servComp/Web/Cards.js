@@ -29,11 +29,11 @@ const useStyles = theme => ({
     display: 'grid',
     gridTemplateColumns: 'repeat(4, 1fr)',
     gridAutoRows: 'minmax(300px, auto)',
-    gridGap: '5%',
+    gridColumnGap: '15%',
     [theme.breakpoints.down('md')]: {
       gridTemplateColumns: 'repeat(3, 1fr)',
       gridAutoRows: 'minmax(auto, auto)',
-      gridColumnGap: 'auto',
+      gridColumnGap: '5%',
     },
   },
   creationWebcont: {
