@@ -22,37 +22,60 @@ const useStyles = theme => ({
   },
   page: {
     width: '100%',
-    display: 'flex',
+    display: 'block',
     justifyContent: 'center',
     alignItems: 'center',
-    
+    backgroundImage: `url(${Office})`,
+    backgroundSize: 'cover',
   },
   center: {
     display: 'flex',
     justifyContent: 'center',
     width: '100%',
-    
+    background: 'linear-gradient(180deg, rgba(166,18,126,0.7) 0%, rgba(8,12,89,0.7) 100%)'
+
   },
   webcontainer: {
     width: '100%',
+    marginTop: '100px',
+    marginBottom: '100px',
     display: 'grid',
-    gridTemplateColumns: 'repeat(6, 1fr)',
-    gridAutoRows: 'minmax(100px, auto)',
-    backgroundImage: `url(${Office})`,
-    backgroundSize: 'cover'
-    
+    gridTemplateColumns: 'repeat(10, 1fr)',
+    gridAutoRows: 'minmax(auto, auto)',
+    gridGap: 100,
+    [theme.breakpoints.down('md')]: {
+      gridTemplateColumns: 'repeat(1, 1fr)',
+      marginLeft: '10%',
+      marginRight: '10%'
+    },
   },
   vitrine: {
-    gridColumn: '1 /span 2',
+    gridColumn: '2 / span 4',
     gridRow: 1,
-    paddingTop: 100,
+    width: '100%',
     color: 'white',
-    paddingTop: '50px',
-    background: 'linear-gradient(180deg, rgba(166,18,126,0.7) 0%, rgba(8,12,89,0.7) 100%)',
-  },
-  vitrineTxt: {
-    marginLeft: '15%',
-    marginRight: '15%'
+    border: ' 2px solid white',
+    boxShadow: '30px 30px 0px 0px #21254F',
+    webkitTransition: 'all 1s ease',
+    mozTransition: 'all 1s ease',
+    oTransition: 'all 1s ease',
+    transition: 'all 1s ease',
+    '&:hover': {
+      boxShadow: '-50px 50px 0px 0px #21254F',
+      '& $title': {
+        WebkitTextFillColor: 'transparent',
+        textShadow: '0px -20px #A6127E, 0px 20px #21254F;',
+        letterSpacing: ' 0.1em',
+      }
+    },
+    [theme.breakpoints.down('md')]: {
+      gridColumn: 1,
+      gridRow: 1,
+      boxShadow: '20px 20px 0px 0px #21254F',
+      '&:hover': {
+        boxShadow: '-20px 20px 0px 0px #21254F',
+      }
+    },
   },
   vitrineImg: {
     gridColumn: '3 / span 4',
@@ -64,43 +87,87 @@ const useStyles = theme => ({
 
   },
   vitImgCont: {
-    width: '50%',
+    width: '100%',
+    gridColumn: '6 / span 4',
+    gridRow: 1,
+    [theme.breakpoints.down('md')]: {
+      display: 'none'
+    },
+  },
+  cardGrid: {
+    gridColumn: '1 / span 10',
+    gridRow: 3,
+    gridGap: 100,
+    display: 'grid',
+    gridTemplateColumns: 'repeat(3, 1fr)',
+    gridAutoRows: 'minmax(auto, auto)',
+    [theme.breakpoints.down('md')]: {
+      gridTemplateColumns: 'repeat(1, 1fr)',
+      gridColumn: 1,
+      gridRow: 3,
+    },
   },
   first: {
-    paddingTop: '50px',
-    paddingBottom: '50px',
-    gridColumn: '1 / span 2',
-    gridRow: 2,
-    background: 'linear-gradient(180deg, rgba(8,12,89,0.7) 0%, rgba(33,37,79,0.7) 100%)'
+    gridColumn: 1,
+    gridRow: 1,
+    [theme.breakpoints.down('md')]: {
+      gridColumn: 1,
+      gridRow: 1,
+    },
   },
   seconde: {
-    paddingTop: '50px',
-    paddingBottom: '50px',
-    gridColumn: '3 / span 2',
-    gridRow: 2,
-    background: 'linear-gradient(180deg, rgba(8,12,89,0.7) 0%, rgba(33,37,79,0.7) 100%)'
+    gridColumn: 2,
+    gridRow: 1,
+    [theme.breakpoints.down('md')]: {
+      gridColumn: 1,
+      gridRow: 2,
+    },
   },
   thired: {
-    paddingTop: '50px',
-    paddingBottom: '50px',
-    gridColumn: '5 / span 2',
-    gridRow: 2,
-    background: 'linear-gradient(180deg, rgba(8,12,89,0.7) 0%, rgba(33,37,79,0.7) 100%)'
+    gridColumn: 3,
+    gridRow: 1,
+    [theme.breakpoints.down('md')]: {
+      gridColumn: 1,
+      gridRow: 3,
+    },
   },
   logW: {
 width: '20%'
   },
-  titre: {
-    textAlign: 'justify',
-    marginBottom: '5%'
+  title: {
+    marginLeft: '5%',
+    letterSpacing: ' 0.1em',
+    fontSize: 30,
+    textTransform: 'uppercase',
+    textAlign: 'left',
+    WebkitTextFillColor: 'white',
+    WebkitTextStroke: '1px',
+    WebkitTextStrokeColor: 'white',
+    textShadow: '7px 7px #ff1f8f, 14px 14px #21254F;',
+    webkitTransition: 'all 0.5s ease',
+    mozTransition: 'all 0.5s ease',
+    oTransition: 'all 0.5s ease',
+    transition: 'all 0.5s ease',
+    [theme.breakpoints.down('md')]: {
+      fontSize: 25,
+      textAlign: 'center',
+      WebkitTextStroke: '2px',
+      textShadow: '0px 7px #ff1f8f, 0px 14px #21254F;',
+      '&:hover': {
+        textShadow: '0px -20px #A6127E, 0px 20px #21254F;',
+      },
+    },
   },
   sousTitre: {
     textAlign: 'left',
-    marginBottom: '5%'
+    marginLeft: '5%',
+    fontSize: 20,
   },
   txt: {
     textAlign: 'justify',
-  },
+    marginLeft: '5%',
+    marginRight: '5%',
+  }
 }
 );
 
@@ -119,28 +186,26 @@ class VBA extends React.Component {
               {/*Arguments*/}
               <div className={classes.vitrine}>
                 <div className={classes.vitrineTxt}>
-                  <Typography className={classes.titre} variant="h4">
+                  <p className={classes.title}>
                     Automatisez vos tache bureautique quotidienne !
-                        </Typography>
-                  <Typography className={classes.sousTitre} variant="h6">
+                        </p>
+                  <p className={classes.sousTitre}>
                     Macro Pour vous simplifier la vie.
-                        </Typography>
-                  <Typography className={classes.txt} variant="subtitle1">
+                        </p>
+                  <p className={classes.txt}>
                     IconicDev peut facilté certaines de vos taches bureautique quotidienne. 
                     Il est possible de creer des micro programme dans des applications comme
-                    Excel ou encore Google Sheets<br />
-                    Un gain de temps sur le court/moyen/long terme assuré<br />
+                    Excel ou encore Google Sheets<br /><br />
+                    Un gain de temps sur le court/moyen/long terme assuré<br /><br />
                     Ameliorer votre productivité ou celle des vos employés 
-                        </Typography>
+                        </p>
                 </div>
               </div>
-              <div className={classes.vitrineImg}>
-                <div className={classes.vertical}>
                   <img className={classes.vitImgCont} src={VB} />
-                </div>
-              </div>
 
               {/*Type de sites*/}
+
+              <div className={classes.cardGrid}>
                 <div className={classes.first}>
                   <div className="container">
                     <a className="card1" >
@@ -181,6 +246,7 @@ class VBA extends React.Component {
                             </div>
                         </a>
                     </div>
+                </div>
                 </div>
             </div>
           </div>

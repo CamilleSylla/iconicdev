@@ -22,8 +22,6 @@ const useStyles = theme => ({
     width: '100%',
   },
   page: {
-    paddingTop: '10%',
-    paddingBottom: '5%',
     width: '100%',
     display: 'block',
     justifyContent: 'center',
@@ -35,10 +33,12 @@ const useStyles = theme => ({
     display: 'flex',
     justifyContent: 'center',
     width: '100%',
-
+    background: 'linear-gradient(180deg, rgba(166,18,126,0.7) 0%, rgba(8,12,89,0.7) 100%)'
   },
   webcontainer: {
     width: '100%',
+    marginTop: '100px',
+    marginBottom: '100px',
     display: 'grid',
     gridTemplateColumns: 'repeat(10, 1fr)',
     gridAutoRows: 'minmax(auto, auto)',
@@ -252,7 +252,11 @@ class Web extends React.Component {
                   </p>
                 </div>
                 <img src={Website} alt='web' className={classes.website} />
+                
+                
                 {/*Type de sites*/}
+
+                
                 <div className={classes.cardGrid}>
                   <div className={classes.first}>
                     <div className="container">

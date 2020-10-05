@@ -117,14 +117,21 @@ class Services extends React.Component {
   render() {
 
     let services;
+    let title;
+    let desc;
     if (this.state.toShow === 'Web') {
-      services = <Web />
+      services = <Web />;
+      title = 'Conception Web';
+      desc ='Tous le monde (ou presque) possède un smartphone ou bien un ordinateur c\'est pourquoi IconicDev rendra votre site'
     } else if (this.state.toShow === 'Identite') {
-      services = <Identite />
+      services = <Identite />;
+      title = 'Création Graphique';
+      desc ='Tous le monde (ou presque) possède un smartphone ou bien un ordinateur c\'est pourquoi IconicDev rendra votre site'
     } else if (this.state.toShow === 'VBA') {
-      services = <VBA />
+      services = <VBA />;
+      title = 'Support Bureautique';
+      desc ='Tous le monde (ou presque) possède un smartphone ou bien un ordinateur c\'est pourquoi IconicDev rendra votre site'
     }
-    const CardsStatus = this.state.toShow
     const { classes } = this.props;
     return (
       <div className={classes.root}>
@@ -142,12 +149,10 @@ class Services extends React.Component {
               <div className={classes.titleContainer}>
               <img className={classes.logo} src={ID} alt="logo" />
                 <span className={classes.cWeb}>
-                  Conception Web
+                  {title}
                                     </span>
                 <Typography variant="subtitle1">
-                  Tous le monde (ou presque) possède
-                  un smartphone ou bien un ordinateur c'est pourquoi IconicDev
-                  rendra votre site
+                  {desc}
                             </Typography>
               </div>
             </div>

@@ -125,10 +125,10 @@ class Nav extends React.Component {
                                                     </Typography>
                     </Box>
                 </Link>
-                <Link to='/Bac_a_Sable' className={classes.navBox3} style={{ textDecoration: 'none', color: 'white' }}>
+                <Link to='/theLab' className={classes.navBox3} style={{ textDecoration: 'none', color: 'white' }}>
                     <Box className={classes.hoverEffect}>
                         <Typography>
-                            Lab
+                            The Lab
                                                     </Typography>
                     </Box>
                 </Link>
