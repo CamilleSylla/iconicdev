@@ -5,8 +5,8 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import { Typography } from '@material-ui/core';
 
-import Keyboard from '../../../assets/img/Keyboard.jpg'
-import Code from '../../../assets/img/Compu.jpg'
+import Keyboard from '../../../assets/img/WebR.svg'
+import Code from '../../../assets/img/WebV.svg'
 
 //animation
 import Fade from 'react-reveal/Fade';
@@ -33,7 +33,7 @@ const useStyles = theme => ({
     imgContainer: {
         gridColumn: 1,
         gridRow: 1,
-        opacity: 0.2,
+        opacity: 0.6,
 
         webkitTransition: 'all 1s ease',
         mozTransition: 'all 1s ease',
@@ -132,10 +132,21 @@ class First extends React.Component {
                         <p className={classes.title}>
                             Marquez le web de votre empreinte
                             </p>
-                        <Typography variant="body2" style={{ margin: '5%' }} >
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh odio, dignissim ut pulvinar non, pretium in neque. Curabitur eget fermentum diam. Nullam ut vestibulum urna. Phasellus egestas quis turpis quis dapibus. Maecenas nunc orci, scelerisque id feugiat vitae, commodo id velit. Nam tincidunt gravida pretium. Duis porta tristique augue, a facilisis lorem rhoncus vel. Aliquam libero nisl, convallis eget volutpat non, porttitor eu sem. Praesent sed ipsum justo. Curabitur rhoncus nisi nulla, nec dictum justo rhoncus sagittis. Phasellus at malesuada elit, id sollicitudin mauris. Integer non nunc sapien. Donec lacinia vestibulum massa eu imperdiet.
+                        <Typography variant="h6" style={{ margin: '5%' }} >
+                            L'ere du digital.
+                            </Typography>
+                            <Typography variant="body2" style={{ margin: '5%' }} >
+                            Aujourd'hui il est impératif d'avoir une présence sur le web.<br/><br/>
+                            Posséder un site web permettra de décrire l'activité que vous proposez, de communiquer avec les clients, de 
+                            délivrer le message que vous souhaitez et qui vous correspond. <br/><br/>
+                            Entretenir votre lien avec vos clients / propospects est insdispensable, 
+                            un site internet est donc le meilleur support pour remédier a ce besoin.
+                            </Typography>
+                            <Typography variant="body2" style={{ margin: '5%' }} >
+                                IconicDev vous accompagnera dans cette création et 
+                                mettra a votre disposition ses connaissances avancé du domaine
+                                afin d'obtenir un resultat a votre image.
 
-                            Etiam erat tortor, mattis vel lacinia imperdiet, eleifend eget turpis. Cras congue ultricies faucibus. Cras venenatis purus ut accumsan convallis. Cras commodo, dolor suscipit vulputate volutpat, eros tortor vulputate ante, sed tempus magna diam sit amet neque. Praesent suscipit, mi ac laoreet placerat, elit ligula elementum diam, at mollis arcu nisi sed tortor. In eu maximus diam. Maecenas et fringilla odio. Aliquam sed lacinia mi. Praesent luctus et sem sit amet ornare. Mauris sed sodales sem. Vivamus mollis quis massa sit amet molestie.
                             </Typography>
                     </Grid>
                 </div>

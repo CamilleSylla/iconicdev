@@ -40,7 +40,8 @@
   background-color: transparent;
   width: 100%;
   height: 100%;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  perspective: 1000px;
+  overflow: hidden; /* Remove this if you don't want the 3D effect */
 }
 
 /* This container is needed to position the front and back side */
@@ -57,6 +58,7 @@
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
   opacity: 1;
+
 }
 
 /* Position the front and back side */
@@ -70,13 +72,13 @@
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  background-color: #bbb;
+  background-color:#38315B;
   color: black;
 }
 
 /* Style the back side */
 .flip-card-back {
-  background-color: dodgerblue;
+  background-color: #38315B;
   color: white;
   transform: rotateY(180deg);
 } 
@@ -204,7 +206,7 @@
   width: 48%
  }
  .input-fields .input,
- .msg textarea{
+ .msg {
    margin: 10px 0;
    background: transparent;
    border-bottom: 2px;
@@ -241,7 +243,7 @@
    .contact-form{
      flex-direction: column;
    }
-   .msg textarea{
+   .msg {
      height: 80px;
 
    }

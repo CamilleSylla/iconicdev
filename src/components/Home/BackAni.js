@@ -153,7 +153,7 @@ class Welcome extends React.Component {
           </Box>
           <Grid>
             <div className="sloAnim">
-              <p className={classes.slogan}>make you bigger</p>
+              <p className={classes.slogan}>widen your web</p>
             </div>
           </Grid>
           <Grid>

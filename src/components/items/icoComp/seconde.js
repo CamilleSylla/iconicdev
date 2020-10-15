@@ -13,8 +13,7 @@ import Fade from 'react-reveal/Fade';
 
 //assets
 import Cerf from '../../../assets/img/Cerf.jpg';
-import Pap from '../../../assets/img/Pap.jpg';
-import Poly from '../../../assets/img/Poly.png';
+import Pap from '../../../assets/img/DesR.svg';
 
 const useStyles = theme => ({
     root: {
@@ -56,7 +55,7 @@ const useStyles = theme => ({
     imgContainer: {
         gridColumn: 2,
         gridRow: 1,
-        opacity: 0.2,
+        opacity: 1,
         webkitTransition: 'all 1s ease',
         mozTransition: 'all 1s ease',
         oTransition: 'all 1s ease',
@@ -145,37 +144,25 @@ class Seconde extends React.Component {
                             <p className={classes.title}>
                                 Illustrez vos idées
                                     </p>
-                            <Typography variant="body2" style={{ margin: '5%' }}>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Proin nibh odio, dignissim ut pulvinar non, pretium in neque.
-                                Curabitur eget fermentum diam. Nullam ut vestibulum urna.
-                                Phasellus egestas quis turpis quis dapibus. Maecenas nunc orci,
-                                scelerisque id feugiat vitae, commodo id velit. Nam tincidunt gravida
-                                pretium. Duis porta tristique augue, a facilisis lorem rhoncus vel. Al
-                                iquam libero nisl, convallis eget volutpat non, porttitor eu sem. Prae
-                                sent sed ipsum justo. Curabitur rhoncus nisi nulla, nec dictum justo rh
-                                oncus sagittis. Phasellus at malesuada elit, id sollicitudin mauris. In
-                                teger non nunc sapien. Donec lacinia vestibulum massa eu imperdiet.
-                                Etiam erat tortor, mattis vel lacinia imperdiet, eleifend eget turpis.
-                                Cras congue ultricies faucibus. Cras venenatis purus ut accumsan convallis.
-                                Cras commodo, dolor suscipit vulputate volutpat, eros tortor vulputate ante,
-                                sed tempus magna diam sit amet neque. Praesent suscipit, mi ac laoreet placerat
-                                , elit ligula elementum diam, at mollis arcu nisi sed tortor. In eu maximus diam
-                                . Maecenas et fringilla odio. Aliquam sed lacinia mi. Praesent luctus et sem sit ame
-                                t ornare. Mauris sed sodales sem. Vivamus mollis quis massa sit amet molestie.
-                                    </Typography>
+                                    <Typography variant="h6" style={{ margin: '5%' }} >
+                            L'importance d'une identité visuelle
+                            </Typography>
+                            <Typography variant="body2" style={{ margin: '5%' }} >
+                            Le visuel est le premier élément perçu par les clients. <br/><br/>
+                            Une identité graphique complete vous permet de vous différencier de vos concurents.<br/><br/>
+                            Grace à ses connaissances en design, IconicDev établira 
+                            votre charte graphique.
+                            </Typography>
+                            <Typography variant="body2" style={{ margin: '5%' }} >
+                                En plus de cela, IconicDev vous aidera a promouvoir votre activité 
+                                avec la conception de Flyer, carte de visite, affiche etc...
+
+                            </Typography>
                         </Grid>
                         <Grid className={classes.imgContainer} container justify="center">
-                            <div class="flip-card" >
-                                <div class="flip-card-inner">
-                                    <div class="flip-card-front">
+                           
                                         <img src={Pap} alt="Computer" style={imgSize} />
-                                    </div>
-                                    <div class="flip-card-back">
-                                        <img src={Poly} alt="Tab" style={imgSize} />
-                                    </div>
-                                </div>
-                            </div>
+                                    
                         </Grid>
                     </Grid>
                 </div>

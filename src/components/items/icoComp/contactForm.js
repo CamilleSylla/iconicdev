@@ -23,7 +23,7 @@ export default function ContactUs() {
       <div className="contact-form">
         <form className="input-fields" onSubmit={sendEmail}>
             <input type="text" className="input" placeholder="Nom" name="name"/>
-            <input type="text" className="input" placeholder="Adresse Email" name="mail"/>
+            <input type="email" className="input" placeholder="Adresse Email" name="mail"/>
             <input type="text" className="input" placeholder="N° de téléphone" name="phone"/>
             <input type="text" className="input" placeholder="Sujet" name="Subject"/>
             <input type="text" className="msg" placeholder="Votre Message" name="msg"/>
