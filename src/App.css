@@ -177,3 +177,76 @@
     transition: all 0.3s ease-out;
     color: #ffffff;
   }
+
+  /*Form*/
+
+ .wrapper{
+   background-image: url(./assets/img/Mail.svg);
+   background-size: cover;
+   background-repeat: no-repeat;
+ }
+ .contact-form{
+   max-width: 550px;
+   margin: 0 auto;
+   background-color: rgba(0, 0, 0, 0.8);
+   padding: 30px;
+   border-radius: 5px;
+   display: flex;
+   box-shadow: 0 0 10px;
+ }
+ .input-fields{
+   display: flex;
+   flex-direction: column;
+   margin-right: 4%;
+ }
+ .input-fields,
+ .msg{
+  width: 48%
+ }
+ .input-fields .input,
+ .msg textarea{
+   margin: 10px 0;
+   background: transparent;
+   border-bottom: 2px;
+   border-bottom: 2px solid white;
+   padding: 10px;
+   color: green;
+   width: 100%;
+ }
+ .msg textarea{
+   height: 212px;
+ }
+
+ ::-webkit-input-placeholder{
+  color: green;
+ }
+ ::-moz-input-placeholder{
+  color: green;
+ }
+ ::-ms-input-placeholder{
+  color: green;
+ }
+
+ .form-btn{
+   background: greenyellow;
+   text-align: center;
+   padding: 15px;
+   border-radius: 5px;
+   color: white;
+   cursor: pointer;
+   text-transform: uppercase;
+ }
+
+ @media screen and (max-width: 600px){
+   .contact-form{
+     flex-direction: column;
+   }
+   .msg textarea{
+     height: 80px;
+
+   }
+   .input-fields,
+   .msg{
+     width: 100%;
+   }
+ }

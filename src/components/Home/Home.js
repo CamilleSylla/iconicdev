@@ -4,6 +4,7 @@ import React from 'react';
 import Welcome from './BackAni';
 import Landing from '../Landing';
 import Services from '../items/services';
+import ContactUs from '../items/icoComp/contactForm'
 import Bac from '../items/Bac';
 import Nav from '../Nav'
 
@@ -25,12 +26,14 @@ class Main extends React.Component {
 
         return (
             <div>
+
                 <Rooter>
                     <Nav className="navbar"/>
                     <Route path='/' exact component={Welcome}/>
                     <Route path='/IconicDev' exact component={Landing}/>
                     <Route path='/Services' exact component={Services}/>
                     <Route path='/theLab' exact component={Bac}/>
+                    <Route path='/Contact' exact component={ContactUs}/>
                 </Rooter>
             </div>
         )
