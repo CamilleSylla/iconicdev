@@ -153,6 +153,7 @@ const useStyles = theme => ({
   title: {
     letterSpacing:' 0.2em',
     fontSize: 30,
+    fontFamily: 'Oswald, sans-serif',
     textTransform: 'uppercase',
     textAlign: 'left',
     WebkitTextFillColor: 'white',
@@ -190,7 +191,7 @@ class Tech extends React.Component {
       <Grid className={classes.root} container justify="center">
         <Grid className={classes.items2} container justify="center">
           <p className={classes.title}>
-            Quelques technologies utilisée
+            la pointe de la technologie
                     </p>
         </Grid>
         <Grid className={classes.items}>

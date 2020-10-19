@@ -10,6 +10,7 @@ import Code from '../../../assets/img/WebV.svg'
 
 //animation
 import Fade from 'react-reveal/Fade';
+import { Link } from 'react-router-dom';
 
 const useStyles = theme => ({
     root: {
@@ -99,6 +100,28 @@ const useStyles = theme => ({
                 textShadow: '0px -20px #A6127E, 0px 20px #21254F;',
             },
         },
+    },
+    btn: {
+        marginLeft: '5%',
+        marginBottom: '5%',
+        width: '20%',
+        textAlign: 'center',
+        padding: '2%',
+        fontWeight: 'bold',
+        color: 'white',
+        border: " 5px solid white",
+        boxShadow: "10px 10px white",
+        webkitTransition: 'all 0.5s ease',
+        mozTransition: 'all 0.5s ease',
+        oTransition: 'all 0.5s ease',
+        transition: 'all 0.5s ease',
+        '&:hover': {
+            boxShadow: "5px 5px #21254F",
+            border: " 5px solid #21254F",
+            color: '#21254F',
+            background: 'white'
+        }
+
     }
 }
 );
@@ -130,24 +153,25 @@ class First extends React.Component {
                     </Grid>
                     <Grid className={classes.domaineBox}>
                         <p className={classes.title}>
-                            Marquez le web de votre empreinte
+                            . Marquez le web de votre empreinte
                             </p>
-                        <Typography variant="h6" style={{ margin: '5%' }} >
-                            L'ere du digital.
-                            </Typography>
-                            <Typography variant="body2" style={{ margin: '5%' }} >
+                            <Typography variant="body2" style={{ margin: '5%', marginTop: '20px', letterSpacing: "0.1em", fontWeight: "700"}} >
                             Aujourd'hui il est impératif d'avoir une présence sur le web.<br/><br/>
                             Posséder un site web permettra de décrire l'activité que vous proposez, de communiquer avec les clients, de 
                             délivrer le message que vous souhaitez et qui vous correspond. <br/><br/>
                             Entretenir votre lien avec vos clients / propospects est insdispensable, 
                             un site internet est donc le meilleur support pour remédier a ce besoin.
                             </Typography>
-                            <Typography variant="body2" style={{ margin: '5%' }} >
+                            <Typography variant="body2" style={{ margin: '5%', marginTop: '20px', letterSpacing: "0.1em", fontWeight: "700" }} >
                                 IconicDev vous accompagnera dans cette création et 
                                 mettra a votre disposition ses connaissances avancé du domaine
                                 afin d'obtenir un resultat a votre image.
-
                             </Typography>
+                            <Link style={{ textDecoration: 'none'}}>
+                            <p className={classes.btn}>
+                                Let's Go
+                            </p>
+                            </Link>
                     </Grid>
                 </div>
 

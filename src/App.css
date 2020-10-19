@@ -1,10 +1,14 @@
+@font-face {
+  font-family: "flow";
+  src: url(./assets/font/Valorant\ Font.ttf);
+}
+
 .App {
   text-align: center;
   height: 100%;
   width: 100%;
-  
- 
   background-repeat: no-repeat;
+  font-family: "flow";
 }
 
 .particles {

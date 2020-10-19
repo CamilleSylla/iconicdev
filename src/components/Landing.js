@@ -13,8 +13,6 @@ import Particles from 'react-particles-js'
 //animation
 import Fade from 'react-reveal/Fade'
 import Tilt from 'react-tilt';
-import Reveal from 'react-reveal/Reveal';
-import Typing from 'react-typing-animation';
 
 
 //assets
@@ -25,6 +23,8 @@ import Gra from '../assets/img/Gra.svg';
 import Fly from '../assets/img/Fly.svg';
 import Lap from '../assets/img/Lap.svg';
 import Set from '../assets/img/Set.svg';
+import font from '../assets/font/Valorant Font.ttf'
+import Typing from 'react-typing-animation';
 
 const useStyles = theme => ({
     root: {
@@ -35,6 +35,7 @@ const useStyles = theme => ({
     bienvenueContainer: {
         width: "100%",
         display: 'grid',
+        fontFamily: 'Oswald',
         gridTemplateColumns: 'repeat(2, 1fr)',
         gridAutoRows: 'minmax(100px, auto)',
         backgroundColor: 'Transparent',
@@ -94,7 +95,7 @@ const useStyles = theme => ({
         },
     },
     bienvenueTitle: {
-        letterSpacing: ' 0.1em',
+        letterSpacing: ' 0.2em',
         fontSize: 80,
         WebkitTextFillColor: 'transparent',
         WebkitTextStroke: '2px',
@@ -323,7 +324,7 @@ class Landing extends React.Component {
     render() {
         const { classes } = this.props
         return (
-            <Fade right>
+            <Fade >
                 <Particles className={classes.particles}
                     params={{
                         "particles": {
@@ -387,12 +388,12 @@ class Landing extends React.Component {
                         <Box className={classes.bienvenueBox}>
                             <div className={classes.element}>
                                 <p className={classes.slogan}>
-                                    MAKE YOU BIGGER
+                                    . MAKE YOU BIGGER
                                     </p>
                                 <span className={classes.bienvenueTitle}>
-                                    Bienvenue
+                                  Bienvenue
                                     </span>
-                                <Typography variant="body2" style={{ marginTop: '20px' }}>
+                                <Typography variant="body2" style={{ marginTop: '20px', letterSpacing: "0.1em", fontWeight: "700"}}>
                                     Ce faire une place sur internet est une tache
                                     technique, complexe et difficile. IconicDev
                                     vous propose ses services afin de vous accompagner

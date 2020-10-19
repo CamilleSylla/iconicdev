@@ -10,10 +10,12 @@ import Code from '../../../assets/img/Comp.jpg'
 
 //animation
 import Fade from 'react-reveal/Fade';
+import { Link } from 'react-router-dom';
 
 //assets
 import Cerf from '../../../assets/img/Cerf.jpg';
 import Pap from '../../../assets/img/DesR.svg';
+import { ArrowRight } from '@material-ui/icons';
 
 const useStyles = theme => ({
     root: {
@@ -122,6 +124,27 @@ const useStyles = theme => ({
                 textShadow: '0px -20px #A6127E, 0px 20px #21254F;',
             },
         },
+    },
+    btn: {
+        width: "100%",
+        
+        textAlign: 'center',
+        padding: '10%',
+        fontWeight: 'bold',
+        color: 'white',
+        border: " 5px solid white",
+        boxShadow: "10px 10px white",
+        webkitTransition: 'all 0.5s ease',
+        mozTransition: 'all 0.5s ease',
+        oTransition: 'all 0.5s ease',
+        transition: 'all 0.5s ease',
+        '&:hover': {
+            boxShadow: "5px 5px #21254F",
+            border: " 5px solid #21254F",
+            color: '#21254F',
+            background: 'white'
+        }
+
     }
 }
 );
@@ -142,22 +165,23 @@ class Seconde extends React.Component {
                     <Grid className={classes.Grids} >
                         <Grid className={classes.domaineBox}>
                             <p className={classes.title}>
-                                Illustrez vos idées
+                                . Illustrez vos idées
                                     </p>
-                                    <Typography variant="h6" style={{ margin: '5%' }} >
-                            L'importance d'une identité visuelle
-                            </Typography>
-                            <Typography variant="body2" style={{ margin: '5%' }} >
+                            <Typography variant="body2" style={{ margin: '5%', marginTop: '20px', letterSpacing: "0.1em", fontWeight: "700" }} >
                             Le visuel est le premier élément perçu par les clients. <br/><br/>
                             Une identité graphique complete vous permet de vous différencier de vos concurents.<br/><br/>
                             Grace à ses connaissances en design, IconicDev établira 
                             votre charte graphique.
                             </Typography>
-                            <Typography variant="body2" style={{ margin: '5%' }} >
+                            <Typography variant="body2" style={{ margin: '5%', marginTop: '20px', letterSpacing: "0.1em", fontWeight: "700" }} >
                                 En plus de cela, IconicDev vous aidera a promouvoir votre activité 
                                 avec la conception de Flyer, carte de visite, affiche etc...
-
                             </Typography>
+                            <Link style={{ textDecoration: 'none', float : "right", marginRight: "10%",marginBottom: "5%",}}>
+                            <p className={classes.btn}>
+                                Let's Go
+                            </p>
+                            </Link>
                         </Grid>
                         <Grid className={classes.imgContainer} container justify="center">
                            
