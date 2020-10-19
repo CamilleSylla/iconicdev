@@ -38,7 +38,6 @@ const useStyles = theme => ({
   webcontainer: {
     width: '100%',
     marginTop: '100px',
-    marginBottom: '100px',
     display: 'grid',
     gridTemplateColumns: 'repeat(10, 1fr)',
     gridAutoRows: 'minmax(auto, auto)',
@@ -117,7 +116,6 @@ const useStyles = theme => ({
   },
 
   seoimg: {
-    width: '100%',
     gridColumn: '2 / span 4',
     gridRow: 2,
     [theme.breakpoints.down('md')]: {
@@ -170,6 +168,7 @@ const useStyles = theme => ({
     letterSpacing: ' 0.1em',
     fontSize: 30,
     textTransform: 'uppercase',
+    fontWeight: 'bold',
     textAlign: 'left',
     WebkitTextFillColor: 'white',
     WebkitTextStroke: '1px',
@@ -192,10 +191,14 @@ const useStyles = theme => ({
   sousTitre: {
     textAlign: 'left',
     marginLeft: '5%',
-    fontSize: 20,
+    fontSize: 25,
+    fontFamily: 'Oswald, sans-serif'
   },
   txt: {
     textAlign: 'justify',
+    letterSpacing: '0.1em',
+    fontWeight: '700',
+    fontFamily:'Oswald, sans-serif',
     marginLeft: '5%',
     marginRight: '5%',
   }
@@ -218,7 +221,7 @@ class Web extends React.Component {
                 {/*Arguments*/}
                 <div className={classes.vitrine}>
                   <p className={classes.title}>
-                    Vous accompagner dans la création d'une image sur le web
+                    . Vous accompagner dans la création d'une image sur le web
                      </p>
                   <p className={classes.sousTitre}>
                     Etude & conception
@@ -235,7 +238,7 @@ class Web extends React.Component {
 
                 <div className={classes.seo}>
                   <p className={classes.title}>
-                    Augmenter votre visibilité grace au referencement
+                    . Augmenter votre visibilité grace au referencement
                      </p>
                   <p className={classes.sousTitre}>
                     Optimisation du SEO

@@ -130,6 +130,7 @@ const useStyles = theme => ({
     letterSpacing: ' 0.1em',
     fontSize: 30,
     textTransform: 'uppercase',
+    fontWeight: 'bold',
     textAlign: 'left',
     WebkitTextFillColor: 'white',
     WebkitTextStroke: '1px',
@@ -152,10 +153,14 @@ const useStyles = theme => ({
   sousTitre: {
     textAlign: 'left',
     marginLeft: '5%',
-    fontSize: 20,
+    fontSize: 25,
+    fontFamily: 'Oswald, sans-serif'
   },
   txt: {
     textAlign: 'justify',
+    letterSpacing: '0.1em',
+    fontWeight: '700',
+    fontFamily:'Oswald, sans-serif',
     marginLeft: '5%',
     marginRight: '5%',
   }
@@ -180,7 +185,7 @@ class Identite extends React.Component {
                 <div className={classes.vitrine}>
                   <div className={classes.vitrineTxt}>
                     <p className={classes.title}>
-                      Marquez les esprits !
+                      . Marquez les esprits !
                         </p>
                     <p className={classes.sousTitre}>
                       Identité graphique.

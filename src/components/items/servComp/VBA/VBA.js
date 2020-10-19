@@ -140,6 +140,7 @@ width: '20%'
     fontSize: 30,
     textTransform: 'uppercase',
     textAlign: 'left',
+    fontWeight: 'bold',
     WebkitTextFillColor: 'white',
     WebkitTextStroke: '1px',
     WebkitTextStrokeColor: 'white',
@@ -161,10 +162,14 @@ width: '20%'
   sousTitre: {
     textAlign: 'left',
     marginLeft: '5%',
-    fontSize: 20,
+    fontSize: 25,
+    fontFamily: 'Oswald, sans-serif'
   },
   txt: {
     textAlign: 'justify',
+    letterSpacing: '0.1em',
+    fontWeight: '700',
+    fontFamily:'Oswald, sans-serif',
     marginLeft: '5%',
     marginRight: '5%',
   }

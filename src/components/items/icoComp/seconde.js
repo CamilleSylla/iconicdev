@@ -167,13 +167,13 @@ class Seconde extends React.Component {
                             <p className={classes.title}>
                                 . Illustrez vos idées
                                     </p>
-                            <Typography variant="body2" style={{ margin: '5%', marginTop: '20px', letterSpacing: "0.1em", fontWeight: "700" }} >
+                            <Typography variant="body2" style={{ margin: '5%', marginTop: '20px',fontSize: "17px",fontFamily:'Oswald, sans-serif', letterSpacing: "0.1em", fontWeight: "700" }} >
                             Le visuel est le premier élément perçu par les clients. <br/><br/>
                             Une identité graphique complete vous permet de vous différencier de vos concurents.<br/><br/>
                             Grace à ses connaissances en design, IconicDev établira 
                             votre charte graphique.
                             </Typography>
-                            <Typography variant="body2" style={{ margin: '5%', marginTop: '20px', letterSpacing: "0.1em", fontWeight: "700" }} >
+                            <Typography variant="body2" style={{ margin: '5%', marginTop: '20px',fontSize: "17px",fontFamily:'Oswald, sans-serif', letterSpacing: "0.1em", fontWeight: "700" }} >
                                 En plus de cela, IconicDev vous aidera a promouvoir votre activité 
                                 avec la conception de Flyer, carte de visite, affiche etc...
                             </Typography>

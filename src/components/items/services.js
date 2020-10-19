@@ -75,6 +75,7 @@ const useStyles = theme => ({
   cWeb: {
     letterSpacing: ' 0.1em',
     fontSize: 70,
+    fontFamily: 'Oswald, sans-serif',
     WebkitTextFillColor: 'transparent',
     WebkitTextStroke: '2px',
     WebkitTextStrokeColor: 'white',

@@ -155,14 +155,14 @@ class First extends React.Component {
                         <p className={classes.title}>
                             . Marquez le web de votre empreinte
                             </p>
-                            <Typography variant="body2" style={{ margin: '5%', marginTop: '20px', letterSpacing: "0.1em", fontWeight: "700"}} >
+                            <Typography variant="body2" style={{ margin: '5%', marginTop: '20px',fontSize: "17px",fontFamily:'Oswald, sans-serif', letterSpacing: "0.1em", fontWeight: "700"}} >
                             Aujourd'hui il est impératif d'avoir une présence sur le web.<br/><br/>
                             Posséder un site web permettra de décrire l'activité que vous proposez, de communiquer avec les clients, de 
                             délivrer le message que vous souhaitez et qui vous correspond. <br/><br/>
                             Entretenir votre lien avec vos clients / propospects est insdispensable, 
                             un site internet est donc le meilleur support pour remédier a ce besoin.
                             </Typography>
-                            <Typography variant="body2" style={{ margin: '5%', marginTop: '20px', letterSpacing: "0.1em", fontWeight: "700" }} >
+                            <Typography variant="body2" style={{ margin: '5%', marginTop: '20px', fontSize: "17px",fontFamily:'Oswald, sans-serif', letterSpacing: "0.1em", fontWeight: "700" }} >
                                 IconicDev vous accompagnera dans cette création et 
                                 mettra a votre disposition ses connaissances avancé du domaine
                                 afin d'obtenir un resultat a votre image.
